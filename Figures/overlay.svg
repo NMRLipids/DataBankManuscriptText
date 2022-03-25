@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="118.00403mm"
+   height="115.85222mm"
+   viewBox="0 0 418.12451 410.49999"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="overlay.svg">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath4234"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         style="clip-rule:evenodd"
+         inkscape:connector-curvature="0"
+         id="path4236"
+         d="m 0,-0.2 793.6,0 0,595.2 L 0,595 0,-0.2 Z" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="320.33931"
+     inkscape:cy="294.51693"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-13.652037,-171.32649)">
+    <g
+       transform="matrix(1.25,0,0,-1.25,-21.348213,722.70149)"
+       inkscape:label="overlay"
+       id="g4228">
+      <g
+         id="g4230">
+        <g
+           clip-path="url(#clipPath4234)"
+           id="g4232">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4238"
+             style="fill:#729fcf;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 195.3,253.1 -164.3,0 0,78.1 328.5,0 0,-78.1 -164.2,0 z" />
+          <g
+             id="g4240">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4242"
+               style="fill:none;stroke:#ff3333;stroke-width:5.99959993;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 195.3,253.1 -164.3,0 0,78.1 328.5,0 0,-78.1 -164.2,0 z" />
+          </g>
+          <g
+             id="g4244">
+            <text
+               id="text4246"
+               style="font-variant:normal;font-weight:bold;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,52.9,303)">
+              <tspan
+                 id="tspan4248"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 8.4980001 16.282 24.066 31.85 37.338001 41.327999 49.112 53.801998 57.694 61.683998 70.181999 78.68 86.463997 94.248001 98.237999 106.736 115.234 119.224 127.722 132.412 136.304 144.088 148.078 160.56599 169.064 172.95599 180.74001 185.42999 189.42 197.918 206.416 210.40601 218.90401 226.688 231.37801 239.162 243.054 251.636 259.42001 263.31201 271.81 280.392">Layer 2: Indexing of simulation data using</tspan>
+            </text>
+          </g>
+          <g
+             id="g4250">
+            <text
+               id="text4252"
+               style="font-variant:normal;font-weight:bold;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,102.5,287.3)">
+              <tspan
+                 id="tspan4254"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 8.4980001 16.996 20.986 28.77 36.554001 42.042 49.826 57.610001 61.599998 65.589996 74.087997 81.872002 94.360001 98.251999 106.75 115.248 119.238 127.022 135.52 144.01801 151.89999 159.60001 164.28999 168.28 176.778">universal naming convetion</tspan>
+            </text>
+          </g>
+          <g
+             id="g4256">
+            <text
+               id="text4258"
+               style="font-style:italic;font-variant:normal;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Italic;writing-mode:lr-tb;fill:#111111;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,69.2,271.5)">
+              <tspan
+                 id="tspan4260"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 7.7839999 11.774 15.666 23.450001 30.534 34.425999 38.416 42.405998 50.189999 53.284 57.273998 65.057999 72.842003 80.625999 84.517998 91.601997 99.386002 110.992 114.982 125.174 136.78 146.972 154.756 157.948 165.73199 168.826 176.61 183.694 187.586 197.778 205.562 209.552 217.336 225.12 232.90401 240.688">https://github.com/NMRLipids/Databank</tspan>
+            </text>
+          </g>
+          <g
+             id="g4262" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4264"
+             style="fill:#729fcf;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 196.3,375.9 -159.6,0 0,64.8 319.2,0 0,-64.8 -159.6,0 z" />
+          <g
+             id="g4266">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4268"
+               style="fill:none;stroke:#3465a4;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 196.3,375.9 -159.6,0 0,64.8 319.2,0 0,-64.8 -159.6,0 z" />
+          </g>
+          <g
+             id="g4270">
+            <text
+               id="text4272"
+               style="font-variant:normal;font-weight:bold;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,99.4,411.3)">
+              <tspan
+                 id="tspan4274"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 8.5819998 16.365999 24.15 31.934 37.422001 41.411999 49.112 53.801998 57.792 67.984001 75.767998 86.660004 90.552002 98.433998 102.326 114.814 123.312 127.302 135.086 139.776 143.668 152.166 160.748 164.64 173.138 180.922 185.612">Layer 1: Raw simulation data</tspan>
+            </text>
+          </g>
+          <g
+             id="g4276" />
+          <g
+             id="g4278">
+            <text
+               id="text4280"
+               style="font-variant:normal;font-weight:normal;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,65.9,395.6)">
+              <tspan
+                 id="tspan4282"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 9.0019999 16.086 23.870001 26.964001 30.058001 37.841999 45.625999 48.720001 56.504002 60.493999 63.588001 71.372002 75.362 83.146004 90.93 98.713997 106.498 110.39 115.08 122.864 130.64799 138.43201 145.51601 148.61 152.60001 160.384 165.07401 172.07401 176.064 180.754 184.744 192.444 196.43401 204.218 208.20799 212.10001 220.68201 228.382 236.166 243.95 251.73399 259.616">Available in open repository ( e.g. Zenodo)</tspan>
+            </text>
+          </g>
+          <g
+             id="g4284">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4286"
+               style="fill:none;stroke:#000000;stroke-width:2.99979997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="M 82.6,373.5 82.4,356.3" />
+          </g>
+          <path
+             inkscape:connector-curvature="0"
+             id="path4288"
+             style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 82.3,337.6 6.7,19.5 -13.1,0.1 6.4,-19.6 z" />
+          <g
+             id="g4290">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4292"
+               style="fill:none;stroke:#000000;stroke-width:2.99979997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 154.2,373.6 0,-17.3" />
+          </g>
+          <path
+             inkscape:connector-curvature="0"
+             id="path4294"
+             style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 154.2,337.6 6.5,19.5 -13,0 6.5,-19.5 z" />
+          <g
+             id="g4296">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4298"
+               style="fill:none;stroke:#000000;stroke-width:2.99979997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 301.7,373.5 -0.1,-17.2" />
+          </g>
+          <path
+             inkscape:connector-curvature="0"
+             id="path4300"
+             style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 301.4,337.6 6.7,19.5 -13,0.1 6.3,-19.6 z" />
+          <g
+             id="g4302">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4304"
+               style="fill:none;stroke:#000000;stroke-width:2.99979997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 228.4,373.5 -0.2,-17.2" />
+          </g>
+          <path
+             inkscape:connector-curvature="0"
+             id="path4306"
+             style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 228.1,337.6 6.7,19.5 -13,0.1 6.3,-19.6 z" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path4308"
+             style="fill:#729fcf;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 196.3,113.1 -159.6,0 0,95.2 319.2,0 0,-95.2 -159.6,0 z" />
+          <g
+             id="g4310">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4312"
+               style="fill:none;stroke:#3465a4;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 196.3,113.1 -159.6,0 0,95.2 319.2,0 0,-95.2 -159.6,0 z" />
+          </g>
+          <g
+             id="g4314">
+            <text
+               id="text4316"
+               style="font-variant:normal;font-weight:bold;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,125.6,187.3)">
+              <tspan
+                 id="tspan4318"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 8.4980001 16.282 24.066 31.85 37.338001 41.327999 49.112 53.801998 57.105999 67.297997 75.795998 84.293999 88.283997 92.274002 100.058 107.842 112.532 116.424 124.922 133.504">Layer 3: Applications</tspan>
+            </text>
+          </g>
+          <g
+             id="g4320">
+            <text
+               id="text4322"
+               style="font-variant:normal;font-weight:normal;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,39.3,171.6)">
+              <tspan
+                 id="tspan4324"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 4.6900001 8.6800003 19.572001 24.261999 32.046001 39.830002 47.613998 50.708 57.792 65.575996 68.669998 72.660004 80.444 87.444 94.528 102.312 109.396 116.48 120.47">- Graphical access:</tspan>
+            </text>
+          </g>
+          <g
+             id="g4326">
+            <text
+               id="text4328"
+               style="font-variant:normal;font-weight:normal;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#dd4814;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,163.9,171.6)">
+              <tspan
+                 id="tspan4330"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 7.7839999 11.774 15.666 23.450001 27.440001 31.332001 35.321999 43.105999 50.889999 54.880001 62.664001 70.447998 78.148003 86.029999 93.029999 97.019997 104.804 116.41 121.1 124.194 127.386 135.17 138.26401 146.048 153.132 157.024 161.01401 164.108">http://databank.nmrlipids.fi/</tspan>
+            </text>
+          </g>
+          <g
+             id="g4332">
+            <text
+               id="text4334"
+               style="font-variant:normal;font-weight:normal;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,39.3,155.9)">
+              <tspan
+                 id="tspan4336"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 4.6900001 7.7839999 17.164 24.948 28.938 36.722 48.327999 56.112 60.102001 67.886002 75.669998 79.561996 87.346001 95.129997 102.914 106.106 113.106 120.19 127.974 135.058">- Automated analyses</tspan>
+            </text>
+          </g>
+          <g
+             id="g4338">
+            <text
+               id="text4340"
+               style="font-variant:normal;font-weight:normal;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,39.3,140.1)">
+              <tspan
+                 id="tspan4342"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 4.6900001 12.474 16.464001 24.247999 28.139999 32.130001 39.914001 43.007999 46.998001 54.782001 62.566002 70.349998 74.339996 81.339996 89.124001 100.814 104.706 114.898 126.588 136.78 144.564 147.658 155.442 158.536 166.32001 173.40401 177.29601 187.48801 195.272 199.26199 207.04601 216.42599 224.21001 231.994 239.078 250.68401 258.46799 266.25201 274.03601 281.12 288.12 292.81 295.90399 303.78601 307.67801">(e.g. github.com/NMRLipids/DataBankManuscript,</tspan>
+            </text>
+          </g>
+          <g
+             id="g4344">
+            <text
+               id="text4346"
+               style="font-variant:normal;font-weight:normal;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               transform="matrix(1,0,0,-1,39.3,124.4)">
+              <tspan
+                 id="tspan4348"
+                 sodipodi:role="line"
+                 y="0"
+                 x="0 7.7839999 11.774 15.764 23.548 30.632 34.523998 38.514 42.405998 50.189999 53.284 57.273998 65.057999 72.842003 80.625999 84.615997 91.699997 99.484001 111.09 114.982 125.174 136.864 147.056 154.84 157.93401 165.718 168.812 176.59599 183.67999 187.67 197.862 205.646 209.53799 217.32201 225.106 232.89 240.674 247.758 257.138 264.22198 272.00601 276.612 283.69601 286.79001 293.87399 301.65799 308.742">https://github.com/NMRLipids/DatabankExercises)</tspan>
+            </text>
+          </g>
+          <g
+             id="g4350">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4352"
+               style="fill:none;stroke:#000000;stroke-width:2.99979997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="M 82.7,246.7 82.5,229.4" />
+          </g>
+          <path
+             inkscape:connector-curvature="0"
+             id="path4354"
+             style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 82.3,210.8 6.7,19.4 -13,0.2 6.3,-19.6 z" />
+          <g
+             id="g4356">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4358"
+               style="fill:none;stroke:#000000;stroke-width:2.99979997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 154.3,246.8 0,-17.4" />
+          </g>
+          <path
+             inkscape:connector-curvature="0"
+             id="path4360"
+             style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 154.3,210.8 6.5,19.5 -13,0 6.5,-19.5 z" />
+          <g
+             id="g4362">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4364"
+               style="fill:none;stroke:#000000;stroke-width:2.99979997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 301.8,246.7 -0.2,-17.3" />
+          </g>
+          <path
+             inkscape:connector-curvature="0"
+             id="path4366"
+             style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 301.5,210.8 6.7,19.4 -13.1,0.2 6.4,-19.6 z" />
+          <g
+             id="g4368">
+            <path
+               inkscape:connector-curvature="0"
+               id="path4370"
+               style="fill:none;stroke:#000000;stroke-width:2.99979997;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+               d="m 228.5,246.7 -0.2,-17.3" />
+          </g>
+          <path
+             inkscape:connector-curvature="0"
+             id="path4372"
+             style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+             d="m 228.1,210.8 6.7,19.4 -13,0.2 6.3,-19.6 z" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
