@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\title{NMRlipids Databank}
+\title{NMRlipids Databank: Overlay Databank of Lipid Membrane Simulations Arising from Open Collaboration}
 
 \author[1,*]{Anne Kiirikki}
 \author[1,*]{O. H. Samuli Ollila}
@@ -41,8 +41,22 @@ The importance of sharing MD simulation data following the FAIR principles~\cite
 The relevance of quality evaluation of simulation trajectories in databanks regarding technical details of simulations and accuracy of the underlying physical description of the system (force field) has become evident~\cite{tai04,meyer10,hospital20} and such quality evaluation has in some cases also been implemented~\cite{meyer10,hospital16}. However, straightforward quality comparisons between individual simulations or force fields within these databanks remain challenging. 
 While importance of such databanks for MD simulations is widely recognized~\cite{feig99,tai04,silva06,abraham19,hildebrand19,hospital20,abriata20,espigares20} and different kinds of approaches are emerging~\cite{meyer10,kamp10,hospital16,mixcoha16,newport19,bekker20,espigares20,leston22}, generally accepted protocols and best practices are still under active development.
 
-Here we present a solution for lipid bilayers based on overlay databank structure illustrated in Fig.~\ref{overlay}.
+ 
+\begin{figure}
+    \centering
+    \includegraphics[width = 89mm]{Figures/overlay.pdf}
+    \caption{Structure of a overlay databank illustrated. 
+    Raw data is available from a publicly accessible repository (layer 1).
+    The core of the databank contains information on the location of the raw data and indexing of molecular compositions and simulation details described with universal naming conventions (layer 2).
+    The content of databank can be viewed and analysed using external programs that automatically read the information and data from layers 1 and 2 (layer 3). Examples of such applications are the GitHub repository generating the results presented in this work and the graphical access to the databank.
+    More detailed description of the databank is illustrated in Fig.~\ref{DatabankStructure} in the SI.
+    }
+    \label{fig:overlay}
+\end{figure}
 
+Here we present a solution for lipid bilayers based on overlay databank structure illustrated in Fig.~\ref{fig:overlay}. The key idea of the overlay databank is that the storage of raw data in layer 1 is distributed in publicly available repositories or other servers with long term stability and permanent links such as digital object identifiers. The core of the databank, layer 2, contains only information on the location and content of the raw data, thereby not requiring large resources to handle and maintain. This lowers the barrier for starting such databank as well as for long term storage. The NMRlipids databank is essentially a git repository containing information on the location of raw data and its indexing with universal naming convention. In addition to all computers where the databank is developed and used, the NMRlipids databank git is stored to Zenodo server, thereby enabling a very cost effective long term storage for the databank. The databank can be used in layer 3 by accessing the raw data and information stored in the databank by employing the universal naming conventions for atoms, molecules and simulation details. The applications can be linked to the core databank (layer 2) without actually including them, thereby enabling flexible extension of the data without compromising the simplicity and lightness of the core databank. The concept of overaly databank is developed here to solve the practical challenges in generating databanks of MD simulation data enabling flexible analyses over large sets of simulation data, but it pontentially used for wide range of situations, particularly when storage of raw data requires significant resources and final outcomes or best practices are not yet clear, overlay databank approach lowers the barrier to start without compromizing the long term stability or scalability.
+
+The practical relevance of the NMRlipids databank is exemplified by automatic quality evaluation and ranking of large amount of MD simulation data, data-driven analysis detecting correlations between properties of model cell membranes and analyses of rare phenomena that are beyond the scope of standard MD simulation studies. The NMRlipids databank provides new tools for researchers in wide range of fields in academia and industry from cell membrane biology to lipid nanoparticle formulations and data-driven computational chemistry and machine learning. 
 
 %The Introduction section, of referenced text\cite{Figueredo:2009dg} expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
 
@@ -51,9 +65,11 @@ Here we present a solution for lipid bilayers based on overlay databank structur
 %Up to three levels of \textbf{subheading} are permitted. Subheadings should not be numbered.
 
 \subsection{Quality evaluation of force fields}
+Even though the quality of force fields has been widely evaluated against experimental data during parameterization and in separate comparison studies~\cite{botan15,ollila16,catte16,pluhackova16,perez17,leonard19}, defining unambiguously their overall quality still remains unclear, and several controversial results are reported for each in the literature~\cite{antila22b}.
 
-The quality of each simulation is evaluated against NMR order parameters.
-Indexing of experimental data to automatize evaluation is currently in progress by Anne Kiirikki.
+The quality of MD simulations in the NMRlipids databank are evaluated against C-H bond order parameters from NMR and form factors from x-ray scattering, which can be robustly measured from lipid bilayers and directly connected to the simulation data~\cite{ollila16}. The first one is related to the conformational ensemble of individual lipids and latter to the overall structure of lipid bilayer. NMRlipids databank searches available experimental data for each simulations and, when found, defines the quality of a simualtion based on comparison against C-H bond order parameters and x-ray scattering form factors. For more details see the method section.
+
+
 
 \subsection{Water permeability across membranes}
 
