@@ -69,7 +69,14 @@ Even though the quality of force fields has been widely evaluated against experi
 
 The quality of MD simulations in the NMRlipids databank are evaluated against C-H bond order parameters from NMR and form factors from x-ray scattering, which can be robustly measured from lipid bilayers and directly connected to the simulation data~\cite{ollila16}. The first one is related to the conformational ensemble of individual lipids and latter to the overall structure of lipid bilayer. NMRlipids databank searches available experimental data for each simulations and, when found, defines the quality of a simualtion based on comparison against C-H bond order parameters and x-ray scattering form factors. For more details see the method section.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=180mm]{Figures/quality.pdf}
+    \caption{Caption}
+    \label{fig:quality}
+\end{figure}
 
+The top ranking simulations according to the NMRlipids measures are shown in Fig.~\ref{fig:quality}. The overall best ranking simulation, POPC lipid bilayer simulated with Slipids force field, gives a good agreement with experiments for all C-H bond order parameters except for glycerol backbone. The best simulation for headroup and glycerol backbone, CHARMM36 POPC, predicts too ordered acyl chain, thereby not being within the top 10 simulations in the overall ranking. The best ranking for x-ray form factor is given by the Slipids POPE simulation, however, because the quantitative value for form factor quality depends on the quality of experimental data, form factor qualities can be compared only between simulations evaluated against the same experimental dataset.
 
 \subsection{Water permeability across membranes}
 
