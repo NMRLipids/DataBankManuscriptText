@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{tablefootnote}
+
 \title{NMRlipids Databank: Overlay Databank of Lipid Membrane Simulations Arising from Open Collaboration}
 
 \author[1,*]{Anne Kiirikki}
@@ -41,20 +43,8 @@ The importance of sharing MD simulation data following the FAIR principles~\cite
 The relevance of quality evaluation of simulation trajectories in databanks regarding technical details of simulations and accuracy of the underlying physical description of the system (force field) has become evident~\cite{tai04,meyer10,hospital20} and such quality evaluation has in some cases also been implemented~\cite{meyer10,hospital16}. However, straightforward quality comparisons between individual simulations or force fields within these databanks remain challenging. 
 While importance of such databanks for MD simulations is widely recognized~\cite{feig99,tai04,silva06,abraham19,hildebrand19,hospital20,abriata20,espigares20} and different kinds of approaches are emerging~\cite{meyer10,kamp10,hospital16,mixcoha16,newport19,bekker20,espigares20,leston22}, generally accepted protocols and best practices are still under active development.
 
- 
-\begin{figure}
-    \centering
-    \includegraphics[width = 89mm]{Figures/overlay.pdf}
-    \caption{Structure of a overlay databank illustrated. 
-    Raw data is available from a publicly accessible repository (layer 1).
-    The core of the databank contains information on the location of the raw data and indexing of molecular compositions and simulation details described with universal naming conventions (layer 2).
-    The content of databank can be viewed and analysed using external programs that automatically read the information and data from layers 1 and 2 (layer 3). Examples of such applications are the GitHub repository generating the results presented in this work and the graphical access to the databank.
-    More detailed description of the databank is illustrated in Fig.~\ref{DatabankStructure} in the SI.
-    }
-    \label{fig:overlay}
-\end{figure}
 
-Here we present a solution for lipid bilayers based on overlay databank structure illustrated in Fig.~\ref{fig:overlay}. The key idea of the overlay databank is that the storage of raw data in layer 1 is distributed in publicly available repositories or other servers with long term stability and permanent links such as digital object identifiers. The core of the databank, layer 2, contains only information on the location and content of the raw data, thereby not requiring large resources to handle and maintain. This lowers the barrier for starting such databank as well as for long term storage. The NMRlipids databank is essentially a git repository containing information on the location of raw data and its indexing with universal naming convention. In addition to all computers where the databank is developed and used, the NMRlipids databank git is stored to Zenodo server, thereby enabling a very cost effective long term storage for the databank. The databank can be used in layer 3 by accessing the raw data and information stored in the databank by employing the universal naming conventions for atoms, molecules and simulation details. The applications can be linked to the core databank (layer 2) without actually including them, thereby enabling flexible extension of the data without compromising the simplicity and lightness of the core databank. The concept of overaly databank is developed here to solve the practical challenges in generating databanks of MD simulation data enabling flexible analyses over large sets of simulation data, but it pontentially used for wide range of situations, particularly when storage of raw data requires significant resources and final outcomes or best practices are not yet clear, overlay databank approach lowers the barrier to start without compromizing the long term stability or scalability.
+Here we present a solution for lipid bilayers based on overlay databank structure illustrated in Fig.~\ref{fig:overlay}.  The concept of overaly databank is developed here to solve the practical challenges in generating databanks of MD simulation data enabling flexible analyses over large sets of simulation data, but it pontentially used for wide range of situations, particularly when storage of raw data requires significant resources and final outcomes or best practices are not yet clear, overlay databank approach lowers the barrier to start without compromizing the long term stability or scalability.
 
 The practical relevance of the NMRlipids databank is exemplified by automatic quality evaluation and ranking of large amount of MD simulation data, data-driven analysis detecting correlations between properties of model cell membranes and analyses of rare phenomena that are beyond the scope of standard MD simulation studies. The NMRlipids databank provides new tools for researchers in wide range of fields in academia and industry from cell membrane biology to lipid nanoparticle formulations and data-driven computational chemistry and machine learning. 
 
@@ -63,28 +53,54 @@ The practical relevance of the NMRlipids databank is exemplified by automatic qu
 \section{Results}
 
 %Up to three levels of \textbf{subheading} are permitted. Subheadings should not be numbered.
-
-\subsection{Quality evaluation of force fields}
-Even though the quality of force fields has been widely evaluated against experimental data during parameterization and in separate comparison studies~\cite{botan15,ollila16,catte16,pluhackova16,perez17,leonard19}, defining unambiguously their overall quality still remains unclear, and several controversial results are reported for each in the literature~\cite{antila22b}.
-
-The quality of MD simulations in the NMRlipids databank are evaluated against C-H bond order parameters from NMR and form factors from x-ray scattering, which can be robustly measured from lipid bilayers and directly connected to the simulation data~\cite{ollila16}. The first one is related to the conformational ensemble of individual lipids and latter to the overall structure of lipid bilayer. NMRlipids databank searches available experimental data for each simulations and, when found, defines the quality of a simualtion based on comparison against C-H bond order parameters and x-ray scattering form factors. For more details see the method section.
+\subsection{Design of the NMRlipids databank}
+The key idea of the overlay databank is that the storage of raw data in layer 1 is distributed in publicly available repositories or other servers with long term stability and permanent links such as digital object identifiers. The core of the databank, layer 2, contains only information on the location and content of the raw data, thereby not requiring large resources to handle and maintain. This lowers the barrier for starting such databank as well as for long term storage. The NMRlipids databank is essentially a git repository containing information on the location of raw data and its indexing with universal naming convention. In addition to all computers where the databank is developed and used, the NMRlipids databank git is stored to Zenodo server, thereby enabling a very cost effective long term storage for the databank. The databank can be used in layer 3 by accessing the raw data and information stored in the databank by employing the universal naming conventions for atoms, molecules and simulation details. The applications can be linked to the core databank (layer 2) without actually including them, thereby enabling flexible extension of the data without compromising the simplicity and lightness of the core databank.
 
 \begin{figure}
     \centering
+    \includegraphics[width = 180mm]{Figures/overlay.pdf}
+    \caption{a) Structure of a overlay databank. 
+    %Raw data is available from a publicly accessible repository (layer 1).
+    %The core of the databank contains information on the location of the raw data and indexing of molecular %compositions and simulation details described with universal naming conventions (layer 2).
+    %The content of databank can be viewed and analysed using external programs that automatically read the information and data from layers 1 and 2 (layer 3). Examples of such applications are the GitHub repository generating the results presented in this work and the graphical access to the databank.
+    More detailed structure of the layer 2 is illustrated in Fig.~\ref{DatabankStructure} in the SI.
+    b) Distribution of lipids that are present in more than two trajectories in the databank.
+    Lipids occuring in 1-2 trajectories are: DCHOL(2), DDOPC(2), DOPE(2), DEPC(1), DMPC(1), SAPI(1), POPI(1), SLPI(1), DLIPC(2), DSPC(2), DPPG(2), DPPE(1), and DLPC(1).
+    c) Distribution of force fields used in the simulations.
+    d) Distribution of the lengths of the trajectories, total number of trajectories and total lenght of the simulations.
+    e) Currently available binary mixtures in the databank.}
+    \label{fig:overlay}
+\end{figure}
+
+Currently the databank is composed of approximately 500 trajectories with the total length of approximately 231 microseconds of which most are contributed for the previous publications from the NMRlipids open collaboration~\cite{botan15,catte16,antila19,bacle21}. The distribution of lipids, force fields, length of the trjajectories and available binary mixtures are shown in Fig.~\ref{fig:overlay}. 
+
+\subsection{Quality evaluation of force fields}
+Quality of membrane simulations with different force fields have been evaluated against experimental data during parameterization and in separate comparison studies~\cite{botan15,ollila16,catte16,pluhackova16,perez17,leonard19}, but universal quality measure for membrane simulations is not defined and controversial results are often reported from simulations~\cite{antila22b}. The unclarities in simulation quality complicate the selection of proper simulation models for specific applications and estimation of reliability of reported simulation results, thereby being a major obstacle in many applications of membrane MD simulations.
+
+To enable rapid evaluation and comparison of membrane MD simulation qualities, we define the quality measure for membrane MD simulations using the C-H bond order parameters from NMR experiments and form factors from x-ray scattering, which are robust experimental measurables that can be directly connected to the simulation data~\cite{ollila16}. C-H bond order parameters are related to the conformational ensemble of individual lipid molecules, while the form factor to arises from electron density thereby connecting to the overall structure of lipid bilayers. This is demonstrated in Fig.~\ref{fig:quality} a) showing correlations between membrane lateral density (area per lipid), thickness, minima of form factor and acyl chain order analyzed from all apporimately 500 trajectories in the NMRlipids databank. Membrane area per lipid has negative correlations with membrane order and thickness with Pearson coefficient of -0.78 and -0.49, respectively, because decreased area leads to more ordered, tightly packed and stretched acyl chains leading to thicker membranes. On the other hand, locations of form factor minima have positive correlation with the membrane area and negative correlation with the thickness. In conclusion, both x-ray scattering form factors and acyl chain order parameters from NMR are on average good proxies for membrane packing and thickness, while NMR order parameters give segmental resolution information on the quality of conformational ensembles of lipids.
+
+\begin{figure}[tbp]
+    \centering
     \includegraphics[width=180mm]{Figures/quality.pdf}
-    \caption{Caption}
+    \caption{a) Correlations between membrane area per lipid, thickness, second minima of form factor and average order parameter of the {\it sn}-1 acyl chain extracted from the NMRlipids databank. All Pearson correlation coefficients shown in bottom left corner have p-value below 0.001.
+    b) Evaluation against experimental data exemplified for the simulation giving the best qualities in overall, for headgroup and x-ray scattering form factor.
+    c) Change in area per lipid upon addition of POPE to POPC in different simulation extracted from the NMRlipids databank and quality evaluation table of POPE simulations.
+    d) Quality evaluation table showing the best 13 simulations according to the overall order parameter quality.}
     \label{fig:quality}
 \end{figure}
 
-The top ranking simulations according to the NMRlipids measures are shown in Fig.~\ref{fig:quality}. The overall best ranking simulation, POPC lipid bilayer simulated with Slipids force field, gives a good agreement with experiments for all C-H bond order parameters except for glycerol backbone. The best simulation for headroup and glycerol backbone, CHARMM36 POPC, predicts too ordered acyl chain, thereby not being within the top 10 simulations in the overall ranking. The best ranking for x-ray form factor is given by the Slipids POPE simulation, however, because the quantitative value for form factor quality depends on the quality of experimental data, form factor qualities can be compared only between simulations evaluated against the same experimental dataset.
+NMRlipids databank contains also experimental order parameter and x-ray form factor data that is connected to corresponding  simulations in order to define the simulation qualities and rank them to select the suitable simulation models for particular applications. The ranking of all simulations based on estimated average probability of order parameters to locate within experimental errors are shown in Fig.~\ref{fig:quality} b) and the comparison for the best models for overall quality, headgroup and glycerol backbone, and form factor are exemplified in Fig.~\ref{fig:quality} d). Full details of the NMRlipids quality measure for lipid bilayer simulations are given in the methods section and supplementary information.
+The top ranking simulations in Figs.~\ref{fig:quality} b) and d) demonstrate also the current complexity in lipid bilayer simulation quality. Simulation of POPC lipid bilayer with Slipids force field ranks first in overall score, glycerol backbone is not correcetly captured in this model. On the othere, simulation with the best quality for headroup and glycerol backbone, CHARMM36 POPC, predicts too ordered acyl chain, thereby not being within the top 10 simulations in the overall ranking. The best ranking for x-ray form factor is given by the Slipids POPE simulation, however, because the quantitative value for form factor quality depends on the quality of experimental data, form factor qualities can be compared only between simulations evaluated against the same experimental dataset.
 
-\subsection{Water permeability across membranes}
+The power of NMRlipids quality metrics in selecting the best model for particular application is demontrated in Fig.~\ref{fig:quality} c) where the area per lipids of POPC:POPE mixtures from different force fields are shown and quality of POPE simulation in different force fields are evaluated. Among the simulations available in the NMRlipids databank, the Slipids force field gives the best quality in terms of acyl chain order parameters and form factor, and predicts the largest area per molecule for POPE and smallest difference with POPC. In conclusion, simulations with Slipids is the most reliable force field for membrane packing in POPC:POPE mixtures althought its glycerol backbone is not accurately modelled. Similar comparisons utilizing the preliminary data from the NMRlipids databank have concluded that Slipids is relatively good model also for mixtures of charged POPC:POPS membranes, although models with better counterion binding have higher quality, but CHARMM36 is the best to study differences in headgroup conformational ensembles between different lipid types. Understanding such complex picture of lipid bilayer MD simulation quality would not be possible without automatic quality evaluation of large sets of simulations enabled by the NMRlipids databank.
 
-Averaging water density profiles over all simulations in the databank enables us to calculate the barrier for the water penetration through lipid bilayers.
+\subsection{NMRlipids databank reveals correlations between membrane properties}
+The power of NMRlipids databank to find correlation between membrane properties is exemplified in Fig.~\ref{??} showing how water diffusion through and along the membrane correlate with different properties of systems. While NMRlipids databank enables similar analyses for any membrane properties, these are selected due to their relevance in the development of MRI imaging methods~\cite{??}.  
 
-\subsection{Spin relaxation rates of confined water close to membranes}
 
-Usefulness of the databank beyond MD simulation experts is demonstrated by analysing water spin relaxation times close to bilayers which are used in MRI imaging.
+%\subsection{Spin relaxation rates of confined water close to membranes}
+
+%Usefulness of the databank beyond MD simulation experts is demonstrated by analysing water spin relaxation times close to bilayers which are used in MRI imaging.
 
 %Example text under a subsection. Bulleted lists may be used where appropriate, e.g.
 
@@ -101,6 +117,14 @@ Usefulness of the databank beyond MD simulation experts is demonstrated by analy
 
 %The Discussion should be succinct and must not contain subheadings.
 
+Quality measure and automatic quality evaluation of lipid bilayer MD simulations introduced in the NMRlipids databank enables rapid ranking of available simulation models agains experimental NMR and x-ray scattering data. This provides a tool for researches to rapidly evaluate the credibility of MD simulations of their own and reported by other groups. Because such tool and quality measure has not been available, this will elaborate the quality of published MD simulations of lipid bilyers and reduce potentially misleading results~\cite{antila22b}. The power of NMRlipids databank to select the best models for particular applications has been demontrated for PC/PE lipid mixtures (Fig.~\ref{fig:quality}), PC/PS lipid mixtures~\cite{antila22b}, and lipid headgroups~\cite{bacle21}.
+
+The increasing amount of MD simulation data with programmatic access in the NMRlipids databank opens up possibilities for wide range of applications utilizing the large set of accessible data. Extend of the data in the NMRlipids databank in terms of quantity (e.g., simulation length and number of conformations), content (e.g, lipid compositions and ion concentrations) and quality enables analyses that are not possible to conduct from MD simulation data produced by a single research group. Applications of the NMRlipids databank to understand how diffusion of water through and along cellular membrane depends on its physical properties are demonstrated in Fig.~\ref{??}. Permeation of water through membranes resembles the permeation of also other hydrophilic molecules, such as drugs, and detailed understanding of water dynamics through and along membranes is potentially useful for the development of MRI imaging methods~\cite{topgaard20}. 
+These examples demonstrate the practical applications of NMRlipids databank on problems in the biological and biomedical sciences.
+
+Building accessible databanks of molecular dynamics simulation data has been challenging due to the required long term support for hardware and software maintenance. In the overlay model used in the NMRlipids databank, the demand of hardware can be distributed and open collaboration model reduces the risk for ending software maintenance. Furthermore, the open collaboration model used in the NMRlipids project credits contributors by offering authorship in published articles, thereby creating an incentive for contributions. This model could be extended also to other fields where similar barriers to establish publicly accessible databanks exist. Emerging applications of machine learning are increasing the impact of such databanks. For example, the existing Protein Databank (PDB)~\cite{??} containing experimentally determined protein structures with programmatic access has enabled the development of machine learning based tools building on the data collected in the databank over the years~\cite{??}. NMRlipids and other databanks with open programmatic access have potential to lead similar unforeseen applications in the future.
+
+
 \section{Methods}
 
 %Topical subheadings are allowed. Authors must ensure that their Methods section includes adequate experimental and characterization data necessary for others in the field to reproduce their work.
@@ -108,23 +132,80 @@ Usefulness of the databank beyond MD simulation experts is demonstrated by analy
 \subsection{Structure of the databank}
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{figures/DataBankStructure.pdf}
-  \caption{Structure of the NMRlipids databank}\label{DatabankStructure}
+  \includegraphics[width=\textwidth]{Figures/DataBankChart.pdf}
+  \caption{Structure of the NMRlipids databank. User give information (blue boxes) includes basic information on the simulation, including the location of raw data, as well as experimental data if available. The databank entries (red box) and analysis results (green boxes) then automatically generated by the computer programs included in the NMRlipids databank (yellow boxes).}\label{DatabankStructure}
 \end{figure}
 
-NMRlipids databank is a overlay databank composed of files that contain all the essential information
-on the molecular dynamics simulation trajectories that are listed in the databank.
-The location publicly avaiable raw MD simulation data is flexible.
-The NMRlipids databank files contain all the essential information on the
-original data that enable wide range of applications.
-%and all essential information on simulations needed in further use and automatic analysis.
+Structure of the NMRlipids databank is illustrated in Fig.~\ref{DatabankStructure}. The core of the databank is composed of README.yaml files locating at \url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations} which contain all the essential information on each simulation entry needed to further applications. As the NMRlipids databank is a overlay databank, the raw simulation data is not stored there but the README.yaml files contain a permanent links to the raw data which can be then accessed when needed. The raw MD simulation data can locate in any stable publicly available repository, although all the current data locates in Zenodo \url{www.zenodo.org}. 
 
-Each simulation system is identified using the hash of original trajectory and topology file. The index files are stored in folder structure based on the identity codes of the simulations.
+A README.yaml file is made using AddData.py script for each simulation stored in the databank based on the information given by the author of the simulation data. In addition to this information, automatically extracted information about the simulation are stored in the README.yaml files (see table~\ref{tab:READMEkeys}). A README.yaml file for each simulation is stored to a folder named according to the hashes of original trajectory and topology file locating in \url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations}. These README.yaml files give access to all the essential information on the simulations in the databank either directly, or pointing to a original file from where the information can be extracted.
 
+\begin{table}[]
+    \centering
+    \begin{tabular}{  p{3.5cm}  p{9.5cm}  p{4.0cm} }
+    \toprule
+    key & description & type  \\
+    \midrule
+        %\hline
+    DOI & DOI from where the raw data is found & user given (compulsory) \\
+    SOFTWARE & Software used to run the simulation (e.g. Gromacs, Amber, NAMD, etc.) & \\
+    TRJ & Name of the trajectory file found from DOI & \\
+    TPR & Name of the topology file found from DOI (trp file in the case of Gromacs) & \\
+    PREEQTIME & Pre-equilibrate time simulated before the uploaded trajectory in nanoseconds. \tablefootnote{For example, if you upload 100-200 ns part of total 200 ns simulation, this should value should be 100.} & \\
+    TIMELEFTOUT & Equilibration period in the uploaded trajectory that should be discarded in analyses. \tablefootnote{For example, if you upload 0-200 ns part of total 200 ns simulation where the first 100 ns should be considered as an equilibration, this value should be 100.} \\
+    COMPOSITION & Molecules names used in the simulation and corresponding mapping files (see ??) & \\
+    DIR\_WRK & Temporary working directory in your local computer. \\
+    UNITEDATOM\_DICT & Information for constucting hydrogens for united atom simulations, empty for all atom simulations & \\
+    TYPEOFSYSTEM & Lipid bilayer or something else & \\
+    \hline
+    PUBLICATION & Give reference to a publication(s) related to the data. \\
+    AUTHORS\_CONTACT & Name and email of the main author(s) of the data. & \\
+    SYSTEM & System description on free text format & \\
+    SOFTWARE\_VERSION & Version of the used software & \\
+    FF & Name of the used force field & \\
+    FF\_SOURCE & Source of the force field parameters, e.g, CHARMM-GUI, webpage, citation to a publication, etc. & \\
+    FF\_DATE &  Date when force field parameters were accessed on the gives source (day/month/year). & \\
+    FF{molename} & Molecule specific force field information, e.g., water model with FFSOL and sodium parameters with FFSOD. & \\
+    CPT & Name of the Gromacs checkpoint file. & \\
+    LOG & Name of the Gromacs log file. & \\
+    TOP & Name of the Gromacs top file. & \\
+    GRO & Name of the Gromacs gro file. & \\
+    \hline
+    TRAJECTORY\_SIZE & Size of the trajectory file in bytes & automatically extracted data. \\
+    TRJLENGTH & Lenght of the trajectory (ps). & \\
+    TEMPERATURE & Temperature of the simulation. & \\
+    NUMBER\_OF\_ATOMS & Number of atoms in the simulation. & \\
+    DATEOFRUNNIG & Date when added into the databank & \\
+    EXPERIMENT & Potentially connected experimental data & \\
+    COMPOSTION & Number of molecules (number of lipids in both leaflets separartely) extracted from the simulation data & \\ 
+    \end{tabular}
+    \caption{Keys stored in the README.yaml files of simulations.}
+    \label{tab:READMEkeys}
+\end{table}
+
+Each simulation is connected to the experimental C-H bond order parameter and x-ray scattering form factor data using the searchDATABANK.py script. Available experimental data is collected to \url{https://github.com/NMRLipids/Databank/tree/main/Data/experiments} where each dataset is saved into a folder with the name based on DOI of the related publication and experimental conditions are described in README.yaml files with the keys listed in table~\ref{tab:READMEkeysEXP}. If molar concentrations of all molecules are within $\pm$5 percentage units, charged lipids have the same counterions, and temperature is within $\pm$2 degrees, a pair will be formed between simulation and experimental datasets by adding the link to the experimental data to the simulation README.yaml file. 
+%If lipid to water ratio is above ??, the systems are considered fully hydrated. Otherwise also hydration level is considered.
+
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{  p{5.0cm}  p{10.0cm}}
+    \toprule
+    key & description \\
+    \midrule
+    DOI & DOI of the publication related to the experimental data. \\
+    TEMPERATURE & Temperature of the experiment. \\
+    MOLAR\_FRACTIONS & Dictionary of molar fractions of bilayer components \\
+    ION\_CONCENTRATIONS & Dictionary of ion concentrations of the system (defined as ??) \\
+    TOTAL\_LIPID\_CONCENTRATION & Total concentration of lipid components. If exact concentration is not known, but experiments are performed in excess water, 'full hydration' can be given. \\
+    COUNTER\_IONS & Type of counter ions if present.
+\end{tabular}
+    \caption{Keys stored in the README.yaml files of experiments.}
+    \label{tab:READMEkeysEXP}
+\end{table}
 
 \subsection{Quality evaluation}
 
-For quality evaluation, each simulation is connected to a experimental dataset is similar conditions. Currently experimental and simulation datasets are paired if molar concentrations of all molecules are within $\pm$5 percentage units, charged lipids have the same counterions, and temperature is within $\pm$2 degrees. If lipid to water ratio is above ??, the systems are considered fully hydrated. Otherwise also hydration level is considered.
 
 Quality of lipid conformational ensembles are evaluated against C-H bond order parameters from NMR experiments~\cite{ollila16}. As a first step, the quality of each order parameter is evaluated using the negative logarithm of probability to find the simulated order parameter within the experimental error bars
 \begin{equation}
