@@ -16,10 +16,50 @@
    viewBox="0 0 3916.2003 1461.7373"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="DataBankChart.svg">
   <defs
      id="defs4">
+    <linearGradient
+       id="linearGradient2597"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#d70039;stop-opacity:0.40392157;"
+         offset="0"
+         id="stop2595" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2589"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#e1948b;stop-opacity:1;"
+         offset="0"
+         id="stop2587" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2583"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#0088be;stop-opacity:0.15686275;"
+         offset="0"
+         id="stop2581" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2577"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2575" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1111"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1109" />
+    </linearGradient>
     <linearGradient
        id="linearGradient17872"
        osb:paint="solid">
@@ -80,7 +120,7 @@
        id="linearGradient17830"
        osb:paint="solid">
       <stop
-         style="stop-color:#e15f8a;stop-opacity:1;"
+         style="stop-color:#e1948b;stop-opacity:1;"
          offset="0"
          id="stop17832" />
     </linearGradient>
@@ -88,7 +128,7 @@
        id="linearGradient17824"
        osb:paint="solid">
       <stop
-         style="stop-color:#7ad327;stop-opacity:1;"
+         style="stop-color:#00a368;stop-opacity:0.63137257;"
          offset="0"
          id="stop17826" />
     </linearGradient>
@@ -96,7 +136,7 @@
        id="linearGradient17818"
        osb:paint="solid">
       <stop
-         style="stop-color:#7ad327;stop-opacity:1;"
+         style="stop-color:#00a368;stop-opacity:0.627451;"
          offset="0"
          id="stop17820" />
     </linearGradient>
@@ -104,7 +144,7 @@
        id="linearGradient17812"
        osb:paint="solid">
       <stop
-         style="stop-color:#7ad327;stop-opacity:1;"
+         style="stop-color:#00a368;stop-opacity:0.63137257;"
          offset="0"
          id="stop17814" />
     </linearGradient>
@@ -112,7 +152,7 @@
        id="linearGradient17806"
        osb:paint="solid">
       <stop
-         style="stop-color:#7ad327;stop-opacity:1;"
+         style="stop-color:#00a368;stop-opacity:0.63137257;"
          offset="0"
          id="stop17808" />
     </linearGradient>
@@ -120,7 +160,7 @@
        id="linearGradient17800"
        osb:paint="solid">
       <stop
-         style="stop-color:#7ad327;stop-opacity:1;"
+         style="stop-color:#00a368;stop-opacity:0.63137257;"
          offset="0"
          id="stop17802" />
     </linearGradient>
@@ -136,7 +176,7 @@
        id="linearGradient17788"
        osb:paint="solid">
       <stop
-         style="stop-color:#d2c4f4;stop-opacity:1;"
+         style="stop-color:#0088be;stop-opacity:0.16470589;"
          offset="0"
          id="stop17790" />
     </linearGradient>
@@ -144,7 +184,7 @@
        id="linearGradient17782"
        osb:paint="solid">
       <stop
-         style="stop-color:#d2c4f4;stop-opacity:1;"
+         style="stop-color:#0088be;stop-opacity:0.16078432;"
          offset="0"
          id="stop17784" />
     </linearGradient>
@@ -332,15 +372,6 @@
     </marker>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient17776"
-       id="linearGradient17780"
-       x1="-1397.5939"
-       y1="179.61071"
-       x2="165.20779"
-       y2="179.61071"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient17782"
        id="linearGradient17786"
        x1="232.59493"
@@ -410,15 +441,6 @@
        y1="1191.7182"
        x2="2156.7366"
        y2="1191.7182"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient17830"
-       id="linearGradient17834"
-       x1="-1407.0012"
-       y1="708.40269"
-       x2="2164.7373"
-       y2="708.40269"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
@@ -498,6 +520,24 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2583"
+       id="linearGradient2585"
+       x1="-1397.5937"
+       y1="179.61071"
+       x2="165.20761"
+       y2="179.61071"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2597"
+       id="linearGradient2599"
+       x1="-1407.0012"
+       y1="708.40269"
+       x2="2164.7373"
+       y2="708.40269"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -506,16 +546,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="1611.8607"
-     inkscape:cy="826.37621"
+     inkscape:zoom="0.49497474"
+     inkscape:cx="1756.2127"
+     inkscape:cy="883.28789"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1004"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-width="3696"
+     inkscape:window-height="2036"
+     inkscape:window-x="144"
+     inkscape:window-y="50"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -635,7 +675,7 @@
        y="75.933037"
        ry="41.511818" />
     <rect
-       style="opacity:1;fill:url(#linearGradient17780);fill-opacity:1;stroke:#000000;stroke-width:14.18754578;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:url(#linearGradient2585);fill-opacity:1;stroke:#000000;stroke-width:14.18718726;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4136-1"
        width="1548.6141"
        height="223.99329"
@@ -652,21 +692,22 @@
        ry="41.511818" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="672.03369"
        y="157.95753"
-       id="text5880"
-       sodipodi:linespacing="125%"><tspan
+       id="text5880"><tspan
          sodipodi:role="line"
          id="tspan5882"
          x="672.03369"
-         y="157.95753">Raw simulation data</tspan><tspan
+         y="157.95753"
+         style="font-size:80px;line-height:1.25">Raw simulation data</tspan><tspan
          sodipodi:role="line"
          x="672.03369"
          y="257.95752"
-         id="tspan5884">(e.g. in Zenodo)</tspan></text>
+         id="tspan5884"
+         style="font-size:80px;line-height:1.25">(e.g. in Zenodo)</tspan></text>
     <rect
-       style="opacity:1;fill:url(#linearGradient17834);fill-opacity:1;stroke:#000000;stroke-width:7.72696686;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:url(#linearGradient2599);fill-opacity:1;stroke:#000000;stroke-width:7.72696686;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect7759"
        width="3564.0115"
        height="244.65024"
@@ -675,71 +716,72 @@
        ry="23.490189" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="364.20721"
        y="-143.65839"
-       id="text7767"
-       sodipodi:linespacing="125%"><tspan
+       id="text7767"><tspan
          sodipodi:role="line"
          id="tspan7769"
          x="364.20721"
          y="-143.65839"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">NMRlipids databank</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:80px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">NMRlipids databank</tspan><tspan
          sodipodi:role="line"
          x="364.20721"
          y="-43.658386"
          id="tspan7820"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">https://github.com/NMRLipids/Databank/</tspan><tspan
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'">https://github.com/NMRLipids/Databank/</tspan><tspan
          sodipodi:role="line"
-         x="364.20721"
+         x="376.92206"
          y="56.341614"
-         id="tspan7818" /></text>
+         id="tspan7818"
+         style="font-size:80px;line-height:1.25"> </tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-107.01527"
        y="684.15906"
-       id="text7771"
-       sodipodi:linespacing="125%"><tspan
+       id="text7771"><tspan
          sodipodi:role="line"
          x="-107.01527"
          y="684.15906"
-         id="tspan7775">README.yaml files</tspan><tspan
+         id="tspan7775"
+         style="font-size:80px;line-height:1.25">README.yaml files</tspan><tspan
          sodipodi:role="line"
          x="-107.01527"
          y="784.15906"
-         id="tspan7779">(<tspan
+         id="tspan7779"
+         style="font-size:80px;line-height:1.25">(<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'"
    id="tspan7781">Data/Simulations</tspan>)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1291.7263"
        y="149.28583"
-       id="text7795"
-       sodipodi:linespacing="125%"><tspan
+       id="text7795"><tspan
          sodipodi:role="line"
          id="tspan7797"
          x="1291.7263"
-         y="149.28583">Experimental data</tspan><tspan
+         y="149.28583"
+         style="font-size:80px;line-height:1.25">Experimental data</tspan><tspan
          sodipodi:role="line"
          x="1291.7263"
          y="249.28583"
-         id="tspan7799">(<tspan
+         id="tspan7799"
+         style="font-size:80px;line-height:1.25">(<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'"
    id="tspan7801">Data/Experiments</tspan>)</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-349.66931"
        y="457.06549"
-       id="text7822"
-       sodipodi:linespacing="125%"><tspan
+       id="text7822"><tspan
          sodipodi:role="line"
          id="tspan7824"
          x="-349.66931"
          y="457.06549"
-         style="font-size:80px">AddData.py</tspan></text>
+         style="font-size:80px;line-height:1.25">AddData.py</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10.15552235;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 358.10184,297.05402 0,77.79406"
@@ -752,19 +794,20 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-595.64618"
        y="151.30612"
-       id="text11998"
-       sodipodi:linespacing="125%"><tspan
+       id="text11998"><tspan
          sodipodi:role="line"
          id="tspan12000"
          x="-595.64618"
-         y="151.30612">User given information</tspan><tspan
+         y="151.30612"
+         style="font-size:80px;line-height:1.25">User given information</tspan><tspan
          sodipodi:role="line"
          x="-595.64618"
          y="251.30612"
-         id="tspan12002">(<tspan
+         id="tspan12002"
+         style="font-size:80px;line-height:1.25">(<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Italic'"
    id="tspan12004">Scripts/BuildDatabank/info_files/</tspan>)</tspan></text>
     <path
@@ -827,82 +870,81 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="795.8559"
        y="448.87695"
-       id="text15121"
-       sodipodi:linespacing="125%"><tspan
+       id="text15121"><tspan
          sodipodi:role="line"
          id="tspan15123"
          x="795.8559"
-         y="448.87695">searchDATABANK.py</tspan></text>
+         y="448.87695"
+         style="font-size:80px;line-height:1.25">searchDATABANK.py</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-1326.189"
        y="1224.0431"
-       id="text15125"
-       sodipodi:linespacing="125%"><tspan
+       id="text15125"><tspan
          sodipodi:role="line"
          id="tspan15127"
          x="-1326.189"
-         y="1224.0431">OrderParameters.json</tspan></text>
+         y="1224.0431"
+         style="font-size:80px;line-height:1.25">OrderParameters.json</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-211.89413"
        y="1213.6371"
-       id="text15144"
-       sodipodi:linespacing="125%"><tspan
+       id="text15144"><tspan
          sodipodi:role="line"
          id="tspan15146"
          x="-211.89413"
-         y="1213.6371">apl.json</tspan></text>
+         y="1213.6371"
+         style="font-size:80px;line-height:1.25">apl.json</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="197.2834"
        y="1215.9619"
-       id="text15163"
-       sodipodi:linespacing="125%"><tspan
+       id="text15163"><tspan
          sodipodi:role="line"
          id="tspan15165"
          x="197.2834"
-         y="1215.9619">FormFactor.json</tspan></text>
+         y="1215.9619"
+         style="font-size:80px;line-height:1.25">FormFactor.json</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="908.26849"
        y="1220.0024"
-       id="text15167"
-       sodipodi:linespacing="125%"><tspan
+       id="text15167"><tspan
          sodipodi:role="line"
          id="tspan15169"
          x="908.26849"
-         y="1220.0024">thickness.json</tspan></text>
+         y="1220.0024"
+         style="font-size:80px;line-height:1.25">thickness.json</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1623.4565"
        y="1215.9619"
-       id="text15171"
-       sodipodi:linespacing="125%"><tspan
+       id="text15171"><tspan
          sodipodi:role="line"
          id="tspan15173"
          x="1623.4565"
-         y="1215.9619">quality.json</tspan></text>
+         y="1215.9619"
+         style="font-size:80px;line-height:1.25">quality.json</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-1349.5543"
        y="997.71948"
-       id="text7822-9"
-       sodipodi:linespacing="125%"><tspan
+       id="text7822-9"><tspan
          sodipodi:role="line"
          id="tspan7824-7"
          x="-1349.5543"
          y="997.71948"
-         style="font-size:80px">calcOrderParameters.py</tspan></text>
+         style="font-size:80px;line-height:1.25">calcOrderParameters.py</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10.15552235;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m -902.57524,1023.5356 0,77.794"
@@ -920,15 +962,15 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-287.75211"
        y="996.21564"
-       id="text16089"
-       sodipodi:linespacing="125%"><tspan
+       id="text16089"><tspan
          sodipodi:role="line"
          id="tspan16091"
          x="-287.75211"
-         y="996.21564">calcAPL.py</tspan></text>
+         y="996.21564"
+         style="font-size:80px;line-height:1.25">calcAPL.py</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.80500007;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6168-9-9-4)"
        d="m -99.843499,1104.6837 0,20.1609"
@@ -946,15 +988,15 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="869.88263"
        y="996.21564"
-       id="text16535"
-       sodipodi:linespacing="125%"><tspan
+       id="text16535"><tspan
          sodipodi:role="line"
          id="tspan16537"
          x="869.88263"
-         y="996.21564">calc_thickness.py</tspan></text>
+         y="996.21564"
+         style="font-size:80px;line-height:1.25">calc_thickness.py</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:9.1861763;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1212.3243,1031.0598 0,63.6519"
@@ -972,15 +1014,15 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="187.0195"
        y="1002.2765"
-       id="text17193"
-       sodipodi:linespacing="125%"><tspan
+       id="text17193"><tspan
          sodipodi:role="line"
          id="tspan17195"
          x="187.0195"
-         y="1002.2765">FormFactors.py</tspan></text>
+         y="1002.2765"
+         style="font-size:80px;line-height:1.25">FormFactors.py</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:9.57972622;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 479.96375,842.40634 0,69.22263"
@@ -998,15 +1040,15 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:80px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="1619.4158"
        y="1004.2968"
-       id="text17757"
-       sodipodi:linespacing="125%"><tspan
+       id="text17757"><tspan
          sodipodi:role="line"
          id="tspan17759"
          x="1619.4158"
-         y="1004.2968">QualityEvaluation.py</tspan></text>
+         y="1004.2968"
+         style="font-size:80px;line-height:1.25">QualityEvaluation.py</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:9.57972622;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1936.6841,850.95023 0,69.2226"
