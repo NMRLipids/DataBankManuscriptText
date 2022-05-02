@@ -1,0 +1,36 @@
+set encoding utf8 
+set size 2.15,0.75
+set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 #size 7.0,10.0
+set output "../POPE_vs_POPC_APL.eps"
+#set yrange [0:0.275] 
+set xrange [-3:103] 
+#set ytic 0.05
+set ytic font ",30"
+set xtic font ",30"
+set ylabel "Area per lipid (Å^2)" font ",40" offset -3.0,0
+set xlabel "Fraction of POPE in POPC" font ",40" offset -0.0,-1.0
+#set xtics ("{/Symbol b}" 1, "{/Symbol a}" 2, "g_{3R}" 3, "g_{3S}" 4, "g_{2}" 5, "g_{1R}" 6, "g_{1S}" 7)
+#set xtics ("{/Symbol b}" 1, "{/Symbol a}" 2, "g_{3}" 3, "g_{2}" 4, "g_{1}" 5)
+#set key box linestyle 1 linecolor rgb 'black'
+set key at graph 1.53,1.0  maxcols 1 maxrows 10 font ",25" spacing 1.8
+
+#set multiplot layout 2,1
+#set yrange [-0.01:0.275]
+
+#set label "Improving quality of POPS based on sn-1 chain" at screen 2.45,0.73 font ",23" rotate by -90
+#set label "order parameters from the NMRlipids databank" at screen 2.4,0.73 font ",23" rotate by -90
+
+#set arrow from screen 2.3,0.1 to screen 2.3,0.7 lw 15 head filled size screen 0.05,15 
+
+set multiplot
+set size 1.45,0.7
+set origin 0.08,0.03
+plot "../../../DatabankExercises/APL/results/POPE_in_POPC/T310K_Slipids.dat" using 1:2 with linespoint title 'Slipids (310 K)' pt 5 lw 8 ps 4.0 lc rgb '#7AEE9E' ,\
+     "../../../DatabankExercises/APL/results/POPE_in_POPC/T298K_Slipids.dat" using 1:2 with linespoint title 'Slipids (298 K)' pt 4 lw 8 ps 4.0 lc rgb '#7AEE9E' ,\
+     "../../../DatabankExercises/APL/results/POPE_in_POPC/T310K_CHARMM36.dat" using 1:2 with linespoint title 'CHARMM36 (310 K)' pt 5 ps 4.0 lw 8 lc rgb '#0088BF' ,\
+     "../../../DatabankExercises/APL/results/POPE_in_POPC/T300K_CHARMM36.dat" using 1:2 with linespoint title 'CHARMM36 (300 K)' pt 4 ps 4.0 lw 8 lc rgb '#0088BF' ,\
+     "../../../DatabankExercises/APL/results/POPE_in_POPC/T300K_MacRog.dat" using 1:2 with linespoint title 'MacRog (300 K)' pt 4 lw 8 ps 4.0 lc rgb '#00A368' ,\
+     "../../../DatabankExercises/APL/results/POPE_in_POPC/T310K_Lipid17.dat" using 1:2 with linespoint title 'Lipid17 (310 K)' pt 5  lw 8 ps 4.0 lc rgb '#FFD300' ,\
+
+#unset multiplot
+
