@@ -241,26 +241,47 @@ Molecule and atom names in each simulation are connected to the unique naming co
 
 \subsection{Quality evaluation}
 
-Quality of conformational ensembles of lipid molecules in simulations are evaluated by estimating the average probability of C-H bond order parameters to agree with the values from NMR experiments. 
+Quality of conformational ensembles of lipid molecules in simulations are evaluated by estimating
+the average probability of C-H bond order parameters to agree with the values from NMR experiments. 
 %As a first step, the quality of each order parameter is evaluated using the negative logarithm of probability to find the simulated order parameter within the experimental error bars
 %\begin{equation}
 %    S_q = -\log_{10}(P),    
 %\end{equation}
-Because each C-H bond order parameter is calculated as an average over individual lipids in a simulation and conformational ensembles of lipids are assumed to be independent, the random variable
-\begin{equation}
-    \frac{\bar{X}-\mu}{S/\sqrt{n}},
+Because each C-H bond order parameter is calculated as an average over individual lipids in a simulation
+and conformational ensembles of individual lipids can be assumed to be independent, the random variable
+\begin{equation}\label{studentT}
+    \frac{\bar{X}-\mu}{s/\sqrt{n}},
 \end{equation}
-where $\bar{X}$ is the sample mean, $S$ is the sample variance and $n$ is the sample size (number of lipids), has a Student's t-distribution with $n-1$ degrees of freedom and the mean of $\mu$.
+where $\bar{X}$ is the sample mean (order parameter calculated from simulations),
+$s$ is the sample variance (variance of order parameters in different lipids)
+and $n$ is the sample size (number of lipids),
+has a Student's t-distribution with $n-1$ degrees of freedom and the mean of $\mu$.
+Because lipid bilayer simulations contain at least dozens of lipids,
+the Student's t-distribution could be safely approximated with a normal distribution in here.
+However, normal distribution gives values below the numerical accuracy of computers when values
+are far away from the mean which leads to problems when evaluating simulations with poor performance.
+To avoid such numerical instability, we use the first order Student's t-distribution for the equation \ref{studentT}.
 
-
-where the probability is calculated from the normal distribution
-\begin{equation}\label{gaussian}
-    P = \int_{S_{\rm exp}-\Delta S_{\rm exp}}^{S_{\rm exp}+
-    \Delta S_{\rm exp}}  \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2} {\rm d}x.
+We estimate the probability for the simulation order parameter to locate within experimental
+error bars from equation
+\begin{equation}\label{probability}
+  P = T(S_{\rm exp}+\Delta S_{\rm exp}) - T(S_{\rm exp}-\Delta S_{\rm exp}),
 \end{equation}
-$S_{\rm exp}$ and $\Delta S_{\rm exp}$ are experimental order parameter and its error, and $\mu$ and $\sigma$ are the mean order parameter and its standard deviation from simulations. The quality measure $S_q$ approaches to zero when probability for agreement between simulation and experimental results approach one, and increases when simulated and experimental values diverge. The accuracy of $\pm$0.02 is currently assumed for all experimental order parameters~\cite{ollila16}. Because phospholipids sample their conformational ensemble within nanosecond timescale~\cite{ferreira15}, all simulations in the databank would be sufficiently long to sample the realistic conformational phase of individual lipids. However, some force fields exhibit too slow dynamics which leads to large error bars in order parameter values~\cite{antila21a}. Because large error bars widen the gaussian distribution in Eq.~\ref{gaussian} thereby artificially increasing the probability to find the simulated value within experimental error bars, the order parameters with error bars larger than the experimental error 0.02 are not included in the quality evaluation.
+where T is the first order Student's t-distribution shifted to $\bar{X}$ and
+scaled with $s$. 
+%where the probability is calculated from the normal distribution
+%\begin{equation}\label{gaussian}
+%    P = \int_{S_{\rm exp}-\Delta S_{\rm exp}}^{S_{\rm exp}+
+%    \Delta S_{\rm exp}}  \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2} {\rm d}x.
+%\end{equation}
+%$S_{\rm exp}$ and $\Delta S_{\rm exp}$ are experimental order parameter and its error, and $\mu$ and $\sigma$ are the mean order parameter and its standard deviation from simulations. The quality measure $S_q$ approaches to zero when probability for agreement between simulation and experimental results approach one, and increases when simulated and experimental values diverge.
+The error of $\Delta S_{\rm exp} = 0.02$ is currently assumed for all experimental order parameters~\cite{ollila16}. Because phospholipids sample their conformational ensemble within nanosecond timescale~\cite{ferreira15}, all simulations in the databank would be sufficiently long to sample the realistic conformational phase of individual lipids. However, some force fields exhibit too slow dynamics which leads to large error bars in order parameter values~\cite{antila21a}. Because large error bars widen the Student's t-distribution in Eq.~\ref{probability} thereby artificially increasing the probability to find the simulated value within experimental error bars, the order parameters with error bars larger than the experimental error 0.02 are not included in the quality evaluation.
 
-The quality of separate fragments in each lipid type within a simulation are then evaluated by averaging individual order parameter qualities over C-H bond belonging to that fragment and dividing this with the percentage of order parameters for which the quality is available within the fragment, $p$
+The quality of separate fragments in each lipid type within a simulation
+are then estimated by averaging the propabilities for individual C-H bond order parameters
+to locate within experimental errors
+%qualities over  belonging to that fragment
+and dividing this with the percentage of order parameters for which the quality is available within the fragment, $p$
 \begin{equation}
     S_q^{\rm frag}[{\rm lipid}] = \frac{\langle S_q[{\rm lipid}]\rangle_{\rm frag}}{p_{\rm frag}[{\rm lipid}]},
 \end{equation}
