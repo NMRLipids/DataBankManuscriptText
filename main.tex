@@ -241,34 +241,51 @@ Molecule and atom names in each simulation are connected to the unique naming co
 
 \subsection{Quality evaluation}
 
-Quality of conformational ensembles of lipid molecules in simulations are evaluated by estimating
-the average probability of C-H bond order parameters to agree with the values from NMR experiments. 
+The quality of conformational ensembles of individual lipid molecules in simulations are evaluated using the C-H bond order parameters which can be directly compared with robust experimental data~\cite{ollila16}.
+%The C--H bond order parameters were calculated directly
+%from the carbon and hydrogen positions using the 
+%definition
+The order parameters are defined as
+\begin{equation}\label{OP}
+S_{\rm CH}=\frac{1}{2}\left\langle 3\cos^2\theta -1 \right\rangle,
+\end{equation}
+where $\theta$ is the angle between the C--H bond and the membrane normal
+%(taken to align with $z$, with bilayer periodicity in the $xy$-plane).
+and angular brackets denote the ensemble average, i.e. average over all sampled configurations of all lipids in a simulation.
+%by estimating
+%the average probability of C-H bond order parameters to agree with the values from NMR experiments. 
 %As a first step, the quality of each order parameter is evaluated using the negative logarithm of probability to find the simulated order parameter within the experimental error bars
 %\begin{equation}
 %    S_q = -\log_{10}(P),    
 %\end{equation}
-Because each C-H bond order parameter is calculated as an average over individual lipids in a simulation
-and conformational ensembles of individual lipids can be assumed to be independent, the random variable
-\begin{equation}\label{studentT}
-    \frac{\bar{X}-\mu}{s/\sqrt{n}},
-\end{equation}
-where $\bar{X}$ is the sample mean (order parameter calculated from simulations),
-$s$ is the sample variance (variance of order parameters in different lipids)
-and $n$ is the sample size (number of lipids),
-has a Student's t-distribution with $n-1$ degrees of freedom and the mean of $\mu$.
-Because lipid bilayer simulations contain at least dozens of lipids,
-the Student's t-distribution could be safely approximated with a normal distribution in here.
-However, normal distribution gives values below the numerical accuracy of computers when values
-are far away from the mean which leads to problems when evaluating simulations with poor performance.
-To avoid such numerical instability, we use the first order Student's t-distribution for the equation \ref{studentT}.
-
-We estimate the probability for the simulation order parameter to locate within experimental
-error bars from equation
+Because conformational ensembles of individual lipids are independent in a simulation of a fluid lipid bilayer, the number of independent sample points for each C-H bond, $n$, equals the number of lipids in a simulation. Denoting the $S_{\rm CH}$ from Eq.~\ref{OP} as the sample mean and $s$ its variance calculated over individual lipids, 
+%the probability the true mean of the order parameter is given by the %Student's t-distribution 
+%Because each C-H bond order parameter is calculated as an average over individual lipids in a simulation
+%\begin{equation}\label{studentT}
+$\frac{S_{\rm CH}-\mu}{s/\sqrt{n}}$
+%\end{equation}
+%where $\bar{X}$ is the sample mean (order parameter calculated from simulations),
+%$s$ is the sample variance (variance of order parameters in different lipids)
+%and 
+%has a 
+has a Student's t-distribution with $n-1$ degrees of freedom, where $\mu$ is the real mean of the order parameter. 
+%shifted by $S_{\rm CH}$ and scaled by $s/\sqrt{n}$.
+Because lipid bilayer simulations contain at least dozens of lipids, the Student's t-distribution could be safely approximated with a normal distribution. However, when calculating the probability for a simulation to locate within experimental order parameters, the normal distribution gives values below the numerical accuracy of computers for simulations values far from experiments. To avoid such numerical instability, we use the first order Student's t-distribution.% for the equation \ref{studentT}.
+Therefore, we estimate the probability for the simulation order parameter to locate within experimental error bars from equation
 \begin{equation}\label{probability}
-  P = T(S_{\rm exp}+\Delta S_{\rm exp}) - T(S_{\rm exp}-\Delta S_{\rm exp}),
+  P = f \left( \frac{S_{\rm CH} - (S_{\rm exp}+\Delta S_{\rm exp})}{s/\sqrt{n}} \right) - f \left( \frac{S_{\rm CH} - (S_{\rm exp}-\Delta S_{\rm exp})}{s/\sqrt{n}} \right),
 \end{equation}
-where T is the first order Student's t-distribution shifted to $\bar{X}$ and
-scaled with $s$. 
+where f(t) is the first order Student's t-distribution.
+% shifted to $\bar{X}$ and scaled with $s$. 
+
+
+%We estimate the probability for the simulation order parameter to locate within experimental
+%error bars from equation
+%\begin{equation}\label{probability}
+%  P = T(S_{\rm exp}+\Delta S_{\rm exp}) - T(S_{\rm exp}-\Delta S_{\rm exp}),
+%\end{equation}
+%where T is the first order Student's t-distribution shifted to $\bar{X}$ and
+%scaled with $s$. 
 %where the probability is calculated from the normal distribution
 %\begin{equation}\label{gaussian}
 %    P = \int_{S_{\rm exp}-\Delta S_{\rm exp}}^{S_{\rm exp}+
@@ -277,21 +294,17 @@ scaled with $s$.
 %$S_{\rm exp}$ and $\Delta S_{\rm exp}$ are experimental order parameter and its error, and $\mu$ and $\sigma$ are the mean order parameter and its standard deviation from simulations. The quality measure $S_q$ approaches to zero when probability for agreement between simulation and experimental results approach one, and increases when simulated and experimental values diverge.
 The error of $\Delta S_{\rm exp} = 0.02$ is currently assumed for all experimental order parameters~\cite{ollila16}. Because phospholipids sample their conformational ensemble within nanosecond timescale~\cite{ferreira15}, all simulations in the databank would be sufficiently long to sample the realistic conformational phase of individual lipids. However, some force fields exhibit too slow dynamics which leads to large error bars in order parameter values~\cite{antila21a}. Because large error bars widen the Student's t-distribution in Eq.~\ref{probability} thereby artificially increasing the probability to find the simulated value within experimental error bars, the order parameters with error bars larger than the experimental error 0.02 are not included in the quality evaluation.
 
-The quality of separate fragments in each lipid type within a simulation
-are then estimated by averaging the propabilities for individual C-H bond order parameters
-to locate within experimental errors
-%qualities over  belonging to that fragment
-and dividing this with the percentage of order parameters for which the quality is available within the fragment, $p$
+The qualities of different fragments within each lipid type in a simulation, $P^{\rm frag}[{\rm lipid}]$, are then estimated by averaging the probabilities for individual C-H bond order parameters to locate within experimental errors according to Eq.~\ref{probability}, and dividing the average with the percentage of order parameters for which the quality is available within the fragment, $p_{\rm frag}[{\rm lipid}]$,
 \begin{equation}
-    S_q^{\rm frag}[{\rm lipid}] = \frac{\langle S_q[{\rm lipid}]\rangle_{\rm frag}}{p_{\rm frag}[{\rm lipid}]},
+    P^{\rm frag}[{\rm lipid}] = \frac{\langle P[{\rm lipid}]\rangle_{\rm frag}}{p_{\rm frag}[{\rm lipid}]},
 \end{equation}
  where frag can be {\it sn}-1, {\it sn}-2, headgroup or total (all order parameters within a molecule). The overall quality of different fragments in a simulation are then defined as a molar fraction weighted average over different lipid components
 \begin{equation}
-    S_q^{\rm frag} = \sum_{\rm lipid} \chi_{\rm lipid} \langle S_q^{\rm frag}[{\rm lipid}]\rangle_{\rm lipid} ,
+    P^{\rm frag} = \sum_{\rm lipid} \chi_{\rm lipid} P^{\rm frag}[{\rm lipid}],
 \end{equation}
 where $\chi_{\rm lipid}$ is the molar fraction of a lipid in the bilayer.
 
-Qualities of form factors were evaluated with the same approach that was used in SIMtoEXP program~\cite{kucerka10}. Because experiments give form factors only in relative scale those were scaled to the simulation data with absolute scale using equation
+Qualities of form factors were evaluated using the same approach as in SIMtoEXP program~\cite{kucerka10}. Because experiments give form factors only in relative intensity scale, they were scaled to the simulation data using equation
 \begin{equation}
     k_e = \frac{\sum_{i=1}^{N_q} \frac{|F_s(q_i)||F_e(q_i)|}{(\Delta F_e(q_i))^2}}{\sum_{i=1}^{N_q} \frac{|F_e(q_i)|^2}{(\Delta F_e(q_i))^2}}.
 \end{equation}
