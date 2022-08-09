@@ -322,6 +322,8 @@ The README.yaml files contain all the essential information to perform arbitrary
 
 While the order parameters, form factors, area per lipid and thickness are stored within the NMRlipids databank (\url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations}), further analyses can be conventiently stored in separate repositories with the same folder structure based on hash identities of trajectory and topology files. For example, results from further analyses performed here are stored in folders at \url{https://github.com/NMRLipids/DataBankManuscript/tree/main/Data}. Such organization of the data enables further upcycling of the analyzed data as similarly to the original NMRlipids databank repository.
 
+For the permeation of water through membranes, the number of permeation events in each trajectory was first calculated using the code by Camilo et al.~\cite{camilo2022}, available at~\url{https://github.com/crobertocamilo/MD-permeation}. The permeation was then calculated from equation $P=r/2c_w$, where $r$ is the rate per time and area, and $c_w$ is the concentration of water in bulk with the value of 33.3679\,(nm)$^{-3}$~\cite{venable19}.
+
 %\subsection{Indexing the simulation data}
 
 %\subsubsection*{AddData.py}
