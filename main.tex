@@ -95,8 +95,38 @@ The top ranking simulations in Figs.~\ref{fig:quality} b) and d) demonstrate als
 
 The power of NMRlipids quality metrics in selecting the best model for particular application is demontrated in Fig.~\ref{fig:quality} c) where the area per lipids of POPC:POPE mixtures from different force fields are shown and quality of POPE simulation in different force fields are evaluated. Among the simulations available in the NMRlipids databank, the Slipids force field gives the best quality in terms of acyl chain order parameters and form factor, and predicts the largest area per molecule for POPE and smallest difference with POPC. In conclusion, simulations with Slipids is the most reliable force field for membrane packing in POPC:POPE mixtures althought its glycerol backbone is not accurately modelled. Similar comparisons utilizing the preliminary data from the NMRlipids databank have concluded that Slipids is relatively good model also for mixtures of charged POPC:POPS membranes, although models with better counterion binding have higher quality, but CHARMM36 is the best to study differences in headgroup conformational ensembles between different lipid types. Understanding such complex picture of lipid bilayer MD simulation quality would not be possible without automatic quality evaluation of large sets of simulations enabled by the NMRlipids databank.
 
-\subsection{NMRlipids databank reveals correlations between membrane properties}
-The power of NMRlipids databank to find correlation between membrane properties is exemplified in Fig.~\ref{??} showing how water diffusion through and along the membrane correlate with different properties of systems. While NMRlipids databank enables similar analyses for any membrane properties, these are selected due to their relevance in the development of MRI imaging methods~\cite{??}.  
+\subsection{Water permeation through membranes}
+Dependence of water permeation rate through membranes on the membrane properties has been under great interest because
+it serves as a proxy for permeation of other hydrophilic molecules such as drugs \cite{??}, and is also relevant in understanding
+MRI imaging \cite{??}. Several models for water permeation are formulated based on experiments and simulations predicting
+different dependencies on membrane properties but concensus on how water permeability depends on basic membrane properties,
+such as area per lipid and thickness, or molecular composition has not yet been reached \cite{shinoda16,venable19,??}.
+This is partially because collection of experimental and simulation data for water permeability from membranes with
+wide range of properties has been tedious.
+Here we demonstrate the power of the NMRlipids databank by analysing how the water permeability through lipid bilayers depend
+on area per lipid, thickness and temperature. The results shown in Fig.~\ref{fig:permeability} are calculated by averaging over
+all the simulations in the databank with the same variable under interest (area per lipid, thickness or temperature).
+%to find correlation between membrane properties is exemplified in Fig.~\ref{??} showing how water diffusion through and along the membrane correlate with different properties of systems. While NMRlipids databank enables similar analyses for any membrane properties, these are selected due to their relevance in the development of MRI imaging methods~\cite{??}.  
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=88mm]{Figures/permeation.pdf}
+    \caption{Water permeation through lipid membranes analyzed from the databank as a function of 
+      a) area per lipid,
+      b) thickness,
+      and c) temperature. 
+      Inserts in a) and b) show the region where the dependence could be considered approximately linear.
+      Insert in c) shows the Arrhenius plot of permeation ($\ln$ (P) vs. 1/T) that gives 17\,$\pm$\,4\,k$_b$T for the average activation energy for water permeation through lipid bilayer.}
+    \label{fig:permeability}
+\end{figure}
+
+The water permeabilities observed in the databank vary between 0.3 and 322\,$\mu$m/s with the mean and median of 14\,$\mu$m/s and 8\,$\mu$m/s, respectively.
+These values are within the range of experimentally reported values and the mean is the same order of magnitude as the diffusive permeability which is 1-2 orders of 
+magnitude slower than osmotic permeability \cite{jansen95,??}. While linear dependence of permeability on both area per lipid and thickness have been proposed based on
+simulations or experiments \cite{mathai08,frallicciardi22}, our results suggest significantly stronger dependence for thicknesses below 3.9\,nm and areas above 69\,Å$^2$.
+Nevertheless, the dependence may appear linear above and below these values as shown in the insets of Figs. \label{fig:permeability} a) and b).
+As expected, the permeability increases with increasing temperature in Figs. \label{fig:permeability} c).
+The Arrhenius plot gives 17\,$\pm$\,4\,k$_b$T for the average energy barrier for the water permeation. 
 
 
 %\subsection{Spin relaxation rates of confined water close to membranes}
