@@ -154,7 +154,7 @@ Structure of the NMRlipids databank is illustrated in Fig.~\ref{DatabankStructur
     TPR & Name of the topology file found from DOI (trp file in the case of Gromacs) & \\
     PREEQTIME & Pre-equilibrate time simulated before the uploaded trajectory in nanoseconds. \tablefootnote{For example, if you upload 100-200 ns part of total 200 ns simulation, this should value should be 100.} & \\
     TIMELEFTOUT & Equilibration period in the uploaded trajectory that should be discarded in analyses. \tablefootnote{For example, if you upload 0-200 ns part of total 200 ns simulation where the first 100 ns should be considered as an equilibration, this value should be 100.} \\
-    COMPOSITION & Molecules names used in the simulation and corresponding mapping files (see ??) & \\
+    COMPOSITION & Molecules names used in the simulation and corresponding mapping files (see section \ref{naming}) & \\
     DIR\_WRK & Temporary working directory in your local computer. \\
     UNITEDATOM\_DICT & Information for constucting hydrogens for united atom simulations, empty for all atom simulations & \\
     TYPEOFSYSTEM & Lipid bilayer or something else & \\
@@ -200,7 +200,7 @@ if molar concentrations of all molecules are within $\pm$5 percentage units, cha
     DOI & DOI of the publication related to the experimental data. \\
     TEMPERATURE & Temperature of the experiment. \\
     MOLAR\_FRACTIONS & Dictionary of molar fractions of bilayer components \\
-    ION\_CONCENTRATIONS & Dictionary of ion concentrations of the system (defined as ??) \\
+    ION\_CONCENTRATIONS & Dictionary of ion concentrations of the system \\% (defined as ??) \\
     TOTAL\_LIPID\_CONCENTRATION & Total concentration of lipid components. If exact concentration is not known, but experiments are performed in excess water, 'full hydration' can be given. \\
     COUNTER\_IONS & Type of counter ions if present.
 \end{tabular}
@@ -210,7 +210,7 @@ if molar concentrations of all molecules are within $\pm$5 percentage units, cha
 
 Because README.yaml contains all the essential information on each simulation, arbitrary analyses can be automatically performed over all the simualtions in the NMRlipids databank. In addition to the order parameters for each C-bonds and x-ray scattering form factors used in the quality evaluation, the NMRlipids databank contains the area per lipid and thickness calculated from all simulations in the databank. These results are stored in the same folders as the README.yaml files in \url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations}.
 
-\subsection{Molecule and atom naming convention}
+\subsection{Molecule and atom naming convention} \label{naming}
 
 Because universal convention for lipid molecules and atoms therein has not been defined, the naming conventions vary between authors and force fields. To enable automatic analyses over large sets of simulation in the NMRlipids databank, we have defined unique naming conventions for lipid molecules and atoms. The abbreviations of molecule names used in the NMRlipids databank are listed in table~\ref{tab:abbreviations}. The unique atom names for each molecule and corresponding names in each simulation are defined using mapping files introduced in the NMRlipids project (\url{https://nmrlipids.blogspot.com/2022/04/new-yaml-format-of-mapping-files.html}). 
 
