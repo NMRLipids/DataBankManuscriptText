@@ -96,17 +96,14 @@ The top ranking simulations in Figs.~\ref{fig:quality} b) and d) demonstrate als
 The power of NMRlipids quality metrics in selecting the best model for particular application is demontrated in Fig.~\ref{fig:quality} c) where the area per lipids of POPC:POPE mixtures from different force fields are shown and quality of POPE simulation in different force fields are evaluated. Among the simulations available in the NMRlipids databank, the Slipids force field gives the best quality in terms of acyl chain order parameters and form factor, and predicts the largest area per molecule for POPE and smallest difference with POPC. In conclusion, simulations with Slipids is the most reliable force field for membrane packing in POPC:POPE mixtures althought its glycerol backbone is not accurately modelled. Similar comparisons utilizing the preliminary data from the NMRlipids databank have concluded that Slipids is relatively good model also for mixtures of charged POPC:POPS membranes, although models with better counterion binding have higher quality, but CHARMM36 is the best to study differences in headgroup conformational ensembles between different lipid types. Understanding such complex picture of lipid bilayer MD simulation quality would not be possible without automatic quality evaluation of large sets of simulations enabled by the NMRlipids databank.
 
 \subsection{Water diffusion anisotropy in membrane systems}
-The anisotropy of water diffusion in the direction of membrane surface and through the membrane is utilized in MRI imaging \cite{??} and regulates the drug translocation particularly in skin \cite{hansen13,wen18,nitsche19,roberts21,??}. The importance of membrane properties on the anisotropic diffusion has been recognized and several models linking the water permeation with the membrane properties have been formulated \cite{??}, yet the consensus on how water permeability depends on basic membrane properties, such as area per lipid and thickness, or molecular composition has not yet been reached \cite{nitsche13,nitsche16,shinoda16,venable19,??}. 
-This is partially because collection of experimental and simulation data for water permeability from membranes with
-wide range of properties has been tedious.
-Here we demonstrate the power of the NMRlipids databank by analysing how the water permeability through lipid bilayers depend
-on area per lipid, thickness and temperature. The results shown in Fig.~\ref{fig:permeability} are calculated by averaging over
-all the simulations in the databank with the same variable under interest (area per lipid, thickness or temperature).
-%to find correlation between membrane properties is exemplified in Fig.~\ref{??} showing how water diffusion through and along the membrane correlate with different properties of systems. While NMRlipids databank enables similar analyses for any membrane properties, these are selected due to their relevance in the development of MRI imaging methods~\cite{??}.  
+The anisotropic water diffusion through and along of membranes is utilized in MRI imaging \cite{??} and plays a role in the drug translocation through biological material, particularly in skin \cite{hansen13,wen18,nitsche19,roberts21,??}. Dependencies between membrane properties, water permeablity, and anisotropic water diffusion have been recognized \cite{??} but consensus on how water permeability depends on membrane properties, such as area per lipid and thickness, or molecular composition, has not yet been reached despite of several available models~\cite{nitsche13,nitsche16,shinoda16,venable19,??}. MD simulations can be used to elucidate such dependencies, but systematic collection of sufficient amount of data has been challenging because few water permeation events are typically observed in a single MD simulation trajectory \cite{??}. Nevertheless, averaging over large amounts of data available in the NMRlipids databank enables to study the trends of water permeation upon changing memebrane properties.
+
+%averaging Here we demonstrate the power of the NMRlipids databank by analysing how 
+Water permeabilities calculated from all the simulations in the NMRlipids databank as a function of area per lipids, thickness, and acyl chain order are shown in  Fig.~\ref{fig:permeability} (a-c). To illustrate how permeability depends these properties, average over systems with fixed values of area per lipids, thickness, and acyl chain order are also shown in the figure. Permeability increases with increasing area per lipid and decreases with increasing membrane thickness and acyl chain order. Previous simulation and experimental studies have reported linear dependence of permeability on both area per lipid and thickness for limited set of lipid mixtures but not always for all types of lipid mixtures \cite{mathai08,frallicciardi22}. Our results suggest stronger dependence for thicknesses below 3.9\,nm and areas above 69\,Å$^2$, but the dependence may appear linear above and below these values as shown in the insets of Figs. \label{fig:permeability} a) and b). As expected, the permeability increases with increasing temperature in Figs. \label{fig:permeability} d). The Arrhenius plot gives 17\,$\pm$\,4\,k$_b$T for the average energy barrier for the water permeation. The values for water permeabilities from simulations in the databank vary between 0.3 and 322\,$\mu$m/s with the mean and median of 14\,$\mu$m/s and 8\,$\mu$m/s, respectively. These values are within the range of experimentally reported values and the mean is the same order of magnitude as the diffusive permeability which is 1-2 orders of magnitude slower than osmotic permeability \cite{jansen95,??}. Clear dependencies of permeability on hydration level, charged lipid fraction, cholesterol fraction or POPE fraction were not observed, although weak decrease for the latter two may be visible.
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=88mm]{Figures/permeation.pdf}
+    \includegraphics[width=180mm]{Figures/permeation2.pdf}
     \caption{Water permeation through lipid membranes analyzed from the databank as a function of 
       a) area per lipid,
       b) thickness,
@@ -116,29 +113,7 @@ all the simulations in the databank with the same variable under interest (area 
     \label{fig:permeability}
 \end{figure}
 
-The water permeabilities observed in the databank vary between 0.3 and 322\,$\mu$m/s with the mean and median of 14\,$\mu$m/s and 8\,$\mu$m/s, respectively.
-These values are within the range of experimentally reported values and the mean is the same order of magnitude as the diffusive permeability which is 1-2 orders of 
-magnitude slower than osmotic permeability \cite{jansen95,??}. While linear dependence of permeability on both area per lipid and thickness have been proposed based on
-simulations or experiments \cite{mathai08,frallicciardi22}, our results suggest significantly stronger dependence for thicknesses below 3.9\,nm and areas above 69\,Å$^2$.
-Nevertheless, the dependence may appear linear above and below these values as shown in the insets of Figs. \label{fig:permeability} a) and b).
-As expected, the permeability increases with increasing temperature in Figs. \label{fig:permeability} c).
-The Arrhenius plot gives 17\,$\pm$\,4\,k$_b$T for the average energy barrier for the water permeation. 
-
-
-%\subsection{Spin relaxation rates of confined water close to membranes}
-
-%Usefulness of the databank beyond MD simulation experts is demonstrated by analysing water spin relaxation times close to bilayers which are used in MRI imaging.
-
-%Example text under a subsection. Bulleted lists may be used where appropriate, e.g.
-
-%\begin{itemize}
-%\item First item
-%\item Second item
-%\end{itemize}
-
-%\subsubsection*{Third-level section}
- 
-%Topical subheadings are allowed.
+To analyze the anisotropic water diffusion, we also calculated the water diffusion along the membrane. The results at different hydration levels are shown in Fig.~\ref{fig:permeability} e) together with the experimental data~\cite{??}. The experimental water diffusion increases with increasing hydration level toward the value for bulk water (?? in ??K). Simulations overestimate the experimental bulk value approximately with the factor of 2 at high hydration levels which is not surprising as the most common water model used in membrane simulations, TIP3P, overestimates the bulk water diffusion. However, simulation results are closer to experiments with low hydration levels. To estimate the diffusion anistoropy, we translated the water permation to diffusion coefficent through multilamellar stack using the Tanner equation~\cite{??}. The results in    
 
 \section{Discussion}
 
