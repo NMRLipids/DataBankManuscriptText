@@ -4,6 +4,14 @@
 \usepackage{graphicx}
 \usepackage{tablefootnote}
 
+\makeatletter
+\newcommand*{\centerfloat}{%
+  \parindent \z@
+  \leftskip \z@ \@plus 1fil \@minus \textwidth
+  \rightskip\leftskip
+  \parfillskip \z@skip}
+\makeatother
+
 \title{SUPPLEMENTARY INFORMATION: NMRlipids Databank: Overlay Databank of Lipid Membrane Simulations Arising from Open Collaboration}
 
 \author[1]{Anne Kiirikki}
@@ -35,6 +43,17 @@
 \thispagestyle{empty}
 
 %\noindent Please note: Abbreviations should be introduced at the first mention in the main text – no abbreviations lists. Suggested structure of main text (not enforced) is provided below.
+
+\pagebreak
+\section{Dependence of form factor and order parameters in the size of simulation}
+
+\begin{figure}[!h]
+    \centerfloat
+    \includegraphics[width = 240mm]{Figures/SizeDependence.pdf}
+    \caption{Dependence of form factor, electron density profiles along membrane normal, and C-H bond orderparameters (from top to bottom) on simulation box size with different cholesterol concentration. }
+    \label{fig:sizedependence}
+\end{figure}
+
 
 \pagebreak
 \section{Water permeation through membranes}
