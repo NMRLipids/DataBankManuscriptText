@@ -82,7 +82,7 @@ To enable rapid evaluation and comparison of membrane MD simulation qualities, w
 
 \begin{figure}[tbp]
     \centering
-    \includegraphics[width=180mm]{Figures/quality.pdf}
+    \includegraphics[width=180mm]{Figures/quality3.pdf}
     \caption{a) Correlations between membrane area per lipid, thickness, second minima of form factor and average order parameter of the {\it sn}-1 acyl chain extracted from the NMRlipids databank. All Pearson correlation coefficients shown in bottom left corner have p-value below 0.001.
     b) Evaluation against experimental data exemplified for the simulation giving the best qualities in overall, for headgroup and x-ray scattering form factor.
     c) Change in area per lipid upon addition of POPE to POPC in different simulation extracted from the NMRlipids databank and quality evaluation table of POPE simulations.
@@ -243,6 +243,7 @@ Molecule and atom names in each simulation are connected to the unique naming co
 
 \subsection{Quality evaluation}
 
+\subsubsection{Conformational ensembles using C-H bond order parameters}
 The quality of conformational ensembles of individual lipid molecules in simulations are evaluated using the C-H bond order parameters which can be directly compared with robust experimental data~\cite{ollila16}.
 %The C--H bond order parameters were calculated directly
 %from the carbon and hydrogen positions using the 
@@ -306,15 +307,29 @@ The qualities of different fragments within each lipid type in a simulation, $P^
 \end{equation}
 where $\chi_{\rm lipid}$ is the molar fraction of a lipid in the bilayer.
 
-Qualities of form factors were evaluated using the same approach as in SIMtoEXP program~\cite{kucerka10}. Because experiments give form factors only in relative intensity scale, they were scaled to the simulation data using equation
+\subsubsection{Membrane dimensions with x-ray scattering form factors}
+While C-H bond order parameters relate to the conformational ensembles of individual lipids,
+the x-ray scattering form factors depend on membrane dimensions and density distribution~\cite{ollila16}.
+Because experiments give form factors only in relative intensity scale, they are typically scaled to the simulation data.
+Here we use the same scaling method as in SIMtoEXP program~\cite{kucerka10} where experimental form factor intensities
+are scaled by a factor defined as
 \begin{equation}
-    k_e = \frac{\sum_{i=1}^{N_q} \frac{|F_s(q_i)||F_e(q_i)|}{(\Delta F_e(q_i))^2}}{\sum_{i=1}^{N_q} \frac{|F_e(q_i)|^2}{(\Delta F_e(q_i))^2}}.
+    k_e = \frac{\sum_{i=1}^{N_q} \frac{|F_s(q_i)||F_e(q_i)|}{(\Delta F_e(q_i))^2}}{\sum_{i=1}^{N_q} \frac{|F_e(q_i)|^2}{(\Delta F_e(q_i))^2}},
 \end{equation}
-The quality of each form factor was then calculated from the equation
-\begin{equation}
-    \chi^2 = \frac{\sqrt{\sum_{i=1}^{N_q}(|F_s(q_i)|-k_e|F_e(q_i)|)^2/(\Delta F_e(q_i))^2}}{\sqrt{N_q-1}},
-\end{equation}
+%The quality of each form factor was then calculated from the equation
+%\begin{equation}
+%    \chi^2 = \frac{\sqrt{\sum_{i=1}^{N_q}(|F_s(q_i)|-k_e|F_e(q_i)|)^2/(\Delta F_e(q_i))^2}}{\sqrt{N_q-1}},
+%\end{equation}
 where $F_s$ and $F_e$ are form factors from a simulation and experiment, respectively, and summation goes over the experimentally available $N_q$ points. 
+Quality measure based on differences in simulated and experimental form factors accross available q-range is also defined in the SIMtoEXP program.
+However, as shown in Fig.~\ref{??}, the lobe heigths in the simulated form factors depend on the simulation box size,
+but locations of minima does not. Therefore, quality measure depending on lobe heights is also dependent on simulation box size.
+In order to define a quality measure which is independent on simulation box size, we measure the form factor quality based on the
+location of the first minima observed in experiments. As shown in Fig.~\ref{??}, this minima correlates well with the thickness of a membrane.
+Although the correlation in second minima would be even stronger, we have chosen to use the first minima because automatic definition
+of second minima is inaccurate in some experimental data. In practise, we first filter the fluctuations from the form factor data using
+Savitzky-Golay filter (window lenght 30 and polynomial order 1) and locate the first minima above 0.1\,$AA^2$ from both simulation and experimental data.
+The quality of a form factor is then defined as Eucledian distance between the minima in simulated and experimental form factors, $FF_q = |FF_{\rm{min}}^{\rm{sim}}-FF_{\rm{min}}^{\rm{exp}}|$. 
 
 
 
