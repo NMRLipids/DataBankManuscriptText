@@ -3,6 +3,24 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{tablefootnote}
+\usepackage{xr}
+
+\makeatletter
+\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+  \typeout{(#1)}
+  \@addtofilelist{#1}
+  \IfFileExists{#1}{}{\typeout{No file #1.}}
+}
+\makeatother
+
+
+\newcommand*{\myexternaldocument}[1]{%
+    \externaldocument{#1}%
+    \addFileDependency{#1.tex}%
+    \addFileDependency{#1.aux}%
+}
+
+\myexternaldocument{SI}
 
 \title{NMRlipids Databank: Overlay Databank of Lipid Membrane Simulations Arising from Open Collaboration}
 
@@ -55,6 +73,7 @@ The practical relevance of the NMRlipids databank is exemplified by automatic qu
 
 %Up to three levels of \textbf{subheading} are permitted. Subheadings should not be numbered.
 \subsection{Design of the NMRlipids databank}
+The practical challenges related to the distribution of large MD simulation trajectories are solved in the NMRlipids databank using the overlay structure. 
 The key idea of the overlay databank is that the storage of raw data in layer 1 is distributed in publicly available repositories or other servers with long term stability and permanent links such as digital object identifiers. The core of the databank, layer 2, contains only information on the location and content of the raw data, thereby not requiring large resources to handle and maintain. This lowers the barrier for starting such databank as well as for long term storage. The NMRlipids databank is essentially a git repository containing information on the location of raw data and its indexing with universal naming convention. In addition to all computers where the databank is developed and used, the NMRlipids databank git is stored to Zenodo server, thereby enabling a very cost effective long term storage for the databank. The databank can be used in layer 3 by accessing the raw data and information stored in the databank by employing the universal naming conventions for atoms, molecules and simulation details. The applications can be linked to the core databank (layer 2) without actually including them, thereby enabling flexible extension of the data without compromising the simplicity and lightness of the core databank.
 
 \begin{figure}
@@ -76,22 +95,31 @@ The key idea of the overlay databank is that the storage of raw data in layer 1 
 Currently the databank is composed of approximately 500 trajectories with the total length of approximately 231 microseconds of which most are contributed for the previous publications from the NMRlipids open collaboration~\cite{botan15,catte16,antila19,bacle21}. The distribution of lipids, force fields, length of the trjajectories and available binary mixtures are shown in Fig.~\ref{fig:overlay}. 
 
 \subsection{Quality evaluation of force fields}
-Quality of membrane simulations with different force fields have been evaluated against experimental data during parameterization and in separate comparison studies~\cite{botan15,ollila16,catte16,pluhackova16,perez17,leonard19}, but universal quality measure for membrane simulations is not defined and controversial results are often reported from simulations~\cite{antila22b}. The unclarities in simulation quality complicate the selection of proper simulation models for specific applications and estimation of reliability of reported simulation results, thereby being a major obstacle in many applications of membrane MD simulations.
+Quality of membrane simulations with different force fields have been evaluated against experimental data during parameterization and in separate comparison studies~\cite{botan15,ollila16,catte16,pluhackova16,perez17,leonard19}, but universal quality measure for membrane simulations is not defined and controversial results are often reported from simulations~\cite{antila22b}. The ambiguity in defining the quality of simulations complicates the selection of proper simulation parameters and estimation of the reliability of simulation results, thereby being a major obstacle in many applications of membrane MD simulations. The NMRlipids
+databank enables rapid quality evaluation of MD simulations using the quantitative quality measure for membrane simulations. The conformational ensembles of individual lipid molecules are evaluated against C-H bond order parameters from NMR experiments, which is complement by x-ray scattering form factors arising from overall membrane dimensions via electron density profile. Both of these are robust experimental measurables that can be directly connected to the simulation data~\cite{ollila16}. 
 
-To enable rapid evaluation and comparison of membrane MD simulation qualities, we define the quality measure for membrane MD simulations using the C-H bond order parameters from NMR experiments and form factors from x-ray scattering, which are robust experimental measurables that can be directly connected to the simulation data~\cite{ollila16}. C-H bond order parameters are related to the conformational ensemble of individual lipid molecules, while the form factor to arises from electron density thereby connecting to the overall structure of lipid bilayers. This is demonstrated in Fig.~\ref{fig:quality} a) showing correlations between membrane lateral density (area per lipid), thickness, minima of form factor and acyl chain order analyzed from all apporimately 500 trajectories in the NMRlipids databank. Membrane area per lipid has negative correlations with membrane order and thickness with Pearson coefficient of -0.78 and -0.49, respectively, because decreased area leads to more ordered, tightly packed and stretched acyl chains leading to thicker membranes. On the other hand, locations of form factor minima have positive correlation with the membrane area and negative correlation with the thickness. In conclusion, both x-ray scattering form factors and acyl chain order parameters from NMR are on average good proxies for membrane packing and thickness, while NMR order parameters give segmental resolution information on the quality of conformational ensembles of lipids.
+%NMRlipids databank contains also experimental order parameter and x-ray form factor data that is connected to corresponding  simulations in order to define the simulation qualities and rank them to select the suitable simulation models for particular applications. 
+The top quality simulations based on average order parameter quality are shown in Fig.~\ref{fig:quality} A and the direct comparison between the best simulation (POPC with OPLS3e) and experiments in shown in Fig.~\ref{fig:quality} D. This model reproduces the experimental data very well with the exception of third carbon in the $\it{sn}$-1 chain and carbons 8 and 9 close to double bond in $\it{sn}$-2 chain.
+%Full details of the NMRlipids quality measure for lipid bilayer simulations are given in the methods section and supplementary information.
+The top ranking simulation for the order parameter quality of POPE lipid are shown in Fig.~\ref{fig:quality} B. In this case the best overall quality is found in GROMOS-CKP simulation (direct comparison shown in Fig.~\ref{fig:quality} E, but clear discrepancies with experiments are present in this model for glycerol backbone and $\it{sn}$-2 chain. On the other hand, glycerol backbone and headgroup for POPE is best described in CHARMM36 model (direct comparison shown in Fig.~\ref{fig:quality} F), but its overall quality suffers from overestimated order in acyl chains. Scatter plots and Pearson correlation coefficients in Fig.~\ref{fig:quality} C reveal strong correlation between membrane area per lipid and thickness. The area per lipid is also strongly correlated with the average order of $\it{sn}$-1 chain, suggesting that its order parameters can used as a proxy for the area per lipid in addition to the conformational ensemble. On the other hand, the first form factor minima is correlated stronger with membrane thickness (Fig.~\ref{fig:quality} C) than with the area per lipid (Fig.~\ref{fig:QualityCorrelationsSI}). 
+
+
+ %This is demonstrated in Fig.~\ref{fig:quality} a) showing correlations between membrane lateral density (area per lipid), thickness, minima of form factor and acyl chain order analyzed from all apporimately 500 trajectories in the NMRlipids databank. Membrane area per lipid has negative correlations with membrane order and thickness with Pearson coefficient of -0.78 and -0.49, respectively, because decreased area leads to more ordered, tightly packed and stretched acyl chains leading to thicker membranes. On the other hand, locations of form factor minima have positive correlation with the membrane area and negative correlation with the thickness. In conclusion, both x-ray scattering form factors and acyl chain order parameters from NMR are on average good proxies for membrane packing and thickness, while NMR order parameters give segmental resolution information on the quality of conformational ensembles of lipids.
 
 \begin{figure}[tbp]
     \centering
     \includegraphics[width=180mm]{Figures/quality3.pdf}
-    \caption{a) Correlations between membrane area per lipid, thickness, second minima of form factor and average order parameter of the {\it sn}-1 acyl chain extracted from the NMRlipids databank. All Pearson correlation coefficients shown in bottom left corner have p-value below 0.001.
-    b) Evaluation against experimental data exemplified for the simulation giving the best qualities in overall, for headgroup and x-ray scattering form factor.
-    c) Change in area per lipid upon addition of POPE to POPC in different simulation extracted from the NMRlipids databank and quality evaluation table of POPE simulations.
-    d) Quality evaluation table showing the best 13 simulations according to the overall order parameter quality.}
+    \caption{ A) Best simulations ranked based on overall order parameter quality.
+    B) Best simulations ranked based on the overall order parameter quality of POPE lipid. 
+    C) Scatter plots and Pearson correlation coefficients for the area per lipid, thickness, and experimental observables. 
+    %second minima of form factor and average order parameter of the {\it sn}-1 acyl chain extracted from the NMRlipids databank. 
+    All correlation coefficients have p-value below 0.001. For more correlations see Fig.~\ref{fig:QualityCorrelationsSI}.
+    D)-F) Evaluation against experimental data exemplified for a simulation with the best overall order parameter quality (D), the best quality for POPE lipid (E), and the headgroup quality for POPE (F).
+    %c) Change in area per lipid upon addition of POPE to POPC in different simulation extracted from the NMRlipids databank and quality evaluation table of POPE simulations.
+    }
     \label{fig:quality}
 \end{figure}
 
-NMRlipids databank contains also experimental order parameter and x-ray form factor data that is connected to corresponding  simulations in order to define the simulation qualities and rank them to select the suitable simulation models for particular applications. The ranking of all simulations based on estimated average probability of order parameters to locate within experimental errors are shown in Fig.~\ref{fig:quality} b) and the comparison for the best models for overall quality, headgroup and glycerol backbone, and form factor are exemplified in Fig.~\ref{fig:quality} d). Full details of the NMRlipids quality measure for lipid bilayer simulations are given in the methods section and supplementary information.
-The top ranking simulations in Figs.~\ref{fig:quality} b) and d) demonstrate also the current complexity in lipid bilayer simulation quality. Simulation of POPC lipid bilayer with Slipids force field ranks first in overall score, glycerol backbone is not correcetly captured in this model. On the othere, simulation with the best quality for headroup and glycerol backbone, CHARMM36 POPC, predicts too ordered acyl chain, thereby not being within the top 10 simulations in the overall ranking. The best ranking for x-ray form factor is given by the Slipids POPE simulation, however, because the quantitative value for form factor quality depends on the quality of experimental data, form factor qualities can be compared only between simulations evaluated against the same experimental dataset.
 
 The power of NMRlipids quality metrics in selecting the best model for particular application is demontrated in Fig.~\ref{fig:quality} c) where the area per lipids of POPC:POPE mixtures from different force fields are shown and quality of POPE simulation in different force fields are evaluated. Among the simulations available in the NMRlipids databank, the Slipids force field gives the best quality in terms of acyl chain order parameters and form factor, and predicts the largest area per molecule for POPE and smallest difference with POPC. In conclusion, simulations with Slipids is the most reliable force field for membrane packing in POPC:POPE mixtures althought its glycerol backbone is not accurately modelled. Similar comparisons utilizing the preliminary data from the NMRlipids databank have concluded that Slipids is relatively good model also for mixtures of charged POPC:POPS membranes, although models with better counterion binding have higher quality, but CHARMM36 is the best to study differences in headgroup conformational ensembles between different lipid types. Understanding such complex picture of lipid bilayer MD simulation quality would not be possible without automatic quality evaluation of large sets of simulations enabled by the NMRlipids databank.
 
@@ -320,16 +348,7 @@ are scaled by a factor defined as
 %\begin{equation}
 %    \chi^2 = \frac{\sqrt{\sum_{i=1}^{N_q}(|F_s(q_i)|-k_e|F_e(q_i)|)^2/(\Delta F_e(q_i))^2}}{\sqrt{N_q-1}},
 %\end{equation}
-where $F_s$ and $F_e$ are form factors from a simulation and experiment, respectively, and summation goes over the experimentally available $N_q$ points. 
-Quality measure based on differences in simulated and experimental form factors accross available q-range is also defined in the SIMtoEXP program.
-However, as shown in Fig.~\ref{??}, the lobe heigths in the simulated form factors depend on the simulation box size,
-but locations of minima does not. Therefore, quality measure depending on lobe heights is also dependent on simulation box size.
-In order to define a quality measure which is independent on simulation box size, we measure the form factor quality based on the
-location of the first minima observed in experiments. As shown in Fig.~\ref{??}, this minima correlates well with the thickness of a membrane.
-Although the correlation in second minima would be even stronger, we have chosen to use the first minima because automatic definition
-of second minima is inaccurate in some experimental data. In practise, we first filter the fluctuations from the form factor data using
-Savitzky-Golay filter (window lenght 30 and polynomial order 1) and locate the first minima above 0.1\,$AA^2$ from both simulation and experimental data.
-The quality of a form factor is then defined as Eucledian distance between the minima in simulated and experimental form factors, $FF_q = |FF_{\rm{min}}^{\rm{sim}}-FF_{\rm{min}}^{\rm{exp}}|$. 
+where $F_s$ and $F_e$ are form factors from a simulation and experiment, respectively, and summation goes over the experimentally available $N_q$ points. Quality measure based on differences in simulated and experimental form factors accross available q-range is also defined in the SIMtoEXP program. However, as shown in Fig.~\ref{fig:sizedependence}, the lobe heigths in the simulated form factors depend on the simulation box size, but locations of minima does not. Therefore, quality measure depending on lobe heights is also dependent on simulation box size. In order to define a quality measure which is independent on simulation box size, we measure the form factor quality based on the location of the first minima observed in experiments. As shown in Fig.~\ref{fig:quality}, this minima correlates well with the thickness of a membrane. Although the correlation in second minima would be even stronger (Fig.~\ref{fig:QualityCorrelationsSI}), we have chosen to use the first minima because automatic definition of second minima is inaccurate in some experimental data. In practise, we first filter the fluctuations from the form factor data using Savitzky-Golay filter (window lenght 30 and polynomial order 1) and locate the first minima above 0.1\,$AA^2$ from both simulation and experimental data. The quality of a form factor is then defined as Eucledian distance between the minima in simulated and experimental form factors, $FF_q = |FF_{\rm{min}}^{\rm{sim}}-FF_{\rm{min}}^{\rm{exp}}|$. 
 
 
 
