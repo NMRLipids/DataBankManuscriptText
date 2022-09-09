@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{tablefootnote}
+\usepackage{xr}
 
 \makeatletter
 \newcommand*{\centerfloat}{%
@@ -11,6 +12,28 @@
   \rightskip\leftskip
   \parfillskip \z@skip}
 \makeatother
+
+\makeatletter
+\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+  \typeout{(#1)}
+  \@addtofilelist{#1}
+  \IfFileExists{#1}{}{\typeout{No file #1.}}
+}
+\makeatother
+
+\newcommand*{\myexternaldocument}[1]{%
+    \externaldocument{#1}%
+    \addFileDependency{#1.tex}%
+    \addFileDependency{#1.aux}%
+}
+
+\myexternaldocument{main}
+
+\renewcommand{\thetable}{S\arabic{table}}%
+\renewcommand{\thefigure}{S\arabic{figure}}%
+\renewcommand{\thesection}{S\arabic{section}}%
+\renewcommand{\thepage}{S\arabic{page}}%
+
 
 \title{SUPPLEMENTARY INFORMATION: NMRlipids Databank: Overlay Databank of Lipid Membrane Simulations Arising from Open Collaboration}
 
@@ -52,7 +75,7 @@
     \centerfloat
     \includegraphics[width = 180mm]{Figures/QualityCorrelationsSI.pdf}
     \caption{Dependence of form factor, electron density profiles along membrane normal, and C-H bond orderparameters (from top to bottom) on simulation box size with different cholesterol concentration. }
-    \label{fig:sizedependence}
+    \label{fig:QualityCorrelationsSI}
 \end{figure}
 
 
