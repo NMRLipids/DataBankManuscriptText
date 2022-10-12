@@ -57,6 +57,7 @@ We present a databank of lipid bilayer simulations from the NMRlipids open colla
 
 %The demand for sharing and reusing of MD simulation data is increasing, but practical solution remains unclear due to unsolved issues in data storage and indexing.
 
+While MD simulations of systems with few biomolecules continue having major contributions in our understanding on biology and drug design, researches are now searching new avenues by building models not only for individual molecules but whole cells or organelles using interdisciplinary approaches~\cite{johnson15,thornburg22,gupta22}.
 
 The importance of sharing MD simulation data following the FAIR principles~\cite{wilkinson16} has been widely recognized~\cite{feig99,tai04,silva06,abraham19,hildebrand19,hospital20,abriata20,espigares20}, and databanks are emerging~\cite{meyer10,kamp10,hospital16,mixcoha16,newport19,bekker20,espigares20,leston22}.
 The relevance of quality evaluation of simulation trajectories in databanks regarding technical details of simulations and accuracy of the underlying physical description of the system (force field) has become evident~\cite{tai04,meyer10,hospital20} and such quality evaluation has in some cases also been implemented~\cite{meyer10,hospital16}. However, straightforward quality comparisons between individual simulations or force fields within these databanks remain challenging. 
@@ -153,11 +154,11 @@ In conclusion, the quality evaluation based on the NMRlipids databank suggests t
 
 
 \subsection{Water diffusion anisotropy in membrane systems}
-The anisotropic water diffusion through and along of membranes plays a role in the drug translocation through biological material, particularly in skin \cite{hansen13,wen18,nitsche19,roberts21,??}, and in MRI imaging~\cite{??}. Therefore, dependence of water permeation through membranes and translational diffusion at membrane surfaces on membrane properties has been studied with different methods, yet consensus 
+The anisotropy in water diffusion in parallel and perpendicular directions with respect to membranes plays a role in the drug translocation through biological material, particularly in skin \cite{hansen13,wen18,nitsche19,roberts21}, and in MRI imaging~\cite{topgaard20}. Several models on how water dynamics depends on membrane properties have been proposed based on different experimental and theoretical methods, yet consensus 
 %on how water permeability depends on membrane properties, such as area per lipid and thickness, or molecular composition, 
-has not been reached despite of several available models~\cite{nitsche13,nitsche16,shinoda16,venable19,??}. MD have been also used in these endeavours, but systematic studies are limited by the accessible amount of data as only few water permeation events are typically observed in a single MD simulation trajectory~\cite{??}. Therefore, this serves as an excellent example where the large amount of available MD simulations in the NMRlipids databank can be utilized to answer important biological questions.
+has not been reached~\cite{mathai07,nitsche13,nitsche16,shinoda16,venable19,frallicciardi22}. MD simulations have been also used in these endeavours, but systematic studies are limited by the accessible amount of data as only few water permeation events are typically observed in a single MD simulation trajectory~\cite{venable19,camilo2022}. Therefore, this serves as an excellent example where the large amount of available MD simulations in the NMRlipids databank can be utilized to answer important biological questions.
 
-To this end, we first calculated the water permeability through membranes from all the simulations in the NMRlipids databank. Resulting permeabilities are shown as a function of temperature, membrane thickness, area per lipid, and acyl chain order in Figs.~\ref{fig:permeability} B-E. The values for water permeabilities from simulations vary between 0.3 and 322\,$\mu$m/s with the mean and median of 14\,$\mu$m/s and 8\,$\mu$m/s, respectively. These values have the same order of magnitude as the experimentally determined diffusive permeability coefficients, but are on average below the values reported for PC lipids in liquid crystalline phase,~190-330\,$\mu$m/s~\cite{jansen95}. To analyze how water permeability through membranes depend on these properties on average, we calculated the average permeabilities over all systems with the value of temperature, thickness, area per lipid, or acyl chain order within a fixed range. These averaged permeabilities also shown in Figs.~\ref{fig:permeability} with black dots. As expected, the permeability increases with the temperature, giving 17\,$\pm$\,4\,k$_b$T for the average energy barrier for the water permeation from the Arrhenius plot in Fig.~\label{fig:permeability} B. Water permeability decreases with increasing membrane packing, i.e., with decreasing area per lipid and increasing thickness and acyl chain order. Linear dependence of permeability on area per lipid and thickness is previously reported from simulations and experiments for some systems, but not for all~\cite{mathai08,frallicciardi22}. Our results suggest on average linear dependence for thicknesses above $\sim$\,3.9\,nm and area per lipids below $\sim$69\,Å$^2$ (insets in Figs.~\ref{fig:permeability} C-D), yet stronger dependence for more loosely packed membranes. 
+To this end, we first calculated the water permeability through membranes from all the simulations in the NMRlipids databank. Resulting permeabilities are shown as a function of temperature, membrane thickness, area per lipid, and acyl chain order in Figs.~\ref{fig:permeability} B-E. The values for water permeabilities from simulations vary between 0.3 and 322\,$\mu$m/s with the mean and median of 14\,$\mu$m/s and 8\,$\mu$m/s, respectively. These values have the same order of magnitude as the experimentally determined diffusive permeability coefficients, but are on average below the values reported for PC lipids in liquid crystalline phase,~190-330\,$\mu$m/s~\cite{jansen95}. To analyze how water permeability through membranes depend on bilayer properties on average, we calculated the average permeabilities over all systems with the value of temperature, thickness, area per lipid, or acyl chain order within a fixed range. These averaged permeabilities also shown in Figs.~\ref{fig:permeability} with black dots. As expected, the permeability increases with the temperature, giving 17\,$\pm$\,4\,k$_b$T for the average energy barrier for the water permeation from the Arrhenius plot in Fig.~\ref{fig:permeability} B. Water permeability decreases with increasing membrane packing, i.e., with decreasing area per lipid and increasing thickness and acyl chain order. Linear dependence of permeability on area per lipid and thickness is previously reported from simulations and experiments for some systems, but not for all~\cite{mathai07,venable19,frallicciardi22}. Our results suggest on average linear dependence for thicknesses above $\sim$\,3.9\,nm and area per lipids below $\sim$69\,Å$^2$ (insets in Figs.~\ref{fig:permeability} C-D), yet stronger dependence is observed for more loosely packed membranes. 
 %within the range of experimentally reported values  permeability which is 1-2 orders of magnitude slower than osmotic permeability \cite{jansen95,??}. 
 Clear dependencies of permeability on charged lipids, cholesterol, POPE, or hydration level were not observed in Fig.~\ref{fig:permeationSI} in the supplementary information.
 %, although weak decrease for the latter two may be visible.
@@ -172,16 +173,21 @@ Clear dependencies of permeability on charged lipids, cholesterol, POPE, or hydr
     \label{fig:permeability}
 \end{figure}
 
-To analyze the anisotropic diffusion of water in membrane environment, we also calculated the water translational diffusion along the membrane surface from all simulations in the NMRlipids databank. The results at different hydration levels are shown in Fig.~\ref{fig:permeability} F together with the experimental data~\cite{rudakova04}. 
+To analyze the anisotropic diffusion of water in membrane environment, we also calculated the water diffusion parallel to the membrane surface from all simulations in the NMRlipids databank. The results at different hydration levels are shown in Fig.~\ref{fig:permeability} F together with the experimental data~\cite{rudakova04}. 
 %The experimental water diffusion increases with increasing hydration level toward the value for bulk water . 
 %As expected, water translational diffusion increase in the diffusion is observed with the increased temperature and hydration level (Figs.~\ref{fig:permeability} H and~\ref{fig:diffusionSI} B). 
-Simulation results are close to the experimental values at low hydration levels, but increase to the values of approximately two times higher than experimental bulk water diffusion value (3.1$\cdot$\,10$^{-9}$\,m$^2$/s at 313\,K~\cite{khakimov08}) at high hydration levels. 
-This is not surprising as the most common water model used in membrane simulations, TIP3P, overestimates the bulk water diffusion~\cite{??}. The water translational diffusion incereased with the temperature, but dependencies on membrane area per lipid, thickness, or fraction of charged lipids were not observed in Fig.~\ref{fig:diffusionSI} in the supplementary information. In order to estimate the diffusion anistoropy of water in multilamellar membrane system, we translated the water permeation coefficients through membranes to diffusion coefficients through multilamellar stack using the Tanner equation~\cite{??}. The resulting diffusion coefficients through the membranes are approximately five orders of magnitude slower than along the membrane (Figs.~\ref{fig:permeability} G and H), which is at the upper limits of the anisotropic estimated from the experimental data~\cite{nitsche19}. Relatively high anisotropy is understandable as simulations give slightly slower permeation rates and higher lateral diffusion rates than experiments. Significant increase in the diffusion anisotropy with membrane packing is observed, as $D_{\perp}/D_{||}$ drifts away from one with decreasing area per lipid and increasing thickness in Figs.~\ref{fig:permeability} G and H.
-This follows from decreasing water permeability with membrane packing (Figs \ref{fig:permeability} C and D), while lateral diffusion remains approximately constant (Fig. \ref{fig:diffusionSI} A and C). 
+Simulation results are close to the experimental values with low hydration levels, but increase to the values of approximately two times higher than experimental bulk water diffusion value (3.1$\cdot$\,10$^{-9}$\,m$^2$/s at 313\,K~\cite{khakimov08}) with high hydration levels. This is not surprising as the most common water model used in membrane simulations, TIP3P, overestimates the bulk water diffusion~\cite{pathirannahalage21}. The water diffusion parallel to membrane surface increased with the temperature, but dependencies on membrane area per lipid, thickness, or fraction of charged lipids were not observed in Fig.~\ref{fig:diffusionSI} in the supplementary information. In order to estimate the diffusion anistoropy of water in multilamellar membrane system, we translated the water permeation coefficients through membranes to diffusion coefficients through multilamellar stack using the Tanner equation~\cite{tanner78,wasterby02}. The resulting diffusion coefficients through the membranes are approximately five orders of magnitude slower than along the membrane (Figs.~\ref{fig:permeability} G and H), which is at the upper limits of the anisotropic estimated from the experimental data~\cite{nitsche19}. Relatively high anisotropy is understandable as simulations give slightly slower permeation rates and higher lateral diffusion rates than experiments. Significant increase in the diffusion anisotropy with membrane packing is observed, as $D_{\perp}/D_{||}$ drifts away from one with decreasing area per lipid and increasing thickness in Figs.~\ref{fig:permeability} G and H. This follows from decreasing water permeability with membrane packing (Figs \ref{fig:permeability} C and D), while lateral diffusion remains approximately constant (Fig. \ref{fig:diffusionSI} A and C). 
+
+\subsection{Flip-flops}
+Lipid flip-flops from one bilayer leaflet to another play an important role in lipid trafficking and regulating membrane properties~\cite{vanmeer08}. Phospholipid flip-flops are slow, occuring with the timescales of hours or days, while cholesterol, diacylglycerol and ceramide flip-flops are faster, yet the reported timescales range between minutes to sub-millisecods~\cite{vanmeer08,steck12,parisio16,gu19}. Flip-flops have been previously studied mainly with coarse-grained simulations and free energy calculations due to time scale limitations in atomistic simulations~\cite{parisio16}, but direct analyses on cholesterol flip-flops in atomistic simulations have been also emerging in recent years~\cite{gu19,javanainen18,baral20}. However, systematic studies on how flip-flop rates depend on membrane properties are still challenging even with the state of the art computational resources. The NMRlipids databank can greatly advance such studies by giving an easy access to large amounts of data simultaneously.
+
 
 \section{Discussion}
 
 %The Discussion should be succinct and must not contain subheadings.
+
+Building accessible databanks of molecular dynamics simulation data has been challenging due to the required long term support for hardware and software maintenance. In the overlay model used in the NMRlipids databank, the demand of hardware can be distributed and open collaboration model reduces the risk for ending software maintenance. Furthermore, the open collaboration model used in the NMRlipids project credits contributors by offering authorship in published articles, thereby creating an incentive for contributions. This model could be extended also to other fields where similar barriers to establish publicly accessible databanks exist. 
+
 
 , thereby not requiring large resources to handle and maintain. This lowers the barrier for starting such databank as well as for long term storage. The NMRlipids databank is essentially a git repository containing information on the location of raw data and its indexing with universal naming convention. In addition to all computers where the databank is developed and used, the NMRlipids databank git is stored to Zenodo server, thereby enabling a very cost effective long term storage for the databank. 
 
@@ -190,7 +196,8 @@ Quality measure and automatic quality evaluation of lipid bilayer MD simulations
 The increasing amount of MD simulation data with programmatic access in the NMRlipids databank opens up possibilities for wide range of applications utilizing the large set of accessible data. Extend of the data in the NMRlipids databank in terms of quantity (e.g., simulation length and number of conformations), content (e.g, lipid compositions and ion concentrations) and quality enables analyses that are not possible to conduct from MD simulation data produced by a single research group. Applications of the NMRlipids databank to understand how diffusion of water through and along cellular membrane depends on its physical properties are demonstrated in Fig.~\ref{??}. Permeation of water through membranes resembles the permeation of also other hydrophilic molecules, such as drugs, and detailed understanding of water dynamics through and along membranes is potentially useful for the development of MRI imaging methods~\cite{topgaard20}. 
 These examples demonstrate the practical applications of NMRlipids databank on problems in the biological and biomedical sciences.
 
-Building accessible databanks of molecular dynamics simulation data has been challenging due to the required long term support for hardware and software maintenance. In the overlay model used in the NMRlipids databank, the demand of hardware can be distributed and open collaboration model reduces the risk for ending software maintenance. Furthermore, the open collaboration model used in the NMRlipids project credits contributors by offering authorship in published articles, thereby creating an incentive for contributions. This model could be extended also to other fields where similar barriers to establish publicly accessible databanks exist. Emerging applications of machine learning are increasing the impact of such databanks. For example, the existing Protein Databank (PDB)~\cite{??} containing experimentally determined protein structures with programmatic access has enabled the development of machine learning based tools building on the data collected in the databank over the years~\cite{??}. NMRlipids and other databanks with open programmatic access have potential to lead similar unforeseen applications in the future.
+
+Emerging applications of machine learning are increasing the impact of such databanks. For example, the existing Protein Databank (PDB)~\cite{??} containing experimentally determined protein structures with programmatic access has enabled the development of machine learning based tools building on the data collected in the databank over the years~\cite{??}. NMRlipids and other databanks with open programmatic access have potential to lead similar unforeseen applications in the future.
 
 
 \section{Methods}
@@ -198,153 +205,63 @@ Building accessible databanks of molecular dynamics simulation data has been cha
 %Topical subheadings are allowed. Authors must ensure that their Methods section includes adequate experimental and characterization data necessary for others in the field to reproduce their work.
 
 \subsection{Structure of the databank}
+Structure of the NMRlipids databank is illustrated more detailed in Fig.~\ref{DatabankStructure} in the supplementary information. The databank locates as a git repository at \url{https://github.com/NMRLipids/Databank/} and is permanently stored in Zenodo repository (\url{www.zenodo.org})~\cite{??}. Whenever a specific file is referred here, the file path within the NMRlipids databank repository is given. The scripts in the NMRlipids databank are mainly written in Python and many of them utilize the MDAnalysis module~\cite{gowers2019mdanalysis,michaud2011mdanalysis}.
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{Figures/DataBankChart.pdf}
-  \caption{Structure of the NMRlipids databank. Manually added input data (blue boxes) includes basic information on the simulation, permanent links to the raw data, and experimental data if available. The databank entries (red box) and analysis results (green boxes), locating at \url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations} are automatically generated by the computer programs included in the NMRlipids databank (yellow boxes). Because raw data are not permanently stored but can be accessed based on the information in the databank, this connection is marked with the dashed line. }\label{DatabankStructure}
-\end{figure}
+The core content of the NMRlipids databank is stored in README.yaml files located at {\it /Data/Simulations} in the NMRlipids databank repository. Essential information for each simulation entry in the databank is stored in these files. These yaml files are both human and machine readable, and contain access to all information that are needed for further analyses of the simulations. The keys available in these files and their explanations are listed in table~\ref{tab:READMEkeys} in the supplementary information. To keep the databank light, the raw MD simulation data is stored in an external location which can be any stable publicly available repository, although all the current data locates in Zenodo \url{www.zenodo.org}. Whenever needed, the raw data can be downloaded through the links stored in the README.yaml files.  
 
-Structure of the NMRlipids databank is illustrated in Fig.~\ref{DatabankStructure}. The required input information to create an entry into the NMRlipids databank are listed in table~\ref{tab:READMEkeys}. While the raw simulation data is not directly stored in the NMRlipids databank, permanent links from where the raw data can be accessed have to be given and are then stored in the README.yaml files at \url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations}. These files contain all the essential information listed in table~\ref{tab:READMEkeys} on each simulation entry that are needed for further applications. The raw MD simulation data can locate in any stable publicly available repository, although all the current data locates in Zenodo \url{www.zenodo.org}. 
 
-%A README.yaml file is made using AddData.py script for each simulation stored in the databank based on the information given by the author of the simulation data. In addition to this information, automatically extracted information about the simulation are stored in the README.yaml files (see table~\ref{tab:READMEkeys}). A README.yaml file for each simulation is stored to a folder named according to the hashes of original trajectory and topology file locating in \url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations}. These README.yaml files give access to all the essential information on the simulations in the databank either directly, or pointing to a original file from where the information can be extracted.
-
-\begin{table}[]
-    \centering
-    \begin{tabular}{  p{3.5cm}  p{9.5cm}  p{4.0cm} }
-    \toprule
-    key & description & type  \\
-    \midrule
-        %\hline
-    DOI & DOI from where the raw data is found & user given (compulsory) \\
-    SOFTWARE & Software used to run the simulation (e.g. Gromacs, Amber, NAMD, etc.) & \\
-    TRJ & Name of the trajectory file found from DOI & \\
-    TPR & Name of the topology file found from DOI (trp file in the case of Gromacs) & \\
-    PREEQTIME & Pre-equilibrate time simulated before the uploaded trajectory in nanoseconds. \tablefootnote{For example, if you upload 100-200 ns part of total 200 ns simulation, this should value should be 100.} & \\
-    TIMELEFTOUT & Equilibration period in the uploaded trajectory that should be discarded in analyses. \tablefootnote{For example, if you upload 0-200 ns part of total 200 ns simulation where the first 100 ns should be considered as an equilibration, this value should be 100.} \\
-    COMPOSITION & Molecules names used in the simulation and corresponding mapping files (see section \ref{naming}) & \\
-    DIR\_WRK & Temporary working directory in your local computer. \\
-    UNITEDATOM\_DICT & Information for constucting hydrogens for united atom simulations, empty for all atom simulations & \\
-    TYPEOFSYSTEM & Lipid bilayer or something else & \\
-    \hline
-    PUBLICATION & Give reference to a publication(s) related to the data. & User given (optional)\\
-    AUTHORS\_CONTACT & Name and email of the main author(s) of the data. & \\
-    SYSTEM & System description on free text format & \\
-    SOFTWARE\_VERSION & Version of the used software & \\
-    FF & Name of the used force field & \\
-    FF\_SOURCE & Source of the force field parameters, e.g, CHARMM-GUI, webpage, citation to a publication, etc. & \\
-    FF\_DATE &  Date when force field parameters were accessed on the gives source (day/month/year). & \\
-    FF{molename} & Molecule specific force field information, e.g., water model with FFSOL and sodium parameters with FFSOD. & \\
-    CPT & Name of the Gromacs checkpoint file. & \\
-    LOG & Name of the Gromacs log file. & \\
-    TOP & Name of the Gromacs top file. & \\
-    GRO & Name of the Gromacs gro file. & \\
-    \hline
-    TRAJECTORY\_SIZE & Size of the trajectory file in bytes & automatically extracted data. \\
-    TRJLENGTH & Lenght of the trajectory (ps). & \\
-    TEMPERATURE & Temperature of the simulation. & \\
-    NUMBER\_OF\_ATOMS & Number of atoms in the simulation. & \\
-    DATEOFRUNNIG & Date when added into the databank & \\
-    EXPERIMENT & Potentially connected experimental data & \\
-    COMPOSITION & Numbers of lipid molecules (NPOPC, NPOPG, etc.) per membrane leaflet are calculated by determining on which side of the center of mass of the membrane the center of mass of the head group of each lipid molecule is located.
-    Numbers of other molecules such as solvent and ions (NSOL, NPOT, NSOD, etc.) are read from the topology file. & \\
-    \end{tabular}
-    \caption{Keys stored in the README.yaml files of simulations.}
-    \label{tab:READMEkeys}
-\end{table}
-
-In order to evaluate the quality of simulations, sets of C-H bond order parameters from NMR and from factors from x-ray scattering are included in the NMRlipids databank (\url{https://github.com/NMRLipids/Databank/tree/main/Data/experiments}). The required information for an experimental dataset are listed in table~\ref{tab:READMEkeysEXP}.
-A simulation is connected to a experimental data set
-%C-H bond order parameter and x-ray scattering form factor data using the searchDATABANK.py script. Available experimental data is collected to  where each dataset is saved into a folder with the name based on DOI of the related publication and experimental conditions are described in README.yaml files with the keys listed in table~\ref{tab:READMEkeysEXP}. 
-if molar concentrations of all molecules are within $\pm$5 percentage units, charged lipids have the same counterions, and temperature is within $\pm$2 degrees. In such cases, a simulation and experimental data are paired by adding the path to the experimental data into the simulation README.yaml file. 
-%If lipid to water ratio is above ??, the systems are considered fully hydrated. Otherwise also hydration level is considered.
-
-\begin{table}[]
-    \centering
-    \begin{tabular}{  p{5.0cm}  p{10.0cm}}
-    \toprule
-    key & description \\
-    \midrule
-    DOI & DOI of the publication related to the experimental data. \\
-    TEMPERATURE & Temperature of the experiment. \\
-    MOLAR\_FRACTIONS & Dictionary of molar fractions of bilayer components \\
-    ION\_CONCENTRATIONS & Dictionary of ion concentrations of the system \\% (defined as ??) \\
-    TOTAL\_LIPID\_CONCENTRATION & Total concentration of lipid components. If exact concentration is not known, but experiments are performed in excess water, 'full hydration' can be given. \\
-    COUNTER\_IONS & Type of counter ions if present.
-\end{tabular}
-    \caption{Keys stored in the README.yaml files of experiments.}
-    \label{tab:READMEkeysEXP}
-\end{table}
-
-Because README.yaml contains all the essential information on each simulation, arbitrary analyses can be automatically performed over all the simualtions in the NMRlipids databank. In addition to the order parameters for each C-bonds and x-ray scattering form factors used in the quality evaluation, the NMRlipids databank contains the area per lipid and thickness calculated from all simulations in the databank. These results are stored in the same folders as the README.yaml files in \url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations}.
 
 \subsection{Molecule and atom naming convention} \label{naming}
+Molecule and atom names used in a simulation are often needed when analyzing the simulation trajectories. However, the naming conventions of lipid molecules and atoms therein vary between authors and force fields because universal naming convention has not been defined. Because such convention is necessary for automatic analyses over simulations, we have defined the unique naming conventions for lipid molecules and atoms in the NMRlipids databank. For each molecule we have defined an unique abbreviation which are listed in table~\ref{tab:abbreviations} in the supplementary information. On the other hand, unique names for each atom in a molecule are defined and connected to corresponding names in a simulation using mapping files. Mapping files are in yaml format where unique atom names are connected to force field specific names. Also residue names and fractions lipids (headgroup, glycerol bakcbone, and acyl chains) can be defined in the mapping file. For example, the mapping files used in the NMRlipids databank are located at {\it /Scripts/BuildDatabank/mapping\_files} in the NMRlipids repository. For more details about mapping files, see~\url{https://nmrlipids.blogspot.com/2022/04/new-yaml-format-of-mapping-files.html}). In practise, information about molecule and atom names are given in the COMPOSITION dictionary in README.yaml files, where force field specific molecule name corresponding the unique abbreviation (table~\ref{tab:abbreviations}) and the name of the mapping file are given. 
 
-Because universal convention for lipid molecules and atoms therein has not been defined, the naming conventions vary between authors and force fields. To enable automatic analyses over large sets of simulation in the NMRlipids databank, we have defined unique naming conventions for lipid molecules and atoms. The abbreviations of molecule names used in the NMRlipids databank are listed in table~\ref{tab:abbreviations}. The unique atom names for each molecule and corresponding names in each simulation are defined using mapping files introduced in the NMRlipids project (\url{https://nmrlipids.blogspot.com/2022/04/new-yaml-format-of-mapping-files.html}). 
+%Upon addition of a new entry in the databank, the molecule names in the simulation corresponding the unique names and mapping files (available at \url{https://github.com/NMRLipids/Databank/tree/main/Scripts/BuildDatabank/mapping_files}) are defined in the dictionary. 
 
-Molecule and atom names in each simulation are connected to the unique naming convention with the COMPOSITION dictionary in the README.yaml file. Upon addition of a new entry in the databank, the molecule names in the simulation corresponding the unique names and mapping files (available at \url{https://github.com/NMRLipids/Databank/tree/main/Scripts/BuildDatabank/mapping_files}) are defined in the dictionary. The numbers of molecules in the system are then automatically calculated by the NMRlipids databank codes (AddData.py in Fig.~\ref{DatabankStructure}) and stored in the README.yaml together with other content of the COMPOSITION dictionary. This information can be then used to find each molecule and atom from each simulation in the analysis codes.  
+\subsection{Adding data into the NMRlipids databank}
+In order to add a simulation entry into the NMRlipids databank, an initial info.yaml file containing user given information listed in table~\ref{tab:READMEkeys} needs to be created. For examples of these files, see {\it /Scripts/BuildDatabank/info\_files} in the NMRlipids databank repository. Using this file as an input, the {\it /Scripts/BuildDatabank/AddData.py} script then calculates the rest of the information to be stored in the README.yaml files, also listed in table~\ref{tab:READMEkeys}. The databank is open for submission of these info.yaml files via pull requests to the git repository. Large fraction of the current content is composed of the data uploaded to Zenodo in previous NMRlipids projects~\cite{botan15,catte16,antila19,bacle21}, yet also other simulation data from the Zenodo repository are added.
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{c|c}
-        Abbreviation & Molecule name \\
-        \hline
-        POPC &  1-palmitoyl-2-oleoyl-sn-glycero-3-phosphocholine\\
-        POPG &  1-palmitoyl-2-oleoyl-sn-glycero-3-phosphoglycerol \\
-        POPS & 1-palmitoyl-2-oleoyl-sn-glycero-3-phospho-L-serine \\
-        POPE & 1-palmitoyl-2-oleoyl-sn-glycero-3-phosphoethanolamine \\
-        CHOL & cholesterol \\
-        DHMDMAB & dihexadecyldimethylammonium \\
-        \hline
-        POT & potassium ion \\
-        SOD & sodium ion \\
-        CLA & chloride ion \\
-        CAL & calcium ion \\
-        SOL & water \\
-    \end{tabular}
-    \caption{Abbreviations used in the databank}
-    \label{tab:abbreviations}
-\end{table}
+\subsection{Experimental data}
+Experimental data used in the quality evaluation, currently composed of C-H bond order parameters and x-ray scattering form factors, are stored in {\it /Data/experiments} in the NMRlipids databank repository. Similarly to simulations, each experimental data set has a README.yaml file containing all the relevant information about the experiment. The keys and their descriptions for the experimental data are given in table~\ref{tab:READMEkeysEXP}. NMR data currently in the NMRlipids databank are taken from Refs.~\citenum{??} and x-ray scattering data from Refs.~\citenum{??}. In addition, some previously unpublished NMR and x-ray scattering data are used. These are measured with previously established methods as described in the supplementary information. 
 
-
-\subsection{Quality evaluation}
-
-\subsubsection{Conformational ensembles using C-H bond order parameters}
-The quality of conformational ensembles of individual lipid molecules in simulations are evaluated using the C-H bond order parameters which can be directly compared with robust experimental data~\cite{ollila16}.
-%The C--H bond order parameters were calculated directly
-%from the carbon and hydrogen positions using the 
-%definition
-The order parameters are defined as
+\subsection{Calculation of C-H bond order parameters}
+The C--H bond order parameters were calculated directly from the carbon and hydrogen positions using the definition
+%The order parameters are defined as
 \begin{equation}\label{OP}
 S_{\rm CH}=\frac{1}{2}\left\langle 3\cos^2\theta -1 \right\rangle,
 \end{equation}
 where $\theta$ is the angle between the C--H bond and the membrane normal
 %(taken to align with $z$, with bilayer periodicity in the $xy$-plane).
-and angular brackets denote the ensemble average, i.e. average over all sampled configurations of all lipids in a simulation.
-%by estimating
-%the average probability of C-H bond order parameters to agree with the values from NMR experiments. 
-%As a first step, the quality of each order parameter is evaluated using the negative logarithm of probability to find the simulated order parameter within the experimental error bars
-%\begin{equation}
-%    S_q = -\log_{10}(P),    
-%\end{equation}
-Because conformational ensembles of individual lipids are independent in a simulation of a fluid lipid bilayer, the number of independent sample points for each C-H bond, $n$, equals the number of lipids in a simulation. Denoting the $S_{\rm CH}$ from Eq.~\ref{OP} as the sample mean and $s$ its variance calculated over individual lipids, 
-%the probability the true mean of the order parameter is given by the %Student's t-distribution 
-%Because each C-H bond order parameter is calculated as an average over individual lipids in a simulation
-%\begin{equation}\label{studentT}
-$\frac{S_{\rm CH}-\mu}{s/\sqrt{n}}$
-%\end{equation}
-%where $\bar{X}$ is the sample mean (order parameter calculated from simulations),
-%$s$ is the sample variance (variance of order parameters in different lipids)
-%and 
-%has a 
-has a Student's t-distribution with $n-1$ degrees of freedom, where $\mu$ is the real mean of the order parameter. 
-%shifted by $S_{\rm CH}$ and scaled by $s/\sqrt{n}$.
-Because lipid bilayer simulations contain at least dozens of lipids, the Student's t-distribution could be safely approximated with a normal distribution. However, when calculating the probability for a simulation to locate within experimental order parameters, the normal distribution gives values below the numerical accuracy of computers for simulations values far from experiments. To avoid such numerical instability, we use the first order Student's t-distribution.% for the equation \ref{studentT}.
-Therefore, we estimate the probability for the simulation order parameter to locate within experimental error bars from equation
+and angular brackets denote the ensemble average, i.e., average over all sampled configurations of all lipids in a simulation. As in previous NMRlipids publications, the order parameters were first calculated separately for each lipid and the standard error of the mean over different lipids was used as the error bar~\cite{botan15}. 
+
+In practise, the analysis code loops over all README.yaml files (i.e., simulations in the NMRlipids databank), downloads the raw simulation to a local computer, uses the information about the atom and molecule naming conventions in README.yaml to determine the location of carbon and hydrogen atoms, and then calculates the order parameters from Eq.~\ref{OP}. The script to calculate all C-H bond order parameters from the NMRlipids databank is available at {\it /Scripts/AnalyzeDatabank/calcOrderParameters.py} in the NMRlipids databank repository. The resulting order parameters are stored for all simulations in files named \newline 
+[{\it lipid\_name}]{\it OrderParameters.json} at folders in {\it /Data/Simulations} in the NMRlipids databank repository.
+
+\subsection{Calculation of x-ray scattering form factors}
+X-ray scattering form factors were calculated with standard equation for symmetric lipid bilayers~\cite{ollila16}
+\begin{equation}\label{FFsimpl}
+F(q)=\int_{-D/2}^{D/2}\Delta \rho_e(z) \cos(zq_z) {\rm d}z,
+\end{equation}
+where $\Delta \rho_e(z)$ is the difference between total and solvent electron densities, and $D$ is the simulation box size in the z-direction. For the calculation of density profiles, atom coordinates were centred around the centre of mass of the POPC lipid molecules for every time frame, and a histogram of these centred positions was calculated with the bin width of $1/3$~Å. Similarly to order parameters, the script loops over all simulations, downloads the data on local computer, and uses the information in README.yaml file to calculate form factors. The script to calculate form factors for all simulations in the NMRlipids databank is available at {\it Scripts/AnalyzeDatabank/calc\_FormFactors.py}.  The resulting form factors are stored for all simulations in files named {\it FormFactor.json} at folders in {\it /Data/Simulations} in the NMRlipids databank repository.
+
+\subsection{Calculation of membrane thickness, and area per lipids}
+Lipid bilayer thicknesses in all simulations are calculated from the intersections of lipid and water electron densities using the script {\it Scripts/AnalyzeDatabank/calc\_thickness.py} at the NMRlipids databank repository. The resulting thicknesses are stored for all simulations in files named {\it thickness.json} at folders in {\it /Data/Simulations} in the NMRlipids databank repository. Lipid bilayer area per lipids in all simulations are calculated by dividing the simulation box area with the total number of molecules considered as lipids using the script {\it Scripts/AnalyzeDatabank/calcAPL.py} at the NMRlipids databank repository. The resulting area per lipids are stored for all simulations in files named {\it apl.json} at folders in {\it /Data/Simulations} in the NMRlipids databank repository.
+
+\subsection{Quality evaluation of C-H bond order parameters}
+As the first step to evaluate simulation qualities against experimental data, each simulation is connected to an experimental data if molar concentrations of all molecules are within $\pm$5 percentage units, charged lipids have the same counterions, and temperatures are within $\pm$2 degrees. For molar concentrations of water, the exact hydration level is considered only for systems with molar water to lipid ratio below 25, otherwise the systems are considered as fully hydrated. In practise, this is implemented by adding the path of the experimental data into the simulation README.yaml file using the {\it /Scripts/BuildDatabank/searchDATABANK.py} script in the NMRlipids databank repository. 
+
+%\subsubsection{Conformational ensembles using C-H bond order parameters}
+%
+%The quality of conformational ensembles of individual lipid molecules in simulations are evaluated using the C-H bond order parameters which can be directly compared with robust experimental data~\cite{ollila16}.
+
+The quality of each C--H bond order parameter is estimated by calculating the probability of a simulated value to locate within the error bars of the experimental value. Because conformational ensembles of individual lipids are independent in a fluid lipid bilayer, 
+$\frac{S_{\rm CH}-\mu}{s/\sqrt{n}}$ has a Student's t-distribution with $n-1$ degrees of freedom and the probability for a order parameter in simulation to locate within experimental error bars can be estimated from equation
 \begin{equation}\label{probability}
   P = f \left( \frac{S_{\rm CH} - (S_{\rm exp}+\Delta S_{\rm exp})}{s/\sqrt{n}} \right) - f \left( \frac{S_{\rm CH} - (S_{\rm exp}-\Delta S_{\rm exp})}{s/\sqrt{n}} \right),
 \end{equation}
-where f(t) is the first order Student's t-distribution.
-% shifted to $\bar{X}$ and scaled with $s$. 
+where f(t) is the %first order 
+Student's t-distribution, $\mu$ is the real mean of the order parameter, $n$ is the number of independent sample points for each C-H bond which equals the number of lipids in a simulation, $S_{\rm CH}$ is the sample mean from Eq.~\ref{OP}, $s$ is the variance of $S_{\rm CH}$ calculated over individual lipids, $S_{\rm exp}$ is the experimental value, and $\Delta S_{\rm exp}$ its error. The error of $\Delta S_{\rm exp} = 0.02$ is currently assumed for all experimental order parameters~\cite{ollila16}. Because lipid bilayer simulations contain at least dozens of lipids, the Student's t-distribution could be safely approximated with a normal distribution. However, the normal distribution gives probability values that are below the numerical accuracy of computers when simulation values are far from experiments. To avoid such numerical instabilities, we use the first order Student's t-distribution having slightly higher probabilities for values far away from the mean.
+%Because phospholipids sample their conformational ensemble within nanosecond timescale~\cite{ferreira15}, all simulations in the databank would be sufficiently long to sample the realistic conformational phase of individual lipids. 
+On the other hand, some force fields exhibit too slow dynamics which leads to large error bars in order parameter values~\cite{antila21a}. Such large error bars widen the Student's t-distribution in Eq.~\ref{probability} thereby artificially increasing the probability to find the simulated value within experimental error bars. Therefore, the order parameters with simulation error bars above the experimental error 0.02 are not included in the quality evaluation.
+
 
 
 %We estimate the probability for the simulation order parameter to locate within experimental
@@ -360,24 +277,23 @@ where f(t) is the first order Student's t-distribution.
 %    \Delta S_{\rm exp}}  \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2} {\rm d}x.
 %\end{equation}
 %$S_{\rm exp}$ and $\Delta S_{\rm exp}$ are experimental order parameter and its error, and $\mu$ and $\sigma$ are the mean order parameter and its standard deviation from simulations. The quality measure $S_q$ approaches to zero when probability for agreement between simulation and experimental results approach one, and increases when simulated and experimental values diverge.
-The error of $\Delta S_{\rm exp} = 0.02$ is currently assumed for all experimental order parameters~\cite{ollila16}. Because phospholipids sample their conformational ensemble within nanosecond timescale~\cite{ferreira15}, all simulations in the databank would be sufficiently long to sample the realistic conformational phase of individual lipids. However, some force fields exhibit too slow dynamics which leads to large error bars in order parameter values~\cite{antila21a}. Because large error bars widen the Student's t-distribution in Eq.~\ref{probability} thereby artificially increasing the probability to find the simulated value within experimental error bars, the order parameters with error bars larger than the experimental error 0.02 are not included in the quality evaluation.
 
-The qualities of different fragments within each lipid type in a simulation, $P^{\rm frag}[{\rm lipid}]$, are then estimated by averaging the probabilities for individual C-H bond order parameters to locate within experimental errors according to Eq.~\ref{probability}, and dividing the average with the percentage of order parameters for which the quality is available within the fragment, $p_{\rm frag}[{\rm lipid}]$,
+To streamline the comparison between simulations, we define the qualities of different fragments (headgroup, acyl chains or total lipid) within each lipid type in a simulation as
 \begin{equation}
     P^{\rm frag}[{\rm lipid}] = \frac{\langle P[{\rm lipid}]\rangle_{\rm frag}}{p_{\rm frag}[{\rm lipid}]},
 \end{equation}
- where frag can be {\it sn}-1, {\it sn}-2, headgroup or total (all order parameters within a molecule). The overall quality of different fragments in a simulation are then defined as a molar fraction weighted average over different lipid components
+where $P^{\rm frag}[{\rm lipid}]$ is the average of individual C-H bond order parameters qualities within the fragment, $p_{\rm frag}[{\rm lipid}]$ is the percentage of order parameters for which the quality is available within the fragment, and frag can be {\it sn}-1, {\it sn}-2, headgroup or total (all order parameters within a molecule). The overall quality of different fragments in a simulation are then defined as a molar fraction weighted average over different lipid components
 \begin{equation}
     P^{\rm frag} = \sum_{\rm lipid} \chi_{\rm lipid} P^{\rm frag}[{\rm lipid}],
 \end{equation}
 where $\chi_{\rm lipid}$ is the molar fraction of a lipid in the bilayer.
 
-\subsubsection{Membrane dimensions with x-ray scattering form factors}
-While C-H bond order parameters relate to the conformational ensembles of individual lipids,
-the x-ray scattering form factors depend on membrane dimensions and density distribution~\cite{ollila16}.
-Because experiments give form factors only in relative intensity scale, they are typically scaled to the simulation data.
-Here we use the same scaling method as in SIMtoEXP program~\cite{kucerka10} where experimental form factor intensities
-are scaled by a factor defined as
+The quality evaluation of order parameters is implemented in {\it /Scripts/BuildDatabank/QualityEvaluation.py} in the NMRlipids databank repository. The resulting qualities for each order parameters are stored in files named  [{\it lipid\_name}]{\it \_OrderParameters\_quality.json}, for individual lipids in files named [{\it lipid\_name}]{\it \_FragmentQuality.json}, and for overall quality for fragments in files named {\it system\_quality.json} at folders in {\it /Data/Simulations} in the NMRlipids databank repository. 
+
+
+\subsection{Quality evaluation of x-ray scattering form factors}
+%While C-H bond order parameters relate to the conformational ensembles of individual lipids, the x-ray scattering form factors depend on membrane dimensions and density distribution~\cite{ollila16}.
+Because experiments give form factors only in relative intensity scale, they should scaled before comparing with the simulation data. Here we use the scaling coefficient for experimental intensities defined in the SIMtoEXP program~\cite{kucerka10}
 \begin{equation}
     k_e = \frac{\sum_{i=1}^{N_q} \frac{|F_s(q_i)||F_e(q_i)|}{(\Delta F_e(q_i))^2}}{\sum_{i=1}^{N_q} \frac{|F_e(q_i)|^2}{(\Delta F_e(q_i))^2}},
 \end{equation}
@@ -385,139 +301,36 @@ are scaled by a factor defined as
 %\begin{equation}
 %    \chi^2 = \frac{\sqrt{\sum_{i=1}^{N_q}(|F_s(q_i)|-k_e|F_e(q_i)|)^2/(\Delta F_e(q_i))^2}}{\sqrt{N_q-1}},
 %\end{equation}
-where $F_s$ and $F_e$ are form factors from a simulation and experiment, respectively, and summation goes over the experimentally available $N_q$ points. Quality measure based on differences in simulated and experimental form factors accross available q-range is also defined in the SIMtoEXP program. However, as shown in Fig.~\ref{fig:sizedependence}, the lobe heigths in the simulated form factors depend on the simulation box size, but locations of minima does not. Therefore, quality measure depending on lobe heights is also dependent on simulation box size. In order to define a quality measure which is independent on simulation box size, we measure the form factor quality based on the location of the first minima observed in experiments. As shown in Fig.~\ref{fig:quality}, this minima correlates well with the thickness of a membrane. Although the correlation in second minima would be even stronger (Fig.~\ref{fig:QualityCorrelationsSI}), we have chosen to use the first minima because automatic definition of second minima is inaccurate in some experimental data. In practise, we first filter the fluctuations from the form factor data using Savitzky-Golay filter (window lenght 30 and polynomial order 1) and locate the first minima above 0.1\,$AA^2$ from both simulation and experimental data. The quality of a form factor is then defined as Eucledian distance between the minima in simulated and experimental form factors, $FF_q = |FF_{\rm{min}}^{\rm{sim}}-FF_{\rm{min}}^{\rm{exp}}|$. 
+where $F_s(q)$ and $F_e(q)$ are form factors from a simulation and experiment, respectively, $\Delta F_e(q)$ is the error of the experimental form factor, and summation goes over the experimentally available $N_q$ points. 
+
+Also a quality measure based on differences in simulated and experimental form factors accross available q-range is defined in the SIMtoEXP program~\cite{kucerka10}. However, the lobe heigths in simulated form factors depend on the simulation box size as shown in Fig.~\ref{fig:sizedependence}. Therefore, the quality measure defined in SIMtoEXP  would also depend on the simulation box size. Nevertheless, locations of form factor minima are independent on simulation box size in Fig.~\ref{fig:sizedependence}. Here we use the location of the first form factor minima for the quality evaluation because automatic detection of the location of second minima is inaccurate for some experimental data due to fluctuations, such as for the POPE data in Figs.~\ref{fig:quality} D and E. 
+%In order to define a quality measure which is independent on simulation box size, we measure the form factor quality based on the location of the first minima observed in experiments. 
+The first minimum correlates well with the thickness of a membrane (Fig.~\ref{fig:quality} F), although the correlation of the second minima would be even stronger (Fig.~\ref{fig:QualityCorrelationsSI}). In practise, we first filter the fluctuations from the form factor data using Savitzky-Golay filter (window lenght 30 and polynomial order 1) and locate the first minima above 0.1\,$AA^2$ from both simulation and experimental data. The quality of a form factor is then defined as Eucledian distance between the minima in simulated and experimental form factors, $FF_q = |FF_{\rm{min}}^{\rm{sim}}-FF_{\rm{min}}^{\rm{exp}}|$. 
+
+The quality evaluation of form factors is implemented in {\it /Scripts/BuildDatabank/QualityEvaluation.py} in the NMRlipids databank repository. The resulting form factor qualities are stored in files named {\it FormFactorQuality.json} at folders in {\it /Data/Simulations} in the NMRlipids databank repository.
 
 
+\subsection{Analysing anisotropic diffusion of water in membranes environment from the NMRlipids databank}
 
-\subsection{Analysing simulations in the NMRlipids databank}
+%The README.yaml files contain all the essential information to perform arbitrary analyses of simulations in the NMRlipids databank, i.e., the permanent location of the original data and naming convention for all atoms and molecules in each system. 
+%In practise, the analyse codes contains a loop over all README.yaml files (i.e., simulations in the NMRlipids databank) which first downloads the raw simulation to a local computer and then uses the information about the atom and molecule naming conventions in README.yaml and mapping files to perform the desired analyses. 
 
-The README.yaml files contain all the essential information to perform arbitrary analyses of simulations in the NMRlipids databank, i.e., the permanent location of the original data and naming convention for all atoms and molecules in each system. In practise, the analyse codes contains a loop over all README.yaml files (i.e., simulations in the NMRlipids databank) which first downloads the raw simulation to a local computer and then uses the information about the atom and molecule naming conventions in README.yaml and mapping files to perform the desired analyses. For example, the code that calculates all C-H bond order parameters of all systems is available at \url{https://github.com/NMRLipids/Databank/blob/main/Scripts/AnalyzeDatabank/calcOrderParameters.py} and minimal example of a analysis code is available at \url{https://github.com/NMRLipids/Databank/blob/main/Scripts/AnalyzeDatabank/template.ipynb}.
+%A minimal example of a analysis code is available at \url{https://github.com/NMRLipids/Databank/blob/main/Scripts/AnalyzeDatabank/template.ipynb}.
 
-While the order parameters, form factors, area per lipid and thickness are stored within the NMRlipids databank (\url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations}), further analyses can be conventiently stored in separate repositories with the same folder structure based on hash identities of trajectory and topology files. For example, results from further analyses performed here are stored in folders at \url{https://github.com/NMRLipids/DataBankManuscript/tree/main/Data}. Such organization of the data enables further upcycling of the analyzed data as similarly to the original NMRlipids databank repository.
+Water permeability through membranes was calculated from equation $P=r/2c_w$, where $r$ is the rate of permeation events per time and area, and $c_w$ is the concentration of water in bulk with the value of 33.3679\,(nm)$^{-3}$~\cite{venable19}. The number of permeation events in each trajectory was calculated using the code by Camilo et al.~\cite{camilo2022}, available at~\url{https://github.com/crobertocamilo/MD-permeation}. This code was used within the loop that goes over all simulations in the NMRlipids databank and extracts the required information using the information in README.yaml files. The code is available at {\it /scripts/calcMD-PERMEATION.py} and resulting permeabilities are stored at {\it /Data/MD-PERMEATION} in the repository containing all analyses specific for this publication at~\url{https://github.com/NMRLipids/DataBankManuscript/}. 
+%While the order parameters, form factors, area per lipid and thickness are stored within the NMRlipids databank (\url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations}), further analyses can be conventiently stored in separate repositories with the same folder structure based on hash identities of trajectory and topology files. For example, results from further analyses performed here are stored in folders at \url{https://github.com/NMRLipids/DataBankManuscript/tree/main/Data}. 
+This repository is organized similarly to the NMRlipids databank repository, enabling the upcycling also of the analyzed data without overloading the main NMRlipids databank repository. 
 
-For the permeation of water through membranes, the number of permeation events in each trajectory was first calculated using the code by Camilo et al.~\cite{camilo2022}, available at~\url{https://github.com/crobertocamilo/MD-permeation}. The permeation was then calculated from equation $P=r/2c_w$, where $r$ is the rate per time and area, and $c_w$ is the concentration of water in bulk with the value of 33.3679\,(nm)$^{-3}$~\cite{venable19}.
+The parallel diffusion along membrane surface was calculated using Einstein's equation with {\it gmx msd} program with the {\it -lateral} option from Gromacs softwater package~\cite{gromacsMANUAL}. The code is available at {\it /scripts/calcWATERdiffusion.py} and resulting diffusion coefficients are stored at {\it /Data/WATERdiffusion} in the repository at~\url{https://github.com/NMRLipids/DataBankManuscript/}.
 
-%\subsection{Indexing the simulation data}
+Water diffusion in the perpendicular direction of lipid bilayers in a multilamellar stack was estimated from the Tanner equation $D_\perp = \frac{D_{||} P z_w}{D_{||} + P z_w}$~\cite{tanner78,wasterby02}, where the water layer thickness, $z_w$, was estimated by subtracting bilayer thickness from the size of the simulation box in membrane normal direction.
 
-%\subsubsection*{AddData.py}
-%AddData.py is a script that builds a database that contains a dictionary file and analysis data of each simulation. The dictionary file contains information about the simulation. The script also calculates order parameters of all CH bonds of the lipids in the simulation. To add a simulation it must be first uploaded to Zenodo (www.zenodo.org). The trajectory and topology files of the simulation are downloaded to the working directory from Zenodo but these are not saved into the database. To add a simulation to the database the user has to give some essential information about the simulation. This is done by writing a info file (*INFO.yaml) which is passed to AddData.py. 
-%\newline \\
-%AddData.py requires GROMACS and MDAnalysis library to be installed.
-%\newline \\
-%Run AddData.py as follows:
-%\newline \\
-%python3 AddData.py -f exampleINFO.yaml
-%\newline \\
-%There is also a script runAddData.sh that can be used to loop over several info files to add many simulations at one go.
+\subsection{Calculation of lipid flip-flops}
 
-%\subsubsection*{Simulation dictionary}
-%A simulation dictionary contains information about the simulation. Some of the information is provided by the user. The numbers of lipid molecules, solvent and ions are automatically read from the files and so are the simulation temperature and trajectory length. All this information is saved to a file named README.yaml.
-
-
-%\subsubsection{User input}
-%Dictionary variables defined by the user are listed here. 
-%The necessary parameters required for the analyses are described first and are marked as ''compulsory''. Then the parameters used to describe the data for further usage and analyses are described.
-%While only compulsory parameters are required for the databank entry, strong recommendation is that all the possible parameters would be given to maximize the possibilities to upcycle the contributed data. 
-
-%\subsubsection*{DOI (compulsory)}
-%Give DOI identity from where the simulation files are located. Current databank works only for the data in Zenodo, but other potential sources are may be implemented in the future. Note that the DOI must point to a specific version of dataset in Zenodo, i.e., DOI pointing to all versions of certain dataset does not work.
-
-%\subsubsection*{SOFTWARE (compulsory)}
-%Give the name of software used to run the simulation. The options are GROMACS, AMBER, NAMD, CHARMM and OPENMM. So far, only simulations run with GROMACS are accepted by the script.
-
-%\subsubsection*{TRJ (compulsory)}
-%Give the name of the trajectory file that is found from the DOI given above.
-
-%\subsubsection*{TPR (compulsory)}
-%Give the name of the file with topology information (tpr file in the case of Gromacs) that is found from the DOI given above.
-
-%\subsubsection*{PREEQTIME (compulsory)}
-%Give the time simulated before the uploaded trajectory in nanoseconds. For example, if you upload 100-200~ns part of total 200~ns simulation, this should value should be 100.
-
-%\subsubsection*{TIMELEFTOUT (compulsory)}
-%Give the time that should be considered as an equilibration period in the uploaded trajectory. Frames before the give time will be discarded in the analysis. For example, if you upload 0-200~ns part of total 200~ns simulation where the first 100~ns should be considered as an equilibration, this value should be 100.
-
-
-%\subsubsection*{Molecule names (compulsory)}
-%In the databank, each molecule has a unique abbreviation (see table~\ref{tab:abbreviations}). 
-%You need to give the residue names of these molecules corresponding your simulation.
-%The user must also provide the names of the molecules, ions and solvent that are used in the simulation to match the names used by the databank. The names provided by the user must be the same as in the tpr file. 
-%If atoms in a lipid belong to different residues (typical situation in Amber force fields), give the name of the head group residue here, and add the residue name of each atom to the third column in the mapping file (see below). If your simulation contains molecules that are not yet in the databank, you need to define the abbreviation and add molecules to the lipids\_dict, molecules\_dict, molecule\_numbers\_dict and molecule\_ff\_dict in the AddData.py script, as well as to table~\ref{tab:abbreviations}. 
-
-
-%\subsubsection*{MAPPING\_DICT (compulsory)}
-%For the analysis, we need to know the names of atoms in your system.
-%These are defined using the mapping file convention introduced in \url{http://nmrlipids.blogspot.com/2015/03/mapping-scheme-for-lipid-atom-names-for.html}, where first column gives the universal atom name, second gives the atom name in force field, and third gives the residue name if not the same for all atoms.
-%The name of the mapping file for each molecule needs to be given in dictionary format. The dictionary the key is the molecule name (abbreviation listed in table \ref{tab:abbreviations}) and the value is the name of the mapping file. The already existing mapping files can be found from the directory named "mapping\_files". If a mapping file for your molecule(s) do not exist, you need to construct one and add to the "mapping\_files" directory.
 
 %\newline \\
 %The purpose of a mapping file is to circumvent the problem caused by different atom naming conventions used by different force fields. The first column of a mapping file contains general atom names. The second column contains the name of the atom as it is in the force field. If the lipid consists of several residues which is the case in some AMBER force fields, then a third column is needed which contains the name of the residue to which each atom belongs to.
 
-%\subsubsection*{DIR\_WRK (compulsory)}
-%Give the path of the working directory in your local computer. The trajectory and topology files will be downloaded to this trajectory, and temporary files created during processing will be stored here. 
-
-
-%\subsubsection*{UNITEDATOM\_DICT (compulsory for united atom trajectories)}
-%Order parameters from united atom simulations are calculated using buildH code (\url{https://github.com/patrickfuchs/buildH}). For united atom simulations, you need to tell how hydrogens are added based on definitions in the dic\_lipids.py dictionary. This is done by giving a dictionary where the key is the molecule name (abbreviation listed in table \ref{tab:abbreviations}) and the value is the correct dictionary key in dic\_lipids.py. If correct dictionary key is not yet found, you need to add to dic\_lipids.py. 
-%In the case of an all atom simulation, UNITEDATOM is left empty.
-
-
-%\subsubsection*{PUBLICATION}
-%Give reference to a publication(s) related to the data.
-
-%\subsubsection*{AUTHORS\_CONTACT}
-%Give the name and email of the main author(s) of the data.
-
-%\subsubsection*{SYSTEM}
-%Give description of system in free format. For example ''POPC with cholesterol at 301K''.
-
-
-%\subsubsection*{SOFTWARE\_VERSION}
-%Give the version of the software used.
-
-%\subsubsection*{FF}
-%Give the name of the force field used used in the simulation.
-
-%\subsubsection*{FF\_SOURCE}
-%Describe the source of the force field parameters. For example, CHARMM-GUI, link to webpage where parameters were downloaded, or citation to a paper.
-
-%\subsubsection*{FF\_DATE}
-%Give the date when parameters were accessed or created. The format is day/month/year.
-
-%%\subsubsection*{Individual force field names for molecules}
-%In some cases special force fields are used for certain molecules. For example, non-standard parameters for ions or other molecules have been used. These can be specified giving forcefield names separately for individual molecules. These can be given as parameters named as
-%FF+[abbreviation from table \ref{tab:abbreviations}], i.e., FFPOPC, FFPOT, FFSOL etc.
-
-%\subsubsection*{CPT (Gromacs)}
-%Give the name of the Gromacs checkpoint file that is found from the DOI given above.
-%CPT stands for the name of the cpt file. 
-
-%\subsubsection*{LOG (Gromacs)}
-%Give the name of the Gromacs log file that is found from the DOI given above.
-
-%\subsubsection*{TOP (Gromacs)}
-%Give the name of the Gromacs top file that is found from the DOI given above.
-
-
-
-%\subsubsection{Automatically analyzed parameters}
-%The following parameters are read automatically from the trajectory and topology files.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%automatically analyzed parameters%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%\subsubsection*{Molecule numbers}
-%Numbers of lipid molecules (NPOPC, NPOPG, etc.) per membrane leaflet are calculated by determining on which side of the center of mass of the membrane the center of mass of the head group of each lipid molecule is located.
-%\newline \\
-%\noindent Numbers of other molecules such as solvent and ions (NSOL, NPOT, NSOD, etc.) are read from the topology file.
-
-%\subsubsection*{Temperature}
-%Temperature of the simulation is read from the topology file.
-
-%\subsubsection*{Trajectory length}
-%The length of a trajectory is read from the trajectory file.
-
-%\subsubsection*{Date of running}
-%The date of running the script is saved to the README.yaml file.
 
 
 
