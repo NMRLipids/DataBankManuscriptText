@@ -186,18 +186,67 @@ Lipid flip-flops from one bilayer leaflet to another play an important role in l
 
 %The Discussion should be succinct and must not contain subheadings.
 
-Building accessible databanks of molecular dynamics simulation data has been challenging due to the required long term support for hardware and software maintenance. In the overlay model used in the NMRlipids databank, the demand of hardware can be distributed and open collaboration model reduces the risk for ending software maintenance. Furthermore, the open collaboration model used in the NMRlipids project credits contributors by offering authorship in published articles, thereby creating an incentive for contributions. This model could be extended also to other fields where similar barriers to establish publicly accessible databanks exist. 
+Applications of MD simulations in understanding biomolecular behaviour are steadily increasing, but protocols for quality evaluation and sharing simulation data fall behind the ones in more elaborated fields, such as structural biology. Development of such protocols has been limited by practical challenges, such as lack of universally defined quality measures for MD simulations, incompatible naming conventions in different models and simulation softwares, and high technical requirements for hardware to share large trajectories from MD simulations, as well as incentives for scientist to evaluate and share their MD simulation data. 
 
+The NMRlipids databank circumvents these challenges by utilizing the overlay databank design and open collaboration approach developed in the NMRlipids project~\cite{botan15}. In the overlay databank, the storage of large simulation files is outsourced to existing publicly available repositories while databank itself is essentially a git repository with open access licence containing relevant information about the trajectories, including the location of the raw data. This architecture streamlines the construction and maintenance of the databank
+%Building accessible databanks of molecular dynamics simulation data has been challenging due to the required long term support for hardware and software maintenance. 
+%
+%, the demand of hardware can be distributed and open collaboration model reduces the risk for ending software maintenance. 
+%Furthermore, the 
+by distributing the long term commitment for hardware and software maintenance. Incentive to share the data is created in the NMRlipids open collaboration by offering authorship in published articles to the contributors.
+%, thereby creating an incentive for contributions. 
+Universal quality measures and naming conventions for molecules and atoms are defined in the NMRlipids databank to enable the automatic quality evaluation and other analyses.
+%of lipid bilayer MD simulations introduced in the NMRlipids databank enables rapid ranking of available simulation models agains experimental NMR and x-ray scattering data. 
+%
+The current NMRlipids databank contains only lipid bilayer simulations, but the concept combining open collaboration and overlay databank structure can be applied also in other fields where similar barriers to establish publicly accessible databanks exist. 
+%
+%, thereby not requiring large resources to handle and maintain. 
+%This lowers the barrier for starting such databank as well as for long term storage. 
+%The NMRlipids databank  
+%In addition to all computers where the databank is developed and used, the NMRlipids databank git is stored to Zenodo server, thereby enabling a very cost effective long term storage for the databank. 
 
-, thereby not requiring large resources to handle and maintain. This lowers the barrier for starting such databank as well as for long term storage. The NMRlipids databank is essentially a git repository containing information on the location of raw data and its indexing with universal naming convention. In addition to all computers where the databank is developed and used, the NMRlipids databank git is stored to Zenodo server, thereby enabling a very cost effective long term storage for the databank. 
+The NMRlipids databank will be of great benefit to scientists involved in MD simulations. They will be able to rapidly evaluate the quality of MD simulations in order to filter out potentially misleading results or facilitate force field parameter development~\cite{antila22b}. The selection of best models for a specific application is demonstrated for PC/PE lipid mixtures in Fig.~\ref{fig:quality}, and previously for PC/PS lipid mixtures~\cite{antila22b}, and lipid headgroups~\cite{bacle21}. On the other hand, programmatic access in the NMRlipids databank enables automatic analyses over large sets of simulation data containing more data in terms of quantity (e.g., simulation length and number of conformations) with broader range in terms of content (e.g, lipid compositions and ion concentrations) that can be accessible for a single research group. Added value of the access to broad range of systems is exemplified in Figs.~\ref{fig:quality}~and~\ref{fig:permeability} revealing correlations between membrane properties, while large quantity of data enables the detection of rare phenomena with good statistics, as exemplified for water permeability in Fig.~\ref{fig:permeability} and cholesterol flip-flop events in Fig.~\ref{??}. 
 
-Quality measure and automatic quality evaluation of lipid bilayer MD simulations introduced in the NMRlipids databank enables rapid ranking of available simulation models agains experimental NMR and x-ray scattering data. This provides a tool for researches to rapidly evaluate the credibility of MD simulations of their own and reported by other groups. Because such tool and quality measure has not been available, this will elaborate the quality of published MD simulations of lipid bilyers and reduce potentially misleading results~\cite{antila22b}. The power of NMRlipids databank to select the best models for particular applications has been demontrated for PC/PE lipid mixtures (Fig.~\ref{fig:quality}), PC/PS lipid mixtures~\cite{antila22b}, and lipid headgroups~\cite{bacle21}.
+Providing programmatic access to large scale MD simulation data can lead to applications in unprecedented directions. For example, water anisotropic diffusion analyzed in Fig.~\ref{fig:permeability} is relevant not only in pharmacokinetics but also in the development of MRI imaging methods where MD simulations are not yet widely used~\cite{topgaard20}. We expect the access provided by the NMRlipids databank to facilitate novel applications also in other fields where MD simulations are less commonly applied, such as design of lipid nanoparticles for drug delivery or other applications, and material science. The increasing amount of data in terms of quantity and content will also increase the scope of potential applications of the NMRlipids databank in time.
 
-The increasing amount of MD simulation data with programmatic access in the NMRlipids databank opens up possibilities for wide range of applications utilizing the large set of accessible data. Extend of the data in the NMRlipids databank in terms of quantity (e.g., simulation length and number of conformations), content (e.g, lipid compositions and ion concentrations) and quality enables analyses that are not possible to conduct from MD simulation data produced by a single research group. Applications of the NMRlipids databank to understand how diffusion of water through and along cellular membrane depends on its physical properties are demonstrated in Fig.~\ref{??}. Permeation of water through membranes resembles the permeation of also other hydrophilic molecules, such as drugs, and detailed understanding of water dynamics through and along membranes is potentially useful for the development of MRI imaging methods~\cite{topgaard20}. 
-These examples demonstrate the practical applications of NMRlipids databank on problems in the biological and biomedical sciences.
+The NMRlipids databank can also serve as a training set for diverse machine learning applications. Most straightforward applications include models that would predict connections between membrane properties that are already stored in the databank. For example, a machine learning model predicting electron density profiles from form factors would be highly useful in interpretation of scattering experiments. On the other hand, more elaborated models could be trained to predict arbitrary membrane properties using the data from the NMRlipids databank. Such models could be used to connect membrane composition to relevant membrane properties in wide range of fields from molecular biology to drug development and biomolecular imaging. The overlay databank design can open such avenues also for other biomolecules than lipids, such as disordered proteins and membrane-protein systems.
 
+Different types of applications enabled by the NMRlipids databank in wide range of fields are exemplified in Table~\ref{tab:applications}. 
 
-Emerging applications of machine learning are increasing the impact of such databanks. For example, the existing Protein Databank (PDB)~\cite{??} containing experimentally determined protein structures with programmatic access has enabled the development of machine learning based tools building on the data collected in the databank over the years~\cite{??}. NMRlipids and other databanks with open programmatic access have potential to lead similar unforeseen applications in the future.
+\begin{table}[]
+    \centering
+    \begin{tabular}{p{5.0cm}  p{5.0cm}  p{4.0cm}}
+    Type of application     & Practical examples & Target group \\
+    \hline
+    Analyses of rare phenomena               & Lipid flip-flops, water permeation & Membrane scientists \\
+    \\
+    Correlations between membrane properties & 
+    Membrane structural properties, water dynamics (Figs.~\ref{fig:quality} and~\ref{fig:permeability}) & 
+    Membrane scientists \\
+    \\
+    Applications that are outside typical scope of MD simulations & 
+    Anisotropic water diffusion for pharmagokinetics and MRI imaging applications & 
+    Scientist in fields where MD simulations are not usually applied \\
+    \\
+    Selection of the best simulation model for a specific application & 
+    Best model for POPC lipids (Fig.~\ref{fig:quality}), headgroup conformations~\cite{bacle21}, 
+    packing of PS~\cite{antila22b} and PE (Fig.~\ref{fig:POPCPOPEapls}) containing membranes. &
+    Scientists using MD simulations \\
+    \\
+    Guidance for force field development & 
+    Improvements in ion binding to lipids~\cite{melcr18,melcr20} and lipid headgroup conformational ensembles~\cite{??} &
+    Scientists developing parameters for MD simulations \\
+    \\
+    Training and target data for coarse grained models & 
+    Optimizing parameters of coarse grained models against NMRlipids databank, extracting continuum parameters for membranes. &
+    Scientists developing and using coarse grained MD simulations \\
+    \\
+    Training set for machine learning applicatons &
+    programmatic access to the data and results enables training of machine learning type of models for various applications, such as predictions of membrane properties from composition & Scientists building and using machine learning applications for biomolecules.  
+    \end{tabular}
+    \caption{Examples on applications of the NMRlipids databank.}
+    \label{tab:applications}
+\end{table}
 
 
 \section{Methods}
@@ -246,7 +295,7 @@ where $\Delta \rho_e(z)$ is the difference between total and solvent electron de
 Lipid bilayer thicknesses in all simulations are calculated from the intersections of lipid and water electron densities using the script {\it Scripts/AnalyzeDatabank/calc\_thickness.py} at the NMRlipids databank repository. The resulting thicknesses are stored for all simulations in files named {\it thickness.json} at folders in {\it /Data/Simulations} in the NMRlipids databank repository. Lipid bilayer area per lipids in all simulations are calculated by dividing the simulation box area with the total number of molecules considered as lipids using the script {\it Scripts/AnalyzeDatabank/calcAPL.py} at the NMRlipids databank repository. The resulting area per lipids are stored for all simulations in files named {\it apl.json} at folders in {\it /Data/Simulations} in the NMRlipids databank repository.
 
 \subsection{Quality evaluation of C-H bond order parameters}
-As the first step to evaluate simulation qualities against experimental data, each simulation is connected to an experimental data if molar concentrations of all molecules are within $\pm$5 percentage units, charged lipids have the same counterions, and temperatures are within $\pm$2 degrees. For molar concentrations of water, the exact hydration level is considered only for systems with molar water to lipid ratio below 25, otherwise the systems are considered as fully hydrated. In practise, this is implemented by adding the path of the experimental data into the simulation README.yaml file using the {\it /Scripts/BuildDatabank/searchDATABANK.py} script in the NMRlipids databank repository. 
+As the first step to evaluate simulation qualities against experimental data, each simulation is connected to an experimental data if molar concentrations of all molecules are within $\pm$3 percentage units, charged lipids have the same counterions, and temperatures are within $\pm$2 degrees. For molar concentrations of water, the exact hydration level is considered only for systems with molar water to lipid ratio below 25, otherwise the systems are considered as fully hydrated. In practise, this is implemented by adding the path of the experimental data into the simulation README.yaml file using the {\it /Scripts/BuildDatabank/searchDATABANK.py} script in the NMRlipids databank repository. 
 
 %\subsubsection{Conformational ensembles using C-H bond order parameters}
 %
@@ -282,7 +331,7 @@ To streamline the comparison between simulations, we define the qualities of dif
 \begin{equation}
     P^{\rm frag}[{\rm lipid}] = \frac{\langle P[{\rm lipid}]\rangle_{\rm frag}}{p_{\rm frag}[{\rm lipid}]},
 \end{equation}
-where $P^{\rm frag}[{\rm lipid}]$ is the average of individual C-H bond order parameters qualities within the fragment, $p_{\rm frag}[{\rm lipid}]$ is the percentage of order parameters for which the quality is available within the fragment, and frag can be {\it sn}-1, {\it sn}-2, headgroup or total (all order parameters within a molecule). The overall quality of different fragments in a simulation are then defined as a molar fraction weighted average over different lipid components
+where $\langle P[{\rm lipid}]\rangle_{\rm frag}$ is the average of individual C-H bond order parameters qualities within the fragment, $p_{\rm frag}[{\rm lipid}]$ is the percentage of order parameters for which the quality is available within the fragment, and frag can be {\it sn}-1, {\it sn}-2, headgroup or total (all order parameters within a molecule). The overall quality of different fragments in a simulation are then defined as a molar fraction weighted average over different lipid components
 \begin{equation}
     P^{\rm frag} = \sum_{\rm lipid} \chi_{\rm lipid} P^{\rm frag}[{\rm lipid}],
 \end{equation}
