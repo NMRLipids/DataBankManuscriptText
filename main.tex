@@ -170,7 +170,7 @@ Clear dependencies of permeability on charged lipids, cholesterol, POPE, or hydr
 \begin{figure}[tb]
     \centering
     \includegraphics[width=180mm]{Figures/permeation2.pdf}
-    \caption{A 
+    \caption{{\bf A} Water diffusion, $D_\perp$, and permeability, $P$, through membranes, and lateral diffusion along the membrane, $D_{||}$, illustrated in a multilamellar stack of lipid bilayers. 
     {\bf B-E} Water permeation through membranes analyzed from the databank as a function of temperature, thickness, area per lipid, and acyl chain order. Values from simulations with non-zero permeation values are shown with blue dots. Averages over fixed range of x-axis values are shown with black dots. Insert in B) shows the Arrhenius plot of permeation ($\ln$ (P) vs. 1/T) that gives 17\,$\pm$\,4\,k$_b$T for the average activation energy for water permeation through lipid bilayer. Inserts in C) and D) show the region where the dependence could be considered approximately linear.
     {\bf F} Lateral diffusion of water as a function of hydration level. Experimental points for DMPC bilayers at 313\,K at different hydration levels are shown~\cite{rudakova04}.
     {\bf G-H} Diffusion anistoropy of water as a function of thickness and area per lipid. }
@@ -184,6 +184,17 @@ Simulation results are close to the experimental values with low hydration level
 
 \subsection{Flip-flops}
 Lipid flip-flops from one bilayer leaflet to another play an important role in lipid trafficking and regulating membrane properties~\cite{vanmeer08}. Phospholipid flip-flops are slow, occuring with the timescales of hours or days, while cholesterol, diacylglycerol and ceramide flip-flops are faster, yet the reported timescales range between minutes to sub-millisecods~\cite{vanmeer08,steck12,parisio16,gu19}. Flip-flops have been previously studied mainly with coarse-grained simulations and free energy calculations due to time scale limitations in atomistic simulations~\cite{parisio16}, but direct analyses on cholesterol flip-flops in atomistic simulations have been also emerging in recent years~\cite{gu19,javanainen18,baral20}. However, systematic studies on how flip-flop rates depend on membrane properties are still challenging even with the state of the art computational resources. The NMRlipids databank can greatly advance such studies by giving an easy access to large amounts of data simultaneously.
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=88mm]{Figures/CholFlipFlops.pdf}
+    \caption{{\bf A} Illustration of cholesterol flip-flop.  
+      {\bf B-D} Cholesterol flip-flops analyzed from the databank as a function of membrane thickness, area per lipid, and acyl chain order.
+      Values from simulations with non-zero flip-flop rates are shown with blue dots. Averages over fixed range of x-axis values are shown with black dots.
+    }
+    \label{fig:permeability}
+\end{figure}
+
 
 
 \section{Discussion}
