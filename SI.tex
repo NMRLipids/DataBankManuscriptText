@@ -149,7 +149,7 @@
 
 
 
-\begin{table}[]
+\begin{table}[!h]
     \centering
     \begin{tabular}{  p{3.5cm}  p{9.5cm}  p{4.0cm} }
     \toprule
@@ -221,7 +221,7 @@
 %    \label{tab:abbreviations}
 %\end{table}
 
-\begin{table}[h]
+\begin{table}[!h]
     \centering
     \begin{tabular}{c c}
     Abbreviation & Molecule name \\
@@ -275,7 +275,7 @@
 
 
 
-\begin{table}[]
+\begin{table}[!h]
     \centering
     \begin{tabular}{  p{5.0cm}  p{10.0cm}}
     \toprule
@@ -293,16 +293,45 @@
 \end{table}
 
 
-\pagebreak
+\newpage
 \section{Experimental data}
 \subsection{NMR experiments}
-Acyl chain order parameters of POPE and POPG were analyzed from the experiments that were used to determine headgroup order parameters in Ref.~\citenum{bacle21}.
+Acyl chain order parameters of POPE and POPG were analyzed from the experiments that were used to determine headgroup order parameters in Ref.~\citenum{bacle21}. The analysis of the crowded spectral region at 29-31 ppm was based on the previous assignment reported for POPC membranes~\cite{ferreira13}. 
 
+\begin{figure}
+  \includegraphics[width=\textwidth]{Figures/POPE_INEPT_contour_SCH.pdf}
+  \caption{Determination of the POPE acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPE depicted. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C-H order parameter profile for the acyl chains of POPE. The splittings used for calculating the order parameters are shown in the next figure. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.      }
+  \label{POPEexp1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{Figures/POPE_slices.pdf}
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in the previous figure. The number at the top left of each plot denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right. The labels are the same as shown in the previous figure.  }
+  \label{POPEexp1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{Figures/POPG_INEPT_contour_SCH.pdf}
+  \caption{Determination of the POPG acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPE depicted. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C-H order parameter profile for the acyl chains of POPE. The splittings used for calculating the order parameters are shown in the next figure. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.}
+  \label{POPEexp1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{Figures/POPG_slices.pdf}
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in the previous figure. The number at the top left of each plot denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right. The labels are the same as shown in the previous figure. }
+  \label{POPEexp1}
+\end{figure}
+
+
+
+
+
+\pagebreak
 \subsection{X-ray scattering experiments}
 X-ray scattering form factors contributed to the NMRlipids III project are included in the databank (\url{http://nmrlipids.blogspot.com/2022/09/nmrlipids-iii-including-lipid-lateral.html}).
 
 
-
+\pagebreak
 \bibliography{refs.bib}
 
 %\noindent LaTeX formats citations and references automatically using the bibliography records in your .bib file, which you can edit via the project menu. Use the cite command for an inline citation, e.g.  \cite{Hao:gidmaps:2014}.
