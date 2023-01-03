@@ -1775,9 +1775,9 @@
        x2="165.20761"
        y2="179.6107"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.30653142,0,0,0.33261658,-81.986583,136.30949)" />
+       gradientTransform="matrix(0.30653142,0,0,0.33261658,-92.700867,543.1845)" />
     <linearGradient
-       gradientTransform="matrix(0.13458804,0,0,0.53777528,-323.21215,-10.676068)"
+       gradientTransform="matrix(0.13458804,0,0,0.53777528,-323.21215,40.886433)"
        inkscape:collect="always"
        xlink:href="#linearGradient2597"
        id="linearGradient2599"
@@ -1907,7 +1907,7 @@
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
     <linearGradient
-       gradientTransform="matrix(0.44172808,0,0,0.99919548,106.55883,-623.59539)"
+       gradientTransform="matrix(0.44172808,0,0,0.99919548,107.63026,-973.2829)"
        inkscape:collect="always"
        xlink:href="#linearGradient17800"
        id="linearGradient17804"
@@ -1925,7 +1925,7 @@
          id="stop17802" />
     </linearGradient>
     <linearGradient
-       gradientTransform="matrix(0.44172808,0,0,0.99919548,106.55883,-623.59539)"
+       gradientTransform="matrix(0.44172808,0,0,0.99919548,107.63026,-973.2829)"
        inkscape:collect="always"
        xlink:href="#linearGradient17794"
        id="linearGradient17798"
@@ -3255,8 +3255,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="914.98394"
-     inkscape:cy="403.02273"
+     inkscape:cx="651.05537"
+     inkscape:cy="400.87987"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -3277,7 +3277,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -10463,30 +10463,30 @@
        id="rect4136-1"
        width="474.69885"
        height="74.503883"
-       x="-508.21851"
-       y="158.79904"
+       x="-518.9328"
+       y="565.67407"
        ry="14.358637" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.4387939px;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.28656617px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-267.26794"
-       y="186.3327"
+       x="-277.98224"
+       y="593.2077"
        id="text11998"><tspan
          sodipodi:role="line"
-         x="-263.6243"
-         y="186.3327"
+         x="-274.33859"
+         y="593.2077"
          id="tspan12002"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
    id="tspan2579">Data layer:</tspan> Raw simulation data in </tspan><tspan
          sodipodi:role="line"
-         x="-267.26794"
-         y="214.98932"
+         x="-277.98224"
+         y="621.86432"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan2577">publicly available repositories</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.52749991;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-       d="m -429.98635,230.98329 v 64.93465"
+       d="M -429.98635,352.29834 V 287.36369"
        id="path7828-2-8"
        inkscape:connector-curvature="0" />
     <rect
@@ -10495,74 +10495,74 @@
        width="479.67331"
        height="131.56685"
        x="-512.05768"
-       y="304.50192"
+       y="356.06442"
        ry="12.632442" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.4387939px;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.28656617px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-269.27252"
-       y="333.45074"
+       y="385.01324"
        id="text11998-5"><tspan
          sodipodi:role="line"
          x="-265.62888"
-         y="333.45074"
+         y="385.01324"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan3991"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.28656617px"
    id="tspan2579-5">Databank layer:</tspan> Programmatic access </tspan><tspan
          sodipodi:role="line"
          x="-265.62888"
-         y="362.10736"
+         y="413.66986"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan4003">to the raw data (README.yaml files), </tspan><tspan
          sodipodi:role="line"
          x="-265.62888"
-         y="390.76398"
+         y="442.32648"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan4019">experimental data, basic analyses and </tspan><tspan
          sodipodi:role="line"
          x="-269.27252"
-         y="419.42059"
+         y="470.98309"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan4021">quality evaluation</tspan><tspan
          sodipodi:role="line"
          x="-269.27252"
-         y="428.68698"
+         y="480.24948"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan4001" /></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.52750015;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-1)"
-       d="m -327.93953,230.96264 v 64.93465"
+       d="M -327.93953,352.31899 V 287.38434"
        id="path7828-2-8-8"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.52750015;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-5)"
-       d="M -200.1492,231.85255 V 296.7872"
+       d="M -200.1492,351.42908 V 286.49443"
        id="path7828-2-8-85"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.52750015;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-16)"
-       d="m -102.58731,231.41711 v 64.93465"
+       d="M -102.58731,351.86452 V 286.92987"
        id="path7828-2-8-9"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.52750015;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-2)"
-       d="m -429.58087,434.52553 v 64.93465"
+       d="M -442.97373,562.15587 V 497.22122"
        id="path7828-2-8-1"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.52750039;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-1-4)"
-       d="m -327.53405,434.50488 v 64.93465"
+       d="M -328.87334,562.84616 V 497.91151"
        id="path7828-2-8-8-3"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.52750039;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-5-1)"
-       d="m -199.74371,435.39479 v 64.93465"
+       d="M -205.10085,565.97411 V 501.03946"
        id="path7828-2-8-85-2"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.52750039;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-16-9)"
-       d="M -102.18182,434.95935 V 499.894"
+       d="M -102.18182,563.06133 V 498.12668"
        id="path7828-2-8-9-6"
        inkscape:connector-curvature="0" />
     <rect
@@ -10570,35 +10570,35 @@
        id="rect7826-7"
        width="491.25076"
        height="111.97007"
-       x="-523.1933"
-       y="515.21649"
+       x="-522.12189"
+       y="165.52898"
        ry="30.047104" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:3.4387939px;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.28656617px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-274.59531"
-       y="546.30273"
+       x="-273.52386"
+       y="196.61522"
        id="text11998-5-4"><tspan
          sodipodi:role="line"
-         x="-270.95166"
-         y="546.30273"
+         x="-269.88022"
+         y="196.61522"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan4021-5"><tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.28656617px"
    id="tspan2579-5-6">Application layer:</tspan> Graphical access </tspan><tspan
          sodipodi:role="line"
-         x="-274.59531"
-         y="574.95935"
+         x="-273.52386"
+         y="225.27184"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan5212">(http://databank.nmrlipids.fi/), results</tspan><tspan
          sodipodi:role="line"
-         x="-274.59531"
-         y="603.61597"
+         x="-273.52386"
+         y="253.92845"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan5214">from analyses</tspan><tspan
          sodipodi:role="line"
-         x="-274.59531"
-         y="612.88232"
+         x="-273.52386"
+         y="263.19482"
          style="font-size:22.92529297px;line-height:1.25;stroke-width:0.28656617px"
          id="tspan4001-3" /></text>
     <g
