@@ -35,15 +35,46 @@
 \renewcommand{\thepage}{S\arabic{page}}%
 
 
-\title{SUPPLEMENTARY INFORMATION: NMRlipids Databank: Overlay Databank of Lipid Membrane Simulations Arising from Open Collaboration}
+\title{SUPPLEMENTARY INFORMATION: NMRlipids Databank makes data-driven analysis of biomembrane properties accessible for all}
 
-\author[1]{Anne Kiirikki}
-\author[2]{...}
-\author[1,*]{O. H. Samuli Ollila}
+
+\author[1]{Anne Kiirikki}         %ORCID: ?
+\author[2]{Hanne Antila}          %ORCID: 0000-0002-2474-5053
+\author[2]{Lara Bort}             %ORCID: ?
+\author[3]{Pavel Buslaev}         %ORCID: ?
+\author[4]{Fernando Favela}
+\author[5]{Tiago Mendes Ferreira}
+\author[6,7]{Patrick Fuchs}
+\author[8,9]{Rebeca Garcia-Fandino}
+\author[2]{Ivan Gushchin}
+%\author[2]{Matti Javanainen}      %ORCID: 0000-0003-4858-364X
+\author[2]{Batuhan Kav}           %ORCID: ?
+\author[2]{Milla Kurki}
+\author[2]{Alexander Kuzmin}
+\author[10,11]{Jesper Madsen}
+\author[2]{Markus S. Miettinen}   %ORCID: 0000-0002-3999-4722
+%\author[2]{...}                   %ORCID: ?
+\author[12]{Thomas Piggot}
+\author[2]{Suman Samantray}
+\author[2]{Fabi{\'a}n Suarez-Leston}
+\author[1,*]{O. H. Samuli Ollila} %ORCID: 0000-0002- 8728-1006
 %\author[1,2,+]{Christine Author}
 %\author[2,+]{Derek Author}
-\affil[1]{University of Helsinki, Institute of Biotechonology, Helsinki, Finland}
+
+\affil[1]{University of Helsinki, Institute of Biotechnology, Helsinki, Finland}
 \affil[2]{Affiliation, department, city, postcode, country}
+\affil[3]{Nanoscience Center and Department of Chemistry, University of Jyv{\"a}skyl{\"a}, P.O. Box 35, Jyv{\"a}skyl{\"a}, 40014 , Finland}
+\affil[4]{Departamento de Ciencias B\'{a}sicas, Tecnol\'{o}gico Nacional de M\'{e}xico - ITS Zacatecas Occidente, Sombrerete, Zacatecas, 99102, M\'{e}xico}
+\affil[5]{NMR group - Institute for Physics, Martin Luther University Halle-Wittenberg,  Halle (Saale), 06120, Germany}
+\affil[6]{Sorbonne Universit{\'e}, Ecole Normale Sup{\'e}rieure, PSL University, CNRS, Laboratoire des Biomol{\'e}cules (LBM), Paris, 75005, France}
+\affil[7]{Universit{\'e} de Paris, UFR Sciences du Vivant, Paris, 75013, France}
+\affil[8]{Center for Research in Biological Chemistry and Molecular Materials (CiQUS), Universidade de Santiago de Compostela,  Santiago de Compostela, E-15782, Spain}
+\affil[9]{CIQUP, Centro de Investigação em Qu{\'i}mica, Departamento de Qu{\'i}mica e Bioqu{\'i}mica, Faculdade de Ci{\^e}ncias, Universidade do Porto, Porto, 4169-007, Portugal}
+\affil[10]{Department of Chemistry, The University of Chicago, Chicago, Illinois, 60637, United States of America}
+\affil[11]{Global and Planetary Health, College of Public Health, University of South Florida, Tampa, Florida, 33612, United States of America}
+\affil[12]{Chemistry, University of Southampton, Highfield, Southampton, SO17 1BJ, United Kingdom}
+
+
 
 \affil[*]{samuli.ollila@helsinki.fi}
 
@@ -74,7 +105,7 @@
 \begin{figure}[!h]
     \centerfloat
     \includegraphics[width = 180mm]{Figures/QualityCorrelationsSI.pdf}
-    \caption{Dependence of form factor, electron density profiles along membrane normal, and C-H bond orderparameters (from top to bottom) on simulation box size with different cholesterol concentration. }
+    \caption{Scatter plots and Pearson correlation coefficients, $r$, for the membrane area per lipid with X-ray scattering form factor minima (A and B), and for thickness with the average order parameter of the {\textit sn}-1 acyl chain (B) and with the second minimum from X-ray scattering form factors (D) extracted from the NMRlipids databank. All correlation coefficients have p-value below 0.001 as indicated by $^{***}$.}
     \label{fig:QualityCorrelationsSI}
 \end{figure}
 
@@ -110,13 +141,8 @@
 \begin{figure}[!h]
     \centering
     \includegraphics[width = 180mm]{Figures/permeationSI.pdf}
-    \caption{a) Structure of an overlay databank. 
-    More detailed structure of the layer 2 in the NMRlipids databank is illustrated in Fig.~\ref{DatabankStructure} in the SI.
-    b) Distribution of the lengths of the trajectories, total number of trajectories and total lenght of the simulations in the NMRlipids databank.
-    c) Distribution of lipids present in the trajectories in the NMRlipids databank. Lipids occuring in five or less simulations ('others') are listed in the right. 
-    d) Currently available binary mixtures in the NMRlipids databank. 
-    e) Distribution of force fields in the simulations in the NMRlipids databank.
-    The figures and numbers are created on 9th of May 2022.}
+    \caption{Water permeation through membranes analyzed from the databank as a function of (A) hydration level, (B) fraction of cholesterol, (C) fraction of charged lipids, and (D) fraction of POPE in membrane. Values from simulations with non-zero permeation values are shown with blue dots. Histogrammed values are shown with black dots.
+    }
     \label{fig:permeationSI}
 \end{figure}
 
@@ -126,13 +152,7 @@
 \begin{figure}[!h]
     \centering
     \includegraphics[width = 180mm]{Figures/LateralDiffusionSI.pdf}
-    \caption{a) Structure of an overlay databank. 
-    More detailed structure of the layer 2 in the NMRlipids databank is illustrated in Fig.~\ref{DatabankStructure} in the SI.
-    b) Distribution of the lengths of the trajectories, total number of trajectories and total lenght of the simulations in the NMRlipids databank.
-    c) Distribution of lipids present in the trajectories in the NMRlipids databank. Lipids occuring in five or less simulations ('others') are listed in the right. 
-    d) Currently available binary mixtures in the NMRlipids databank. 
-    e) Distribution of force fields in the simulations in the NMRlipids databank.
-    The figures and numbers are created on 9th of May 2022.}
+    \caption{Lateral diffusion of water as a function of (A) area per lipid, (B) temperature, (C) membrane thickness, and (D) fraction of charged lipids in a membrane.}
     \label{fig:diffusionSI}
 \end{figure}
 
@@ -149,7 +169,7 @@
 
 
 
-\begin{table}[]
+\begin{table}[!h]
     \centering
     \begin{tabular}{  p{3.5cm}  p{9.5cm}  p{4.0cm} }
     \toprule
@@ -221,7 +241,7 @@
 %    \label{tab:abbreviations}
 %\end{table}
 
-\begin{table}[h]
+\begin{table}[!h]
     \centering
     \begin{tabular}{c c}
     Abbreviation & Molecule name \\
@@ -275,7 +295,7 @@
 
 
 
-\begin{table}[]
+\begin{table}[!h]
     \centering
     \begin{tabular}{  p{5.0cm}  p{10.0cm}}
     \toprule
@@ -293,16 +313,45 @@
 \end{table}
 
 
-\pagebreak
+\newpage
 \section{Experimental data}
 \subsection{NMR experiments}
-Acyl chain order parameters of POPE and POPG were analyzed from the experiments that were used to determine headgroup order parameters in Ref.~\citenum{bacle21}.
+Acyl chain order parameters of POPE and POPG were analyzed from the experiments that were used to determine headgroup order parameters in Ref.~\citenum{bacle21}. The analysis of the crowded spectral region at 29-31 ppm was based on the previous assignment reported for POPC membranes~\cite{ferreira13}. 
 
+\begin{figure}
+  \includegraphics[width=\textwidth]{Figures/POPE_INEPT_contour_SCH.pdf}
+  \caption{Determination of the POPE acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPE depicted. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C-H order parameter profile for the acyl chains of POPE. The splittings used for calculating the order parameters are shown in the next figure. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.      }
+  \label{POPEexp1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{Figures/POPE_slices.pdf}
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in the previous figure. The number at the top left of each plot denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right. The labels are the same as shown in the previous figure.  }
+  \label{POPEexp1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{Figures/POPG_INEPT_contour_SCH.pdf}
+  \caption{Determination of the POPG acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPE depicted. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C-H order parameter profile for the acyl chains of POPE. The splittings used for calculating the order parameters are shown in the next figure. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.}
+  \label{POPEexp1}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{Figures/POPG_slices.pdf}
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in the previous figure. The number at the top left of each plot denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right. The labels are the same as shown in the previous figure. }
+  \label{POPEexp1}
+\end{figure}
+
+
+
+
+
+\pagebreak
 \subsection{X-ray scattering experiments}
 X-ray scattering form factors contributed to the NMRlipids III project are included in the databank (\url{http://nmrlipids.blogspot.com/2022/09/nmrlipids-iii-including-lipid-lateral.html}).
 
 
-
+\pagebreak
 \bibliography{refs.bib}
 
 %\noindent LaTeX formats citations and references automatically using the bibliography records in your .bib file, which you can edit via the project menu. Use the cite command for an inline citation, e.g.  \cite{Hao:gidmaps:2014}.
