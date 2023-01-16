@@ -130,16 +130,39 @@ The {\it Databank layer} is the core of the databank containing all the relevant
 \end{figure}
 
 \subsection{Accessing NMRlipids databank}
-The content of the NMRlipids databank is easily searchable and browsable via graphical user interface (GUI) (\url{http://www.databank.nmrlipids.fi/}), which can be also used to visualize the systems, compare basic properties between diffent systems and experiments, order the simulations based on their quality. 
+The content of the NMRlipids databank is easily searchable and browsable via graphical user interface (GUI) (\url{http://www.databank.nmrlipids.fi/}), which can be also used to visualize the systems, compare basic properties between diffent systems and experiments, and rank simulations based on their quality evaluated against experimental data. 
 
 %\subsection{Analyzing the databank}
-More flexible analyses, enabling wide range of novel applications can be performed by the Python application programming interface (API) available at \url{https://github.com/NMRLipids/Databank}. 
-Programs that analyze large data sets from the NMRlipids databank loop over README.yaml files of all simulations, download the raw simulation data to the local computer, and perform the analysis from the downloaded trajectories. When molecule or atom names are needed in the analysis, they will be read from the README.yaml file and mapping files defined therein.
+More flexible analyses that enable wide range of novel applications can be performed by the Python application programming interface (API) available at \url{https://github.com/NMRLipids/Databank}. The API can be used to automatically analyse virtually any property from all simulations in the NMRlipids databank following the flowchart demonstrated in Fig.~\ref{fig:POPCPOPEapls}A. Iteration through the README.yaml files in the {\it databank layer} enables the access to raw simulation data via the links stored in these files. Affiliation of universal molecule and atom names to the simulation specific names in README.yaml and mapping files enable automatic analyses independently on the specific naming convention used in a simulation. Analysis codes and results for membrane area per lipid, C–H bond order parameters, X-ray scattering form factors and thickness are included in the {\it Databank layer}. Any other analyses can be implement by users and the results can be stored to the application layer.
+
+These tools offer open programmatic access to unprecedented amount of simulation trajectories for all, which enables possibilities for wide range of novel analyses. This is particularly useful for scientist without access to resources to perform large scale MD simulations and for analyses of rare phenomena that require exceptional amounts of simulation data. On the other hand, universal naming convention enables systematic comparisons between simulations having different model parameters and thereby different naming conventions. This will guide the development of more accurate simulation parameters and usage of atomistic models to train coarse grained simulations.
+
+\begin{figure}[tbp]
+    \centering
+    \includegraphics[width=88mm]{Figures/flowchart2.pdf}
+    \caption{Differences in area per lipids of POPC and POPE bilayers between different force fields.  
+    }
+    \label{fig:POPCPOPEapls}
+\end{figure}
 
 
 \subsection{Selection of best simulation parameters for applications using the NMRlipids databank}
 %Quality of membrane simulations with different force fields have been evaluated against experimental data during parameterization and in separate comparison studies~\cite{botan15,ollila16,catte16,pluhackova16,perez17,leonard19,??}, but the lack of universal quality measure for membrane simulations complicates the estimations of reliability of simulations. 
-Understanding the accuracy of the used force field parameters is crucial when assessing the reliability and significance of MD simulation results. However, the lack of universal quality measures for MD simulations and the complicated landscape of force field quality for membranes hamper the applicability of such simulations, resulting in substantial controversies~\cite{antila22b}. For example, previous quality evaluations of membrane simulations have concluded that CHARMM36 parameters give the best description for lipid headgroup conformational ensembles~\cite{bacle21}, GROMOS-CKP parameters best capture the membrane packing in POPS bilayers~\cite{antila22b}, and that OPLS3e parameters overcome CHARMM36 in structural quality for POPC but predicts overestimated ion binding~\cite{kurki22}. To enable the navigation in this complex force field milieu, we define here quantitative quality measures that can be used to rapidly find the best available parameters for a specific application or to guide the development of improved force fields. For detailed definitions of quality measures, see the supplementary information.
+Understanding of how closely simulations resemble the reality is crucial when assessing the reliability and significance of MD simulation results, as well as when using atomistic simulations in parametrization of coarse grained models. However, universal quality measures for MD simulations are lacking, and a prevailing force field that would perform best in all situations has not been found for membranes. For example, OPLS3e parameters overcome CHARMM36 in structural quality for POPC but predicts overestimated ion binding~\cite{kurki22}. 
+%and the complicated landscape of force field quality for membranes hamper the applicability of such simulations, resulting in substantial controversies~\cite{antila22b}. 
+%For example, previous quality evaluations of membrane simulations have concluded that 
+On the other hand, CHARMM36 gives the best description for lipid headgroup conformational ensembles~\cite{bacle21}, whileGROMOS-CKP parameters best capture the membrane packing in POPS bilayers~\cite{antila22b}. Furthermore, Fig.~\ref{fig:POPCPOPEapls}B illustrates divergent predictions for the difference in packing between POPC and POPE membranes from different force fields. To streamline the selection of best simulations for specific applications, and to guide the development of atomistic and coarse grained parameters, quantitative quality measures for lipid bilayer simulations are defined in the NMRlipids databank.
+%that can be used to rapidly find the best available parameters . 
+
+The quality for each simulation in the NMRlipids databank with the corresponding experimental data available is currently done using C--H bond order parameters from NMRexperiments and form factors from X-ray scattering experiments. The C--H bond order parameters are sensitive to conformational ensembles of individual lipid molecules~\cite{ollila16}, while correlating well also with the membrane thickness and lateral packing as shown in Fig.~\ref{fig:quality}F. The X-ray scattering form factors are related to membrane dimensions \textit{via} the electron density profile. In particular, locations of minima in these form factors are correlated with the membrane lateral packing and thickness as shown in Figs.~\ref{fig:quality}F,~\ref{fig:QualityCorrelationsSI}, and~\ref{fig:sizedependence}.
+For quality measures, probabilities for each order parameter to locate within experimental error and distance of the first form factor minimum from the experimental value are calculated from a simulation.
+%For detailed definitions of quality measures, see the supplementary information.
+
+Ranking based on C--H bond order parameter quality for the best performing simulations is shown in Fig.~\ref{fig:quality}A, and for the best performing POPE lipid bilayer simulations in Fig.~\ref{fig:quality}B. Direct comparisons with experiments are shown for selected simulations in Figs.~\ref{fig:quality}C--E. 
+%The power of the NMRlipids databank in selecting the best simulation parameters for a specific application is demonstrated for mixtures of PE and PC lipids in Fig.~\ref{fig:POPCPOPEapls} showing area per lipids from available POPC and POPE bilayer simulations in the databank from different force fields at 310\,K. Predictions from different force fields deviate significantly in terms of absolute values and the slope of decrease upon addition of POPE. 
+This can be used to select the the simulations that best caputer area per lipids for POPE and POPC lipids in Fig.~\ref{fig:POPCPOPEapls}B because the area per lipid correlates with the average order parameter of the $\textit{sn}$-1 chain (Fig.~\ref{fig:quality} F).
+%, simulations with the best predictions for area per lipids can be selected based on order parameter quality evaluation. 
+Quality evaluation in Fig.~\ref{fig:quality} and direct comparison in Fig.~\ref{fig:POPC_POPE_dataSI} reveal that Slipids ranks 1\textsuperscript{st} for POPC with a clear difference to others, and 2\textsuperscript{nd} for POPE with only marginally lower quality than GROMOS-CKP. Simulations with CHARMM36 and GROMOS-CKP predict overly packed bilayer for POPC (overestimated order in Fig.~\ref{fig:POPC_POPE_dataSI}), while the area per lipid for POPC is overestimated in Lipid17. For POPE, CHARMM36 and Lipid17 predict membranes that are too packed. In conclusion, Slipids parameters is the best available choice for studies where packing effects of PE lipids are relevant
 
 \begin{figure}[!t]
     \centering
@@ -153,24 +176,11 @@ Understanding the accuracy of the used force field parameters is crucial when as
 \end{figure}
 
 
-Ranking of all simulations with the highest scores based on evaluation against C--H bond order parameters from NMR experiments is shown in Fig.~\ref{fig:quality}A and ranking of best POPE lipid bilayer simulations in Fig.~\ref{fig:quality}B. Direct comparisons with experiments for selected simulations are shown in Figs.~\ref{fig:quality}C--E. C--H bond order parameters are sensitive to conformational ensembles of individual lipid molecules~\cite{ollila16} while also correlating well also with the membrane thickness and lateral packing as shown in Fig.~\ref{fig:quality}F. This is complemented by comparing the absolute values of X-ray scattering form factors between simulations and experiments that are related to the overall membrane dimensions \textit{via} the electron density profile. In particular, the location of minima in these form factors are correlated with the membrane dimensions as shown in Figs.~\ref{fig:quality}F,~\ref{fig:QualityCorrelationsSI}, and~\ref{fig:sizedependence}.
-
-%\subsection{Finding the best models for PC and PE lipid mixtures}
-The power of the NMRlipids databank in selecting the best simulation parameters for a specific application is demonstrated for mixtures of PE and PC lipids in Fig.~\ref{fig:POPCPOPEapls} showing area per lipids from available POPC and POPE bilayer simulations in the databank from different force fields at 310\,K. Predictions from different force fields deviate significantly in terms of absolute values and the slope of decrease upon addition of POPE. Because the area per lipid correlates with the average order parameter of the $\textit{sn}$-1 chain (Fig.~\ref{fig:quality} F), simulations with the best predictions for area per lipids can be selected based on order parameter quality evaluation. Quality evaluation in Fig.~\ref{fig:quality} and direct comparison in Fig.~\ref{fig:POPC_POPE_dataSI} reveal that Slipids ranks 1\textsuperscript{st} for POPC with a clear difference to others, and 2\textsuperscript{nd} for POPE with only marginally lower quality than GROMOS-CKP and is therefore the best available choice for studies where packing effects of PE lipids are relevant. Simulations with CHARMM36 and GROMOS-CKP predict overly packed bilayer for POPC (overestimated order in Fig.~\ref{fig:POPC_POPE_dataSI}), while the area per lipid for POPC is overestimated in Lipid17. For POPE, CHARMM36 and Lipid17 predict membranes that are too packed. 
-
-
 In summary, the automatic quality evaluation of the NMRlipids databank enables the rapid exploration and selection of the best simulation parameters for specific applications without extensive and tedious manual force field evaluation. This possibility will promote more reliable simulation results for wide range of applications, support force field development, and streamline the parametrization of coarse grained force fields against the best atomistic MD simulations. The automatically extracted quantitative quality measures will be particularly useful to guide automatic parametrization procedures.
 
 %Understanding such complex picture of lipid bilayer MD simulation quality would not be possible without automatic quality evaluation of large sets of simulations enabled by the NMRlipids databank.
 
 
-\begin{figure}[tbp]
-    \centering
-    \includegraphics[width=88mm]{Figures/APL.pdf}
-    \caption{Differences in area per lipids of POPC and POPE bilayers between different force fields.  
-    }
-    \label{fig:POPCPOPEapls}
-\end{figure}
 
 
 
