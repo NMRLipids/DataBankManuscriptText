@@ -95,9 +95,9 @@
 
 %\keywords{Keyword1, Keyword2, Keyword3}
 
-%\begin{abstract}
+\begin{abstract}
 %We present a databank of lipid bilayer simulations from the NMRlipids open collaboration project.
-%\end{abstract}
+\end{abstract}
 
 \begin{document}
 
@@ -107,7 +107,7 @@
 %
 %  Click the title above to edit the author information and abstract
 %
-\thispagestyle{empty}
+%\thispagestyle{empty}
 
 %\noindent Please note: Abbreviations should be introduced at the first mention in the main text – no abbreviations lists. Suggested structure of main text (not enforced) is provided below.
 
@@ -180,7 +180,29 @@
   \label{DatabankStructure}
 \end{figure}
 
-
+\begin{table}[!h]
+    \centering
+    %\begin{tabular}{c c c c}
+    \begin{tabular}{p{3.0cm}  p{5.0cm}  p{3.0cm}  p{4.0cm}}
+        Code & Function & Input & Output \\
+        \hline
+        \multicolumn{4}{c}{ {\bf Databank layer}}\\
+        \hline
+        \multicolumn{4}{c}{ {\bf Scripts/BuildDatabank/ }}\\
+         AddData.py & Create README.yaml from user given information in info.yaml  & info.yaml & README.yaml \\
+         searchDATABANK.py & Pair simulations with available experimental data  & README.yaml files & Updated README.yaml files \\
+         QualityEvaluation.py & Quality evaluate simulations that are paired with experimental data  & README.yaml files & [lipid\_name]\_OrderParameters\_quality.json, [lipid\_name]\_FragmentQuality.json, system\_quality.json, FormFactorQuality.json \\
+         \multicolumn{4}{c}{ {\bf Scripts/AnalyzeDatabank/ }}\\
+         calcOrderParameters.py & Calculate C-H bond order parameters for all lipids in the simulation & README.yaml files & [lipid\_name]\_OrderParameters.json \\
+         calcAPL.py & Calculate area per lipid as a function of time & README.yaml files & apl.json \\
+         calc\_FormFactors.py & Calculate x-ray scattering form factors & README.yaml files & FormFactor.json \\
+         calc\_thickness.py & Calculate membrane thickness & README.yaml files & thickness.json \\
+         
+         
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
 
 \begin{table}[p]
     \centering
@@ -329,6 +351,31 @@
     \label{tab:abbreviations}
 \end{table}
 
+\begin{table}[p]
+    \centering
+    \begin{tabular}{l}
+    Force field name and references \\
+    \hline
+    CHARMM36~\cite{klauda10}\\
+    Slipids~\cite{jambeck12,jambeck12b,jambeck2012another,ermilova16,grote20}  \\
+    MacRog~\cite{Kulig15b}  \\
+    Amber Lipid14/17~\cite{dickson14,dickson22}  \\
+    Charmm-Drude~\cite{li2017drude}      \\
+    ECClipids~\cite{melcr18,melcr20,bacle21}  \\
+    GROMOS-CKP~\cite{Chandrasekhar03,kukol09,piggot12}  \\
+    Berger~\cite{berger97}  \\
+    ECC-CHARMM36~\cite{nencini2019development}  \\
+    Orange~\cite{catte16}  \\
+    Poger~\cite{poger10}  \\
+    GROMOS 43A1-S3~\cite{chiu09}  \\ 
+    GAFFlipid~\cite{dickson12}  \\
+    OPLS3e~\cite{roos19}  \\
+    Ulmschneider~\cite{Ulmschneider09}  \\
+    Chiu Gromos~\cite{chiu09}  \\
+    \end{tabular}
+    \caption{List of current force fields used in simulations in the databank with references.}
+    \label{tab:ForceFields}
+\end{table}
 
 
 
