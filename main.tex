@@ -131,7 +131,7 @@ The {\it application layer} is composed of repositories and tools that read info
 
 
 
-\begin{figure}
+\begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{Figures/overlay3.pdf}
     \caption{A) Schematic presentation of the overlay structure used in the NMRlipids databank. A more detailed structure of the databank layer is shown in Fig.~\ref{DatabankStructure} in the SI.
@@ -153,15 +153,15 @@ While analysis codes and results for basic membrane properties
 %area per lipid, C–H bond order parameters, X-ray scattering form factors and thickness 
 are included in the {\it Databank layer}, unlimited amount of further analyses can be implemented by anyone in separate repositories in the {\it application layer}. {\it Application layer} repositories that are organized using the {\it Databank layer} structure can be straightforwardly accessed programmatically and further analyzed by implementing the flowchart demonstrated in Fig.~\ref{fig:POPCPOPEapls}B by using the NMRlipids databank-API functions. Novel analyses demonstrating the power of the NMRlipids databank in selecting best simulation models, analyses of rare phenomena and extending MD simulations to new fields are implemented in an {\it application layer} repository located at~\url{www.github.com/NMRLipids/DataBankManuscript}.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=88mm]{Figures/flowchart2.pdf}
-    \caption{ A) Flowchart for performing an analysis of properties through all MD simulations in the NMRlipids databank using the API.
-    B) Flowchart for accessing results calculated from the NMRlipids databank and stored to the application layer.
-    C) Area per lipids of POPC and POPE lipid bilayers predicted by different force fields at 310\,K in simulations that are available in the NMRlipids databank. The points from the best performing simulations in the NMRlipids databank quality evaluation for each lipid (Figs.~\ref{fig:quality} and~\ref{fig:POPC_POPE_dataSI}) are surrounded by black circles. 
-    }
-    \label{fig:POPCPOPEapls}
-\end{figure}
+%\begin{figure}[t]
+%    \centering
+%    \includegraphics[width=88mm]{Figures/flowchart2.pdf}
+%    \caption{ A) Flowchart for performing an analysis of properties through all MD simulations in the NMRlipids databank using the API.
+%    B) Flowchart for accessing results calculated from the NMRlipids databank and stored to the application layer.
+%    C) Area per lipids of POPC and POPE lipid bilayers predicted by different force fields at 310\,K in simulations that are available in the NMRlipids databank. The points from the best performing simulations in the NMRlipids databank quality evaluation for each lipid (Figs.~\ref{fig:quality} and~\ref{fig:POPC_POPE_dataSI}) are surrounded by black circles. 
+%    }
+%    \label{fig:POPCPOPEapls}
+%\end{figure}
 
 \subsection{Applications of the NMRlipids databank}
 \subsubsection{Selection of simulation parameters using the NMRlipids databank: Best models for most abundant neutral membrane lipids}
@@ -185,7 +185,7 @@ Together with the API, these enable rapid and automatic quality evaluation of si
 
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=\linewidth]{Figures/quality3.pdf}
+    \includegraphics[width=\linewidth]{Figures/quality5.pdf}
     \caption{ A) Best simulations ranked based on overall order parameter quality.
     B) Best simulations ranked based on the overall order parameter quality of POPE lipid. 
     C)--E) Evaluation against experimental (NMR order parameters and X-ray scattering ) data exemplified for a simulation with the best overall order parameter quality (C), the best quality for POPE lipid (D), and the headgroup quality for POPE (E).
