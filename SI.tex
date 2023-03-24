@@ -144,6 +144,7 @@
     \label{fig:top50simulations}
 \end{figure}
 
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width = 140mm]{Figures/POPC_POPE_dataSI.pdf}
@@ -204,12 +205,34 @@
          calcAPL.py & Calculate area per lipid as a function of time & README.yaml files & apl.json \\
          calc\_FormFactors.py & Calculate x-ray scattering form factors & README.yaml files & FormFactor.json \\
          calc\_thickness.py & Calculate membrane thickness & README.yaml files & thickness.json \\
-         
+         template.py $\qquad$  template.ipynb & Minimal code to loop over simulations that can be used as a template for new analyses. & README.yaml files & \\
          
     \end{tabular}
-    \caption{Caption}
-    \label{tab:my_label}
+    \caption{List of relevant codes used to build the databank and perform analyses in the {\it databank layer} available at~\url{https://github.com/NMRLipids/Databank/}.}
+    \label{tab:codes}
 \end{table}
+
+\begin{table}[!h]
+    \centering
+    %\begin{tabular}{c c c c}
+    \begin{tabular}{p{3.5cm}  p{4.5cm}  p{3.0cm}  p{4.0cm}}
+        Code & Function & Input & Output \\
+        \hline
+        \multicolumn{4}{c}{ {\bf Application layer}}\\
+        \hline
+        %\multicolumn{4}{c}{ {\bf Scripts/BuildDatabank/ }}\\
+        AreaPerLipidAnd ThicknessCorrelations.ipynb  & Analyze correlations between results in the {\it databank layer}  & Results in the {\it databank layer} & Figs.~\ref{fig:quality}G and~\ref{fig:QualityCorrelationsSI} \\
+        FlipFlop.py & Calculate flip-flop rates of lipids in all simulations & README.yaml & flipflop.dat files at {\it /Data/Flipflops/}. \\
+        plotFlipFlop.ipynb & Plots how flip-flop rates depend on membrane properties & README.yaml and flipflop.dat files at {\it /Data/Flipflops/}. & Fig.~\ref{fig:flip-flops} \\
+        calcMD-PERMEATION.py  & Calculate permeation rate of water molecules through bilayers from all simulations. & README.yaml & Counting\_events.txt files at {\it /Data/MD-PERMEATION/} \\
+        calcWATERdiffusion.py & Calculate water lateral diffusion along membrane surface. & README.yaml & WATERlateralMSD.xvg files at {\it /Data/WATERdiffusion/} \\
+        plotWaterPermeation.ipynb & Plots how water permeation and diffusion depends on membrane properties. & README.yaml, Counting\_events.txt\,at {\it /Data/MD-PERMEATION/} and\,WATERlateralMSD.xvg files\,at {\it /Data/WATERdiffusion/} & Figs.~\ref{fig:permeability},~\ref{fig:permeationSI}, and~\ref{fig:diffusionSI}. \\
+        plotSimulation.ipynb & Plot results from a simulation together with the experimental data if available. & README.yaml files and results in the {\it databank layer} & Figs~\ref{fig:quality}D-F and ~\ref{fig:POPC_POPE_dataSI}.
+    \end{tabular}
+    \caption{Examples of codes that analyze membrane properties from the databank in an {\it application layer} available at~\url{https://github.com/NMRLipids/DataBankManuscript/}.}
+    \label{tab:codesApplication}
+\end{table}
+
 
 \begin{table}[p]
     \centering
@@ -379,6 +402,7 @@
     OPLS3e~\cite{roos19}  \\
     Ulmschneider~\cite{Ulmschneider09}  \\
     Chiu Gromos~\cite{chiu09}  \\
+    AMOEBA~\cite{chu2018polarizable} \\
     \end{tabular}
     \caption{List of current force fields used in simulations in the databank with references.}
     \label{tab:ForceFields}
@@ -389,7 +413,7 @@
 \clearpage
 %\section{Experimental data}
 \section{NMR experiments}
-Acyl chain order parameters of POPE and POPG were analyzed from the experiments that were previously used to determine headgroup order parameters~\cite{bacle21}. The analysis of the crowded spectral region at 29-31 ppm was based on the previous assignment reported for POPC membranes~\cite{ferreira13}. 
+Acyl chain order parameters of POPE (Figs.~\ref{POPEexp1} and~\ref{POPEexp2}) and POPG (Figs.~\ref{POPGexp1} and~\ref{POPGexp2}) were analyzed from the same data that were previously recorded to determine headgroup order parameters~\cite{bacle21}. The analysis of the crowded spectral region at 29-31 ppm was based on the previous assignment reported for POPC membranes~\cite{ferreira13}. To measure the order parameters for DOPC (Fig.~\ref{fig:DOPCexp}), the sample was prepared and experiments performed similarly to previous studies~\cite{bacle21}.
 
 \begin{figure}[h]
   \includegraphics[width=\textwidth]{Figures/POPE_INEPT_contour_SCH.pdf}
@@ -415,7 +439,12 @@ Acyl chain order parameters of POPE and POPG were analyzed from the experiments 
   \label{POPGexp2}
 \end{figure}
 
-
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{Figures/DOPCfig.pdf}
+    \caption{Determination of DOPC order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of DOPC. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C-H order parameters of DOPC.}
+    \label{fig:DOPCexp}
+\end{figure}
 
 
 
