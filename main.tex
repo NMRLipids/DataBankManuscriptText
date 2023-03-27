@@ -14,6 +14,7 @@
 }
 \makeatother
 
+\newcommand{\iu}{{i\mkern1mu}}
 
 \newcommand*{\myexternaldocument}[1]{%
     \externaldocument{#1}%
@@ -344,9 +345,9 @@ where angular brackets denote the ensemble average, \textit{i.e.}, average over 
 [\texttt{lipid\_name}]\texttt{OrderParameters.json} at folders in \texttt{/Data/Simulations} in the NMRlipids databank repository.
 
 \subsection{Calculation of X-ray scattering form factors}
-X-ray scattering form factors were calculated with the standard equation for symmetric lipid bilayers~\cite{ollila16}
+X-ray scattering form factors were calculated using the standard equation for lipid bilayers that does not assume symmetric membranes~\cite{ollila16},
 \begin{equation}\label{FFsimpl}
-F(q)=\int_{-D/2}^{D/2}\Delta \rho_e(z) \cos(zq_z) {\rm d}z,
+F(q)= \left\lvert\int_{-D/2}^{D/2}\Delta \rho_e(z) \exp(\iu zq_z) {\rm d}z \right\rvert,
 \end{equation}
 where $\Delta \rho_e(z)$ is the difference between total and solvent electron densities, and $D$ is the simulation box size in the $z$-direction (normal to the membrane). For the calculation of density profiles, atom coordinates were first centred around the centre of mass of lipid molecules for every time frame, and a histogram of these centred positions, weighted with the number of electrons in each atom, was then calculated with the bin width of $1/3$~\AA{}. Electron density profiles were then calculated as an average of these histograms over the time frames in simulations. The script to calculate form factors for all simulations in the NMRlipids databank is available at \texttt{Scripts/AnalyzeDatabank/calc\_FormFactors.py}. The resulting form factors are stored for all simulations in files named \texttt{FormFactor.json} at folders in \texttt{/Data/Simulations} in the NMRlipids databank repository.
 
