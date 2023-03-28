@@ -320,7 +320,7 @@ Experimental data used in the quality evaluation, currently composed of C--H bon
 
 
 \subsection{Analysing simulations}
-In practise, simulations in the NMRlipids databank can be analyzed by executing a program that loops over README.yaml files in the {\it databank layer}, downloads the data using the information in README.yaml files, and then performs the desired analysis on a local computer utilising the universal naming conventions for molecules and atoms defined in README.yaml and mapping files. This procedure is illustrated in Fig.~\ref{fig:overlay}D and examples of codes that perform such analyses in practise are listed in tables~\ref{tab:codes} and~\ref{tab:codesApplication}.
+In practise, simulations in the NMRlipids databank can be analyzed by executing a program that loops over README.yaml files in the {\it databank layer}, downloads the data using the information in README.yaml files, and then performs the desired analysis on a local computer utilising the universal naming conventions for molecules and atoms defined in README.yaml and mapping files. This procedure is illustrated in Fig.~\ref{fig:overlay}D and examples of codes that perform such analyses in practise are listed in tables~\ref{tab:codes} and~\ref{tab:codesApplication}. The equilibration period given by the user (TIMELEFTOUT in table~\ref{tab:READMEkeys}) is discarded from the trajectories in all analysis codes.
 
 
 \subsection{Principal Components Analysis of equilibration of simulations}
@@ -372,11 +372,11 @@ To streamline the comparison between simulations, we define the qualities for di
 \end{equation}
 where $\langle P[\mathrm{lipid}]\rangle_\mathrm{frag}$ is the average of individual C-H bond order parameters qualities within the fragment, and $F_\mathrm{frag}[\mathrm{lipid}]$ is the percentage of order parameters for which the quality is available within the fragment.
 %, and frag can be \textit{sn}-1, \textit{sn}-2, headgroup or total (all order parameters within a molecule). 
-The overall quality of different fragments in a simulation are then defined as a molar fraction weighted average over different lipid components
+The overall quality of different fragments in a simulation (frag = tails, headgroup or total) are then defined as a molar fraction weighted average over different lipid components
 \begin{equation}
     P^\mathrm{frag} = \sum_\mathrm{lipid} \chi_\mathrm{lipid} P^\mathrm{frag}[\mathrm{lipid}],
 \end{equation}
-where $\chi_\mathrm{lipid}$ is the molar fraction of a lipid in the bilayer.
+where $\chi_\mathrm{lipid}$ is the molar fraction of a lipid in the bilayer and "tails" refer to the average of all acyl chains.
 
 The quality evaluation of order parameters is implemented in \texttt{/Scripts/BuildDatabank/QualityEvaluation.py} in the NMRlipids databank repository. The resulting qualities for each order parameters are stored in files named  [\texttt{lipid\_name}]\texttt{ \_OrderParameters\_quality.json}, for individual lipids in files named [\texttt{lipid\_name}]\texttt{\_FragmentQuality.json}, and for overall quality for fragments in files named \texttt{system\_quality.json} at folders in \texttt{/Data/Simulations} in the NMRlipids databank repository. 
 
