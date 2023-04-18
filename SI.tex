@@ -114,23 +114,23 @@
 
 
 \pagebreak
-\section{Correlations between area per lipid and thickness with order parameters and form factors}
+\section{Correlations of area per lipid and thickness with order parameters and form factors}
 
 \begin{figure}[!h]
     \centerfloat
     \includegraphics[width = 180mm]{Figures/QualityCorrelationsSI.pdf}
-    \caption{Scatter plots and Pearson correlation coefficients, $r$, for the membrane area per lipid with X-ray scattering form factor minima (A and B), and for thickness with the average order parameter of the {\textit sn}-1 acyl chain (B) and with the second minimum from X-ray scattering form factors (D) extracted from the NMRlipids databank. All correlation coefficients have p-value below 0.001 as indicated by $^{***}$.}
+    \caption{Scatter plots and Pearson correlation coefficients, $r$, for the membrane area per lipid with X-ray scattering form factor minima (A and B), and for thickness with the average order parameter of the {\textit sn}-1 acyl chain (B) and with the second minimum from X-ray scattering form factors (D) extracted from the NMRlipids databank. All correlation coefficients have p-value below 0.001.}
     \label{fig:QualityCorrelationsSI}
 \end{figure}
 
 
 \pagebreak
-\section{Dependence of form factor and order parameters in the size of simulation}
+\section{Dependence of form factor and order parameters on the simulation box size}
 
 \begin{figure}[!h]
     \centerfloat
     \includegraphics[width = 240mm]{Figures/SizeDependence.pdf}
-    \caption{Dependence of form factor, electron density profiles along membrane normal, and C-H bond orderparameters (from top to bottom) on simulation box size with different cholesterol concentration. Simulations with 64, 256 or 1024 POPC lipids taken from Ref.~\citenum{javanainen_matti_2021_7035350}. }
+    \caption{Dependence of the form factor $F(q_z)$, the electron density profiles along membrane normal, and the C--H bond order parameters $S_\mathrm{CH}$ (from top to bottom) on the simulation box size (with different columns showing different cholesterol concentrations). Simulations with 64, 256, and 1024 POPC lipids are from Ref.~\citenum{javanainen_matti_2021_7035350}. }
     \label{fig:sizedependence}
 \end{figure}
 
@@ -138,20 +138,20 @@
 \pagebreak
 \section{Finding the best models for PC and PE mixtures}
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
-    \includegraphics[width = 110mm]{Figures/totalrankingCOMPL.pdf}
-    \caption{Top 50 simulations ranked based on order parameter quality against experiments.}
+    \includegraphics[height = 0.9\textheight]{Figures/totalrankingCOMPL.pdf}
+    \caption{Top 50 simulations in the NMRlipids Databank ranked based on the C--H bond order parameter quality against experiments.}
     \label{fig:top50simulations}
 \end{figure}
 
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = 140mm]{Figures/POPC_POPE_dataSI.pdf}
+    \includegraphics[height = 0.9\textheight]{Figures/POPC_POPE_dataSI.pdf}
     \caption{Simulations with the data for both POPC (top) and POPE (bottom) directly compared with the experimental data.
-      The area per lipid in simulations increase from left to right.
-      Simulations with the best overall quality for POPC and POPE order parameters are circled by a square.
+      The area per lipid increases from left to right.
+      Simulations with the best overall quality for POPC and POPE order parameters are highlighted with a solid border.
   }
     \label{fig:POPC_POPE_dataSI}
 \end{figure}
@@ -162,8 +162,8 @@
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = 180mm]{Figures/permeationSI.pdf}
-    \caption{Water permeation through membranes analyzed from the databank as a function of (A) hydration level, (B) fraction of cholesterol, (C) fraction of charged lipids, and (D) fraction of POPE in membrane. Values from simulations with non-zero permeation values are shown with blue dots. Histogrammed values are shown with black dots.
+    \includegraphics[width = \textwidth]{Figures/permeationSI.pdf}
+    \caption{Water permeation through membranes analyzed from the Databank as a function of (A) hydration level, (B) fraction of cholesterol, (C) fraction of charged lipids, and (D) fraction of POPE in membrane. Values from simulations with non-zero permeation values are shown with blue dots. Histogrammed values are shown with black dots.
     }
     \label{fig:permeationSI}
 \end{figure}
@@ -173,7 +173,7 @@
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width = 180mm]{Figures/LateralDiffusionSI.pdf}
+    \includegraphics[width = \textwidth]{Figures/LateralDiffusionSI.pdf}
     \caption{Lateral diffusion of water as a function of (A) area per lipid, (B) temperature, (C) membrane thickness, and (D) fraction of charged lipids in a membrane.}
     \label{fig:diffusionSI}
 \end{figure}
@@ -185,7 +185,7 @@
 
 \begin{figure}[!h]
   \includegraphics[width=\textwidth]{Figures/DataBankChart.pdf}
-  \caption{Structure of the NMRlipids databank. Manually added input data (blue boxes) includes basic information on the simulation, permanent links to the raw data, and experimental data if available. The databank entries (red box) and analysis results (green boxes), locating at \url{https://github.com/NMRLipids/Databank/tree/main/Data/Simulations} are automatically generated by the computer programs included in the NMRlipids databank (yellow boxes). Because raw data are not permanently stored but can be accessed based on the information in the databank, this connection is marked with the dashed line.}
+  \caption{Structure of the NMRlipids Databank. Manually added input data (blue boxes) include basic information on the simulation, permanent links to the raw data, and experimental data if available. The databank entries (red box) and analysis results (green boxes), at \url{https://github.com/NMRlipids/Databank/tree/main/Data/Simulations} are automatically generated by the computer programs included in the NMRlipids Databank (yellow boxes). Because the raw data are not permanently stored but can be accessed based on the information in the Databank, this connection is marked with a dashed line.}
   \label{DatabankStructure}
 \end{figure}
 
@@ -200,16 +200,16 @@
         \multicolumn{4}{c}{ {\bf Scripts/BuildDatabank/ }}\\
          AddData.py & Create README.yaml from user given information in info.yaml  & info.yaml & README.yaml \\
          searchDATABANK.py & Pair simulations with available experimental data  & README.yaml files & Updated README.yaml files \\
-         QualityEvaluation.py & Quality evaluate simulations that are paired with experimental data  & README.yaml files & [lipid\_name]\_OrderParameters\_quality.json, [lipid\_name]\_FragmentQuality.json, system\_quality.json, FormFactorQuality.json \\
+         QualityEvaluation.py & Quality-evaluate simulations that are paired with experimental data  & README.yaml files & [lipid\_name]\_OrderParameters\_quality.json, [lipid\_name]\_FragmentQuality.json, system\_quality.json, FormFactorQuality.json \\
          \multicolumn{4}{c}{ {\bf Scripts/AnalyzeDatabank/ }}\\
          calcOrderParameters.py & Calculate C-H bond order parameters for all lipids in the simulation & README.yaml files & [lipid\_name]\_OrderParameters.json \\
          calcAPL.py & Calculate area per lipid as a function of time & README.yaml files & apl.json \\
          calc\_FormFactors.py & Calculate x-ray scattering form factors & README.yaml files & FormFactor.json \\
          calc\_thickness.py & Calculate membrane thickness & README.yaml files & thickness.json \\
-         template.py $\qquad$  template.ipynb & Minimal code to loop over simulations that can be used as a template for new analyses. & README.yaml files & \\
+         template.py $\qquad$  template.ipynb & Minimal code to loop over simulations that can be used as a template for new analyses & README.yaml files & \\
          
     \end{tabular}
-    \caption{List of relevant codes used to build the databank and perform analyses in the {\it databank layer} available at~\url{https://github.com/NMRLipids/Databank/}.}
+    \caption{List of relevant codes used to build the Databank and perform analyses in the {\it Databank layer} available at~\url{https://github.com/NMRLipids/Databank/}.}
     \label{tab:codes}
 \end{table}
 
@@ -222,15 +222,15 @@
         \multicolumn{4}{c}{ {\bf Application layer}}\\
         \hline
         %\multicolumn{4}{c}{ {\bf Scripts/BuildDatabank/ }}\\
-        AreaPerLipidAnd ThicknessCorrelations.ipynb  & Analyze correlations between results in the {\it databank layer}  & Results in the {\it databank layer} & Figs.~\ref{fig:quality}G and~\ref{fig:QualityCorrelationsSI} \\
-        FlipFlop.py & Calculate flip-flop rates of lipids in all simulations & README.yaml & flipflop.dat files at {\it /Data/Flipflops/}. \\
-        plotFlipFlop.ipynb & Plots how flip-flop rates depend on membrane properties & README.yaml and flipflop.dat files at {\it /Data/Flipflops/}. & Fig.~\ref{fig:flip-flops} \\
-        calcMD-PERMEATION.py  & Calculate permeation rate of water molecules through bilayers from all simulations. & README.yaml & Counting\_events.txt files at {\it /Data/MD-PERMEATION/} \\
-        calcWATERdiffusion.py & Calculate water lateral diffusion along membrane surface. & README.yaml & WATERlateralMSD.xvg files at {\it /Data/WATERdiffusion/} \\
-        plotWaterPermeation.ipynb & Plots how water permeation and diffusion depends on membrane properties. & README.yaml, Counting\_events.txt\,at {\it /Data/MD-PERMEATION/} and\,WATERlateralMSD.xvg files\,at {\it /Data/WATERdiffusion/} & Figs.~\ref{fig:permeability},~\ref{fig:permeationSI}, and~\ref{fig:diffusionSI}. \\
-        plotSimulation.ipynb & Plot results from a simulation together with the experimental data if available. & README.yaml files and results in the {\it databank layer} & Figs~\ref{fig:quality}D-F and ~\ref{fig:POPC_POPE_dataSI}.
+        AreaPerLipidAnd ThicknessCorrelations.ipynb  & Analyze correlations between results in the {\it Databank layer}  & Results in the {\it Databank layer} & Figs.~\ref{fig:quality}G and~\ref{fig:QualityCorrelationsSI} \\
+        FlipFlop.py & Calculate flip-flop rates of lipids in all simulations & README.yaml & flipflop.dat files at {\it /Data/Flipflops/} \\
+        plotFlipFlop.ipynb & Plot how flip-flop rates depend on membrane properties & README.yaml and flipflop.dat files at {\it /Data/Flipflops/} & Fig.~\ref{fig:flip-flops} \\
+        calcMD-PERMEATION.py  & Calculate permeation rate of water molecules through bilayers from all simulations & README.yaml & Counting\_events.txt files at {\it /Data/MD-PERMEATION/} \\
+        calcWATERdiffusion.py & Calculate water lateral diffusion along membrane surface & README.yaml & WATERlateralMSD.xvg files at {\it /Data/WATERdiffusion/} \\
+        plotWaterPermeation.ipynb & Plot how water permeation and diffusion depend on membrane properties & README.yaml, Counting\_events.txt\,at {\it /Data/MD-PERMEATION/} and\,WATERlateralMSD.xvg files\,at {\it /Data/WATERdiffusion/} & Figs.~\ref{fig:permeability},~\ref{fig:permeationSI}, and~\ref{fig:diffusionSI}. \\
+        plotSimulation.ipynb & Plot results from a simulation together with the experimental data if available & README.yaml files and results in the {\it databank layer} & Figs~\ref{fig:quality}D-F and ~\ref{fig:POPC_POPE_dataSI}
     \end{tabular}
-    \caption{Examples of codes that analyze membrane properties from the databank in an {\it application layer} available at~\url{https://github.com/NMRLipids/DataBankManuscript/}.}
+    \caption{Examples of codes that analyze membrane properties from the Databank in an {\it Application layer} available at~\url{https://github.com/NMRLipids/DataBankManuscript/}.}
     \label{tab:codesApplication}
 \end{table}
 
@@ -243,7 +243,7 @@
     \midrule
         %\hline
     DOI & DOI from where the raw data is found & user given (compulsory) \\
-    SOFTWARE & Software used to run the simulation (e.g. Gromacs, Amber, NAMD, etc.) & \\
+    SOFTWARE & Software used to run the simulation (Gromacs, Amber, NAMD, etc.) & \\
     TRJ & Name of the trajectory file found from DOI (trr or xtc for Gromacs, dcd for OpenMM) & \\
     TPR (Gromacs) & Name of the tpr topology file found from DOI for Gromacs simulations & \\
     PDB (OpenMM) & Name of the pdb file found from DOI for OpenMM simulations & \\
@@ -258,29 +258,29 @@
     UNITEDATOM\_DICT & Information for constucting hydrogens for united atom simulations using buildH program~\cite{santuz21}. Empty for all atom simulations. & \\
     TYPEOFSYSTEM & Lipid bilayer or something else & \\
     \hline
-    PUBLICATION & Give reference to a publication(s) related to the data. & User given (optional)\\
-    AUTHORS\_CONTACT & Name and email of the main author(s) of the data. & \\
+    PUBLICATION & Give reference to a publication(s) related to the data & user given (optional)\\
+    AUTHORS\_CONTACT & Name and email of the main author(s) of the data & \\
     SYSTEM & System description on free text format & \\
     SOFTWARE\_VERSION & Version of the used software & \\
     FF & Name of the used force field & \\
-    FF\_SOURCE & Source of the force field parameters, e.g, CHARMM-GUI, webpage, citation to a publication, etc. & \\
-    FF\_DATE &  Date when force field parameters were accessed on the gives source (day/month/year). & \\
-    FF{molename} & Molecule specific force field information, e.g., water model with FFSOL and sodium parameters with FFSOD. & \\
-    CPT & Name of the Gromacs checkpoint file. & \\
-    LOG & Name of the Gromacs log file. & \\
-    GRO & Name of the Gromacs gro file. & \\
-    TOP & Name of top file for Gromacs or psf file for OpenMM. & \\
-    CRD & Name of crd file for OpenMM. & \\
-    WARNINGS & Dictionary containing information about unusual features in the trajectory, such as ambiguous atom names, membrane normal not oriented in z-direction, old Gromacs version used, etc. & \\
+    FF\_SOURCE & Source of the force field parameters, e.g, CHARMM-GUI, webpage, citation to a publication & \\
+    FF\_DATE &  Date when force field parameters were accessed on the given source (day/month/year) & \\
+    FF{molename} & Molecule specific force field information, e.g., water model with FFSOL and sodium parameters with FFSOD & \\
+    CPT & Name of the Gromacs checkpoint file & \\
+    LOG & Name of the Gromacs log file & \\
+    GRO & Name of the Gromacs gro file & \\
+    TOP & Name of top file for Gromacs or psf file for OpenMM & \\
+    CRD & Name of crd file for OpenMM & \\
+    WARNINGS & Dictionary containing information about unusual features in the trajectory, such as ambiguous atom names, membrane normal not oriented in $z$-direction, old Gromacs version used & \\
     \hline
-    TRAJECTORY\_SIZE & Size of the trajectory file in bytes & automatically extracted data. \\
-    TRJLENGTH & Lenght of the trajectory (ps). & \\
-    TEMPERATURE & Temperature of the simulation. & \\
-    NUMBER\_OF\_ATOMS & Number of atoms in the simulation. & \\
-    DATEOFRUNNIG & Date when added into the databank & \\
+    TRAJECTORY\_SIZE & Size of the trajectory file in bytes & automatically extracted data \\
+    TRJLENGTH & Lenght of the trajectory (ps) & \\
+    TEMPERATURE & Temperature of the simulation & \\
+    NUMBER\_OF\_ATOMS & Number of atoms in the simulation & \\
+    DATEOFRUNNIG & Date when added into the Databank & \\
     EXPERIMENT & Potentially connected experimental data & \\
-    COMPOSITION & Numbers of lipid molecules in both leaflets and numbers of other molecules are added to the dictionary. & \\
-    ID & Unique ID number to ease the analyses. & \\
+    COMPOSITION & Numbers of lipid molecules in both leaflets and numbers of other molecules are added to the dictionary & \\
+    ID & Unique ID number to ease the analyses & \\
     \end{tabular}
     \caption{Keys stored in the README.yaml files of simulations.}
     \label{tab:READMEkeys}
@@ -314,13 +314,13 @@
     \toprule
     key & description \\
     \midrule
-    DOI & DOI of the publication related to the experimental data. \\
-    TEMPERATURE & Temperature of the experiment. \\
+    DOI & DOI of the publication related to the experimental data \\
+    TEMPERATURE & Temperature of the experiment \\
     MOLAR\_FRACTIONS & Dictionary of molar fractions of bilayer components \\
     ION\_CONCENTRATIONS & Dictionary of ion concentrations of the system \\
     % (defined as ??) \\
-    TOTAL\_LIPID\_CONCENTRATION & Total concentration of lipid components. If exact concentration is not known, but experiments are performed in excess water, 'full hydration' can be given. \\
-    COUNTER\_IONS & Type of counter ions if present.
+    TOTAL\_LIPID\_CONCENTRATION & Total concentration of lipid components; if exact concentration is not known, but experiments are performed in excess water, 'full hydration' can be given \\
+    COUNTER\_IONS & Type of counter ions if present
 \end{tabular}
     \caption{Keys stored in the README.yaml files of experiments.}
     \label{tab:READMEkeysEXP}
@@ -378,7 +378,7 @@
     CES & caesium ion \\
     SOL & water  \\
     \end{tabular}
-    \caption{Abbreviations for molecules used in the databank}
+    \caption{Abbreviations for molecule names used in the Databank.}
     \label{tab:abbreviations}
 \end{table}
 
@@ -405,7 +405,7 @@
     Chiu Gromos~\cite{chiu09}  \\
     AMOEBA~\cite{chu2018polarizable} \\
     \end{tabular}
-    \caption{List of current force fields used in simulations in the databank with references.}
+    \caption{List of current force fields used in simulations in the Databank, with references.}
     \label{tab:ForceFields}
 \end{table}
 
@@ -414,42 +414,42 @@
 \clearpage
 %\section{Experimental data}
 \section{NMR experiments}
-Acyl chain order parameters of POPE (Figs.~\ref{POPEexp1} and~\ref{POPEexp2}) and POPG (Figs.~\ref{POPGexp1} and~\ref{POPGexp2}) were analyzed from the same data that were previously recorded to determine headgroup order parameters~\cite{bacle21}. The analysis of the crowded spectral region at 29-31 ppm was based on the previous assignment reported for POPC membranes~\cite{ferreira13}. To measure the order parameters for DOPC (Fig.~\ref{fig:DOPCexp}), the sample was prepared and experiments performed similarly to previous studies~\cite{bacle21}.
+Acyl chain order parameters of POPE (Figs.~\ref{POPEexp1} and~\ref{POPEexp2}) and POPG (Figs.~\ref{POPGexp1} and~\ref{POPGexp2}) were analyzed from the same data that were previously recorded to determine headgroup order parameters~\cite{bacle21}. The analysis of the crowded spectral region at 29--31 ppm was based on the previous assignment reported for POPC membranes~\cite{ferreira13}. To measure the order parameters for DOPC (Fig.~\ref{fig:DOPCexp}), the sample was prepared and experiments performed similarly to previous studies~\cite{bacle21}.
 
 \begin{figure}[h]
   \includegraphics[width=\textwidth]{Figures/POPE_INEPT_contour_SCH.pdf}
-  \caption{Determination of the POPE acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPE. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C-H order parameter profile for the acyl chains of POPE. The splittings used for calculating the order parameters are shown in Fig.~\ref{POPEexp2}. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.      }
+  \caption{Determination of the POPE acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPE. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C--H bond order parameter profile for the acyl chains of POPE. The splittings used for calculating the order parameters are shown in Fig.~\ref{POPEexp2}. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.      }
   \label{POPEexp1}
 \end{figure}
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth]{Figures/POPE_slices.pdf}
-  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum from POPE in Fig.~\ref{POPEexp1}. The number at the top left of each plot denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right. The labels are the same as in Fig.~\ref{POPEexp1}.  }
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum from POPE in Fig.~\ref{POPEexp1}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Fig.~\ref{POPEexp1}.  }
   \label{POPEexp2}
 \end{figure}
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth]{Figures/POPG_INEPT_contour_SCH.pdf}
-  \caption{Determination of the POPG acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPG. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C-H order parameter profile for the acyl chains of POPG. The splittings used for calculating the order parameters are shown in Fig.~\ref{POPGexp2}. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.}
+  \caption{Determination of the POPG acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPG. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C--H bond order parameter profile for the acyl chains of POPG. The splittings used for calculating the order parameters are shown in Fig.~\ref{POPGexp2}. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.}
   \label{POPGexp1}
 \end{figure}
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth]{Figures/POPG_slices.pdf}
-  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in Fig.~\ref{POPGexp1}. The number at the top left of each plot denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right. The labels are the same as in Fig.~\ref{POPGexp1}. }
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in Fig.~\ref{POPGexp1}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Fig.~\ref{POPGexp1}. }
   \label{POPGexp2}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{Figures/DOPCfig.pdf}
-    \caption{Determination of DOPC order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of DOPC. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C-H order parameters of DOPC.}
+    \caption{Determination of DOPC order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of DOPC. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C--H bond order parameters of DOPC.}
     \label{fig:DOPCexp}
 \end{figure}
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth]{Figures/DOPC_slices.pdf}
-  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in Fig.~\ref{fig:DOPCexp}. The number at the top left of each plot denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right. The labels are the same as in Fig.~\ref{fig:DOPCexp}. }
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in Fig.~\ref{fig:DOPCexp}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Fig.~\ref{fig:DOPCexp}. }
   \label{DOPCexp2}
 \end{figure}
 
