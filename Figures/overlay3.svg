@@ -3597,7 +3597,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="1499.5605"
+     inkscape:cx="374.33999"
      inkscape:cy="315.64866"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -3610,7 +3610,8 @@
      inkscape:window-height="692"
      inkscape:window-x="0"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     showguides="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -3619,7 +3620,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -11865,9 +11866,9 @@
     <rect
        style="opacity:0.98999999;fill:#56ffff;fill-opacity:0.24420681;stroke:none;stroke-width:2.27025795;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect815-4-4"
-       width="327.38159"
+       width="398.09229"
        height="69.056343"
-       x="-472.08542"
+       x="-504.41031"
        y="812.89587"
        ry="0" />
     <text
@@ -11877,22 +11878,22 @@
        y="832.80963"
        id="text819-7-605"><tspan
          sodipodi:role="line"
-         x="-305.38907"
+         x="-302.05591"
          y="832.80963"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.93964767px;line-height:1;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan1388-3">Clone the <tspan
+         id="tspan3139">Clone the <tspan
    style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
-   id="tspan2009">Databank layer</tspan> git,</tspan><tspan
+   id="tspan2009">Databank layer</tspan> git, </tspan><tspan
          sodipodi:role="line"
-         x="-305.38907"
+         x="-302.05591"
          y="853.74927"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.93964767px;line-height:1;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan3137">initialize databank and</tspan><tspan
+         id="tspan6903">initialize databank and loop over </tspan><tspan
          sodipodi:role="line"
          x="-305.38907"
          y="874.6889"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.93964767px;line-height:1;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.26458332"
-         id="tspan3139">loop over simulations</tspan><tspan
+         id="tspan6913">simulations using README.yaml files</tspan><tspan
          sodipodi:role="line"
          x="-305.38907"
          y="895.6286"
