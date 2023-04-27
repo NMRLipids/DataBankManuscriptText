@@ -1,0 +1,54 @@
+\documentclass[11pt]{letter}
+\usepackage{graphicx,baskervald,microtype}
+\usepackage{hyperref,amsmath,xcolor}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+\usepackage{pgfplots,marginnote}
+\usepackage[top=0.5in,bottom=0.5in,left=1in,right=1in]{geometry}
+%\newgeometry{margin=2.5cm}
+\newcommand{\omamargin}[1]{\marginnote{\textbf{#1}}[7pt]}
+\begin{document}
+\reversemarginpar
+\pagestyle{empty}
+\noindent Dr. O. H. Samuli Ollila \\
+\noindent Institute of Biotechnology \\
+\noindent University of Helsinki, Finland \\
+\noindent samuli.ollila@helsinki.fi\\
+\noindent +358\,503\,746\,963 \\
+
+
+Dear Editor,
+
+Please find enclosed our manuscript titled
+{\it NMRlipids Databank makes data-driven analysis of biomembrane properties accessible for all}, which we would like to submit for your consideration to be published as a Resource in \textit{Nature Methods}.
+
+In the manuscript, we present the NMRlipids Databank --- the first community-driven, open-for-all database featuring programmatic access to atom-resolution molecular dynamics (MD) simulations of cellular membranes. The Databank has been designed to improve the Findability, Accessibility, Interoperability, and Reuse (FAIR) of MD simulation data. Nearly thousand simulations with the total length approaching half a microsecond are made accessible to a wide interdisciplinary audience of academic and industry researchers through a graphical user interface (GUI) at \href{https://databank.nmrlipids.fi/}{\tt databank.nmrlipids.fi}, and for imaginative data-driven analyses through an application programming interface (API) at \href{https://github.com/NMRlipids/Databank}{\tt github.com/NMRlipids/Databank}.
+
+By providing rapid open access to simulation data and automaticly  assessing
+%ranking of simulations based on 
+their quality against experiments, the NMRlipids Databank holds immediate practical relevance for the broad basic research community studying membranes in life sciences --- ranging from molecular cell biology to biomedical applications such as lipid nanoparticles. Even more importantly, the programmable interface for flexible implementation of data-driven and machine learning applications will advance new biological applications of MD simulation data.
+We validate the practical relevance of the NMRlipids Databank here by successfully analysing how anisotropic diffusion of water and cholesterol flip-flop depend on membrane properties. Both of these processes are highly relevant for magnetic resonance imaging (MRI), pharmacokinetics, lipid trafficking, and regulating membrane properties of cellular membranes --- yet their timescales are beyond the scope of standard MD simulation investigations. 
+
+The NMRlipids Databank emerges from the NMRlipids open collaboration project started by us in 2013.
+%with 314 citations in total) 
+%where all the content is openly accessible throughout the project. 
+The current manuscript demonstrates how MD simulation data can be shared by combining the open collaboration approach with an overlay databank structure, and describes how we take major steps in FAIRness by standardizing file formats, developing community guidelines, and creating incentives for sharing MD simulation data. Crucially, our success paves the way for corresponding smart guidelines and community-consensus best-practices for data sharing also in other fields than membrane MD simulations.
+Such developments will, we believe, strongly support the reproducibility and reuse of data that is becoming increasingly important in the age of big data and artificial intelligence --- as also pointed out by a recent editorial in \textit{Nature Methods} (\href{https://doi.org/10.1038/s41592-023-01865-4}{\tt DOI: 10.1038/s41592-023-01865-4}). 
+
+We see that the NMRlipids Databank has both immediate and long term impact for a broad interdisciplinary audience of academic and industry researchers across
+%at different fields in
+life sciences: from biophysics and biochemistry to biology, biotechnology and biomedicine. Consequently, we trust our manuscript to fulfill the high standards for publication in %the \textit{Resource} section of
+\textit{Nature Methods}.\\
+
+%We now leave it for your own consideration.
+
+Sincerely yours,
+
+on behalf of the authors,\\
+
+Dr. O. H. Samuli Ollila
+
+\end{document}
