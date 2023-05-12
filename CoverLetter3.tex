@@ -1,0 +1,55 @@
+\documentclass[11pt]{letter}
+\usepackage{graphicx,baskervald,microtype}
+\usepackage{hyperref,amsmath,xcolor}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+\usepackage{pgfplots,marginnote}
+\usepackage[top=0.2in,bottom=0.5in,left=1in,right=1in]{geometry}
+%\newgeometry{margin=2.5cm}
+\newcommand{\omamargin}[1]{\marginnote{\textbf{#1}}[7pt]}
+\begin{document}
+\reversemarginpar
+\pagestyle{empty}
+\noindent Dr. O. H. Samuli Ollila \\
+\noindent Institute of Biotechnology, University of Helsinki, Finland \\
+\noindent samuli.ollila@helsinki.fi, +358\,503\,746\,963 
+
+
+Dear Editor,
+
+Please find enclosed our manuscript titled {\it Overlay databank unlocks data-driven analyses of biomolecules for all}. Previous version of the manuscript, titled {\it NMRlipids Databank makes data-driven analysis of biomembrane properties accessible for all}, was rejected from \textit{Nature Methods} by Dr. Arunima Singh (NMETH-RS52135) because it was not considered to have a sufficiently significant and immediate impact on a broader readership. After receiving this feedback, we re-evaluated our manuscript and concluded that it was indeed probably formulated for too specialized audience. That said, we do believe that the presented overlay databank concept and its practical implementation have significant and immediate impact on broad readership much beyond the membrane biophysics field (see below for more detailed justification). Thus, inspired by the previous feedback, we have rewritten the manuscript to better convey its importance to a wide audience. We want thank you for the feedback on the previous version of our manuscript, and kindly ask you to consider the reworked manuscript to be published as a Resource in \textit{Nature Methods}. 
+
+Importance and potential of making data accessible in the age of big data and artificial intelligence (AI) has been recently recognized in correspondence (\href{https://doi.org/10.1038/s41592-023-01817-y}{\tt DOI: 10.1038/s41592-023-01817-y}) and editorial articles (\href{https://doi.org/10.1038/s41592-023-01865-4}{\tt DOI: 10.1038/s41592-023-01865-4}) in \textit{Nature Methods}. In the NMRlipids open collaboration (\href{http://nmrlipids.blogspot.com/}{\tt nmrlipids.blogspot.com}), we have been promoting Findability, Accessibility, Interoperability, and Reuse (FAIR) of molecular dynamics (MD) simulation data for biomolecules almost a decade now. Other scientists have started to recently follow our example, and the amount of publicly accessible MD simulation data is increasing, although a significant fraction still originates from the NMRlipids Project. This is summarized by an authorative group of eminent scientists from different disciplines of MD simulations in a very recent preprint article (\href{http://dx.doi.org/10.1101/2023.05.02.538537}{\tt DOI: 10.1101/2023.05.02.538537}, published on May 2$^\mathrm{nd}$ 2023), which also %appropriately credits NMRlipids project and 
+cites the preprint of the manuscript submitted here. However, for big-data and AI applications the data need to be made available also in a programmatically accessible format. This is typically an issue in fields where smart guidelines and community-consensus best-practices for data sharing have not been defined, such as biomolecular modeling.
+
+Here we show for the first time how data in scattered locations can be made programmatically accessible for data-driven and machine learning applications 
+%programmable interfaces for flexible implementation of  can be build using publicly available  and 
+using the overlay databank concept. 
+%Here we propose a cost-effective solution to make data scattered in various locations and formats accessible for data-driven and machine learning applications using the overlay databank format. 
+The practical relevance of this approach is demonstrated by introducing the NMRlipids Databank --- the first community-driven, open-for-all database featuring programmatic access to atom-resolution molecular dynamics simulations of biomolecules. Crucially, as the overlay databank concept can be applied beyond applications in biomolecular simulations, we are convinced that our manuscript has significant and immediate impact on the broad readership of \textit{Nature Methods}.
+
+The NMRlipids Databank makes nearly thousand simulations --- with the total length approaching half a microsecond --- accessible to a wide interdisciplinary audience of academic and industry researchers through a graphical user interface (GUI) at \href{https://databank.nmrlipids.fi/}{\tt databank.nmrlipids.fi}, and for imaginative data-driven analyses through an application programming interface (API) at \href{https://github.com/NMRlipids/Databank}{\tt github.com/NMRlipids/Databank}. By providing rapid open access to biomolecular simulation data and automaticly assessing their quality against experiments, the NMRlipids Databank holds immediate practical relevance for broad audience in life sciences --- ranging from molecular cell biology to biomedical applications such as lipid nanoparticles. Furthermore, it enables novel analyses that can advance new biological applications of MD simulation data in unprecedented directions: We were already approached by medical scientists who, after reading the preprint of our article, wish to use the NMRlipids Databank to predict pharmacokinetics of drugs in skin. Our preprint has gained broad interest also according to statistics: Research interest score in ResearchGate is higher than 96\% of research items published in 2023.
+
+%We validate the practical relevance of the NMRlipids Databank here by successfully analysing how anisotropic diffusion of water and cholesterol flip-flop depend on membrane properties. Both of these processes are highly relevant for magnetic resonance imaging (MRI), pharmacokinetics, lipid trafficking, and regulating membrane properties of cellular membranes --- yet their timescales are beyond the scope of standard MD simulation investigations. 
+
+%The NMRlipids Databank emerges from the NMRlipids open collaboration project started by us in 2013.
+%%with 314 citations in total) 
+%%where all the content is openly accessible throughout the project. 
+%The current manuscript demonstrates how MD simulation data can be shared by combining the open collaboration approach with an overlay databank structure, and describes how we take major steps in FAIRness by standardizing file formats, developing community guidelines, and creating incentives for sharing MD simulation data. Crucially, our success paves the way for corresponding smart guidelines and community-consensus best-practices for data sharing also in other fields than membrane MD simulations.
+%Such developments will, we believe, strongly support the reproducibility and reuse of data that is becoming increasingly important in the age of big data and artificial intelligence --- as also pointed out by a recent editorial in \textit{Nature Methods} (\href{https://doi.org/10.1038/s41592-023-01865-4}{\tt DOI: 10.1038/s41592-023-01865-4}). 
+
+%We see that the NMRlipids Databank has both immediate and long term impact for a broad interdisciplinary audience of academic and industry researchers across
+%%at different fields in
+%life sciences: from biophysics and biochemistry to biology, biotechnology and biomedicine. Consequently, we trust our manuscript to fulfill the high standards for publication in %the \textit{Resource} section of
+%\textit{Nature Methods}.\\
+
+%We now leave it for your own consideration.
+
+Sincerely yours, on behalf of the authors,
+
+Dr. O. H. Samuli Ollila
+
+\end{document}
