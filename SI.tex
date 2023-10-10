@@ -117,6 +117,17 @@
 
 
 \pagebreak
+\section{Processing results in the application layer}
+
+\begin{figure}[!h]
+    \centerfloat
+    \includegraphics[width = 90mm]{Figures/resultProcessing.pdf}
+    \caption{Flowchart for accessing results calculated from the NMRlipids Databank and stored to the \textit{Application layer}.}
+    \label{fig:resultsProcessingSI}
+\end{figure}
+
+
+\pagebreak
 \section{Correlations of area per lipid and thickness with order parameters and form factors}
 
 \begin{figure}[!h]
@@ -229,7 +240,7 @@
         calcMD-PERMEATION.py  & Calculate permeation rate of water molecules through bilayers from all simulations & README.yaml & Counting\_events.txt files at {\it /Data/MD-PERMEATION/} \\
         calcWATERdiffusion.py & Calculate water lateral diffusion along membrane surface & README.yaml & WATERlateralMSD.xvg files at {\it /Data/WATERdiffusion/} \\
         plotWaterPermeation.ipynb & Plot how water permeation and diffusion depend on membrane properties & README.yaml, Counting\_events.txt\,at {\it /Data/MD-PERMEATION/} and\,WATERlateralMSD.xvg files\,at {\it /Data/WATERdiffusion/} & Figs.~\ref{fig:permeability},~\ref{fig:permeationSI}, and~\ref{fig:diffusionSI}. \\
-        plotSimulation.ipynb & Plot results from a simulation together with the experimental data if available & README.yaml files and results in the {\it databank layer} & Figs~\ref{fig:quality}D-F and ~\ref{fig:POPC_POPE_dataSI}
+        %plotSimulation.ipynb & Plot results from a simulation together with the experimental data if available & README.yaml files and results in the {\it databank layer} & Figs~\ref{fig:quality}D-F and ~\ref{fig:POPC_POPE_dataSI}
     \end{tabular}
     \caption{Examples of codes that analyze membrane properties from the Databank in an {\it Application layer} available at~\url{https://github.com/NMRLipids/DataBankManuscript/}.}
     \label{tab:codesApplication}
