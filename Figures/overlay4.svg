@@ -4129,10 +4129,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9899495"
-     inkscape:cx="1541.9979"
+     inkscape:cx="1541.9978"
      inkscape:cy="350.01785"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g17264"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -4253,16 +4253,7 @@
       </g>
       <g
          id="g17264"
-         transform="translate(7.2,328.90275)">
-        <text
-           transform="scale(1,-1)"
-           style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'DejaVu Sans';-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#262626;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           id="text17268"><tspan
-             x="0 8.3549995 12.525 22.049999 26.219999 35.744999 45.285 54.825001 59.880001 69.419998"
-             y="0"
-             sodipodi:role="line"
-             id="tspan17266">Lipid14/17</tspan></text>
-      </g>
+         transform="translate(7.2,328.90275)" />
       <g
          id="g17270"
          transform="translate(107.26866,126.40188)">
