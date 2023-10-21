@@ -44,14 +44,21 @@
 \author[15]{Patrik Kula}
 \author[16]{Milla Kurki}
 \author[11]{Alexander Kuzmin}
+\author[26]{Anusha Lalitha} %ORCID: 0000-0002-2817-661X
+\author[27,28]{Fabio Lolicato}
 \author[17,18]{Jesper J. Madsen}  %ORCID: 0000-0003-1411-9080
 \author[2,19,20]{Markus S. Miettinen}   %ORCID: 0000-0002-3999-4722
 %\author[2]{...}                   %ORCID: ?
+\author[25]{Cedric Mingham}
+\author[29]{Luca Monticelli}
 \author[1]{Ricky Nencini}
+\author[19,20]{Alexey M. Nesterenko}
 \author[21]{Thomas J. Piggot}
 \author[22]{{\'A}ngel Pi{\~n}eiro}
-%\author[11]{Suman Samantray} %ORCID: 0000-0003-3361-9582
+\author[12]{Suman Samantray} %ORCID: 0000-0003-3361-9582
+\author[19,20]{Nathalie Reuter}
 \author[10,22,23]{Fabi{\'a}n Su{\'a}rez-Lest{\'o}n}
+\author[19,20]{Reza Talandashti}
 \author[1,24,*]{O. H. Samuli Ollila} %ORCID: 0000-0002- 8728-1006
 %\author[1,2,+]{Christine Author}
 %\author[2,+]{Derek Author}
@@ -68,8 +75,7 @@
 \affil[9]{Universit{\'e} Paris Cit{\'e}, UFR Sciences du Vivant, Paris, 75013, France}
 \affil[10]{Center for Research in Biological Chemistry and Molecular Materials (CiQUS), Universidade de Santiago de Compostela,  Santiago de Compostela, E-15782, Spain}
 \affil[11]{no affiliation}
-%Physical and Computational Sciences Division, Pacific Northwest National Laboratory, Richland, Washington 99352, United States
-\affil[12]{Institute of Biological Information Processing: Structural Biochemistry (IBI-7), Forschungszentrum Jülich, Jülich 52428, Germany}
+\affil[12]{Institute of Biological Information Processing: Structural Biochemistry (IBI-7), Forschungszentrum Jülich, 52428 Jülich, Germany}
 \affil[13]{ariadne.ai GmbH (Germany), Häusserstra{\ss}e 3 Heidelberg 69115, Germany }
 \affil[14]{Department of Physical Chemistry of Drugs and Faculty of Pharmacy, Comenius University Bratislava, 832 32 Bratislava, Slovakia}
 \affil[15]{Institute of Organic Chemistry and Biochemistry of the Czech Academy of Sciences, Flemingovo n\'{a}m. 542/2,  Prague, CZ-16610, Czech Republic}
@@ -82,6 +88,11 @@
 \affil[22]{Department of Applied Physics, Faculty of Physics, University of Santiago de Compostela, Santiago de Compostela, E-15782, Spain}
 \affil[23]{MD.USE Innovations S.L., Edificio Emprendia, 15782 Santiago de Compostela, Spain}
 \affil[24]{VTT Technical Research Centre of Finland, Espoo, Finland}
+\affil[25]{Hochschule Mannheim, University of Applied Sciences, Mannheim, Germany}
+\affil[26]{Institut Charles Gerhardt Montpellier (UMR CNRS 5253), Universit{\'e} Montpellier, Place Eug{\`e}ne Bataillon, 34095 Montpellier, Cedex 05, France}
+\affil[27]{Heidelberg University Biochemistry Center, 69120 Heidelberg, Germany}
+\affil[28]{Department of Physics, University of Helsinki, FI-00014 Helsinki, Finland}
+\affil[29]{IBCP CNRS, UMR 5086 7, Lyon, France}
 
 \affil[*]{samuli.ollila@helsinki.fi}
 
@@ -193,15 +204,15 @@ Also direct comparisons with the experimental data for the most relevant simulat
 To demonstrate the usage of the NMRlipids databank to construct machine learning (ML) models that predict membrane properties, we trained a model that predicts area per lipids and thicknesses of membranes with diverse compositions. First we used randomly selected 80\% of the databank simulations to choose the hyperparameters for, and optimize, a set of machine learning models with the goal of predicting the area per lipid from the membrane composition.
 
 
- After the parameter optimization, we tested predictions both against the remaining 20\% of the databank and against data from different ML models against area per lipids reported from simulations of membranes containing mixtures of POPC, POPE, POPS, PI, sphingomyelin lipids and cholesterol~\cite{shahane19,kumar21,oliveira22} not included in the databank. Linear regression and Ridge models gave the best correlation with the literature data in this test (predictions  from the linear regression model are shown in Fig.~\ref{fig:LinearRegressionTest} and from other models in Fig.~\ref{fig:MLTest} in the supplementary information). The linear regression model was selected for further studies due to its simplicity.
+ After the parameter optimization, we tested predictions from different ML models for the area per lipid both against the remaining 20\% of the databank and against area per lipids reported from simulations of membranes containing mixtures of POPC, POPE, POPS, PI, sphingomyelin lipids and cholesterol~\cite{shahane19,kumar21,oliveira22} that are not included in the databank. Essential differences between models were not observed when predicting area per lipids of 20\% of simulations selected as the test set, but linear regression and Ridge models gave the best correlations with the literature data (predictions  from the linear regression model are shown in Fig.~\ref{fig:LinearRegressionTest} and from other models in Fig.~\ref{fig:MLTest} in the supplementary information). The linear regression model was selected for further studies due to its simplicity.
 \begin{figure}
     \centering
     \includegraphics[width=88mm]{Figures/MLtest/LinearRegressiontest.pdf}
-    \caption{Predictions of area per lipids of POPC, POPE, POPS, PI, sphingomyelin lipids and cholesterol from linear regression model against literature data from simulations (green~\cite{shahane19}, blue~\cite{kumar21}, and red~\cite{oliveira22}).}
+    \caption{Predictions of area per lipids of multi-component membranes composed of POPC, POPE, POPS, PI, sphingomyelin lipids and cholesterol from linear regression model against literature data from simulations (green~\cite{shahane19}, blue~\cite{kumar21}, and red~\cite{oliveira22}). Black line indicates x=y.}
     \label{fig:LinearRegressionTest}
 \end{figure}
 
-To demonstrate the usefulness of the constructed models for understanding multi-component membrane properties, we predicted later packing (ares per lipids) and membrane thicknesses of common biological membranes based on their lipid compositions reported in the literature, see table~\ref{tab:MLpredictions}. The model predicts substantial 50\% difference in area per lipid between most densely (influenza virus) and loosely (mitochondria) packed membranes. Difference of 0.8\,nm in thickness is predicted between thinnest (bacterial) and thicknest (plasma) membranes. Such differences are expected to effect on many biologically relevant functions of membranes, such as permeation, cholesterol flip-flops (see next sections), and interactions with proteins~\cite{phillips09}, demonstrating that NMRlipids databank can be used to give valuable insights on biologically relevant properties of complex biological membranes. Most importantly, the delivered programmatic access to increasing amount of MD simulation data enables training of machine learning models that predict various membrane properties for all.
+To demonstrate the usefulness of the constructed models for understanding multi-component membrane properties, we predicted later packing (ares per lipids) and membrane thicknesses of common biological membranes based on their lipid compositions reported in the literature, see table~\ref{tab:MLpredictions}. The model predicts substantial 50\% difference in area per lipid between most densely (influenza virus) and loosely (mitochondria) packed membranes. Difference of 0.8\,nm in thickness is predicted between thinnest (bacterial) and thickest (plasma) membranes. Such differences are expected to effect on many biologically relevant functions of membranes, such as permeation, cholesterol flip-flops (see next sections), and interactions with proteins~\cite{phillips09}, demonstrating that NMRlipids databank can be used to give valuable insights on biologically relevant properties of complex biological membranes. Most importantly, the delivered programmatic access to increasing amount of MD simulation data enables training of machine learning models that predict various membrane properties for all.
 
     \begin{table}[htb]
     \caption{Area per lipids (APL) and membrane thicknesses predicted by the linear regression model trained using the NMRlipids databank for membrane compositions corresponding different biological membranes. Systems are sorted in the order of increasing membrane packing. Compositions of different membranes are estimated based on references given in composition column.}
@@ -275,7 +286,7 @@ In summary, our results suggest that the bilayer packing has a substantial effec
 
 Sharing of biomolecular MD simulation and other data is becoming increasingly important in the age of big data and artificial intelligence~\cite{sever23,tiemann23}.  Besides the data itself, also programmatic access is a necessary requirement for data-driven and machine learning applications. This is particularly challenging when field-specific smart guidelines and community-consensus best-practices have not yet been defined, which is the case in biomolecular simulations~\cite{tiemann23}. The NMRlipids Databank demonstrates how these issues can be solved by the overlay databank design, where the raw data are distributed to already publicly available decentralized locations, while the core of the databank is composed only of the metadata stored in a version-controlled git repository with an open-access license. On the other hand, the open-collaboration approach developed in the NMRlipids Project~\cite{botan15} creates incentives for sharing the data by offering authorship in published articles to the contributors. Advantages of such an approach are demonstrated here for membrane simulations, yet the concept can be applied to any other biomolecules, as well as in any other field where similar barriers hinder the AI revolution, such as the assignment of NMR spectra~\cite{klukowski22}. 
 
-The NMRlipids Databank-API delivers programmatic access to MD simulation data that can be used as training set for diverse data-driven and machine learning applications that predict membrane properties. Such applications could be analogous to AlphaFold \cite{jumper21} and other tools~\cite{baek21,lin23} that predict protein structures from their sequence using artificial intelligence. The analysis of cholesterol flip-flop events (Fig.~\ref{fig:flip-flops}) and water permeation through membranes (Fig.~\ref{fig:permeability}) demonstrate how a large amount of accessible simulation data in terms of quantity (\textit{e.g.}, simulation length and number of conformations) and content (\textit{e.g.}, lipid compositions and ion concentrations) enable analyses of rare phenomena that are beyond the current possibilities for a single research group. Such analyses also pave the way for applications of MD simulations in new fields, as demonstrated here by analysing an essential parameter in pharmacokinetic modeling and MRI imaging:\cite{nitsche19,topgaard20} the anisotropic diffusion of water in membrane systems (Fig.~\ref{fig:permeability}). These possibilities are particularly valuable for scientists who do not typically have access to large-scale MD simulation data. 
+The NMRlipids Databank-API delivers programmatic access to MD simulation data that can be used as training set for diverse data-driven and machine learning applications that predict membrane properties. Such applications could be analogous to AlphaFold \cite{jumper21} and other tools~\cite{baek21,lin23} that predict protein structures from their sequence using artificial intelligence. This is demonstrated here by building ML models to predict multi-component membrane properties. Furthermore, the analysis of cholesterol flip-flop events (Fig.~\ref{fig:flip-flops}) and water permeation through membranes (Fig.~\ref{fig:permeability}) demonstrate how a large amount of accessible simulation data in terms of quantity (\textit{e.g.}, simulation length and number of conformations) and content (\textit{e.g.}, lipid compositions and ion concentrations) enable analyses of rare phenomena that are beyond the current possibilities for a single research group. Such analyses also pave the way for applications of MD simulations in new fields, as demonstrated here by analysing an essential parameter in pharmacokinetic modeling and MRI imaging:\cite{nitsche19,topgaard20} the anisotropic diffusion of water in membrane systems (Fig.~\ref{fig:permeability}). These possibilities are particularly valuable for scientists who do not typically have access to large-scale MD simulation data. 
 
 The focus of biomolecular simulations is moving from studies of individual molecules to larger complexes and even whole cells and organelles~\cite{johnson15,thornburg22,gupta22}. Simultaneously, machine-learning-based models for predicting the behaviour of biomolecules and automatic approaches to parametrize models are emerging~\cite{jumper21,antila22b}. The resources delivered by the NMRlipids Databank will support developments in both of these directions. Automatic quality evaluation and ranking of simulations against experimental data enable the selection of best simulations for specific applications without laborious manual force field evaluation. This also streamlines automatic parametrization procedures for atomistic and coarse grained simulations by, for example, pinpointing typical failures of force fields and highlighting points of improvement. Such practises for fostering the accuracy of simulations are becoming increasingly important as small errors accumulate when complexity and size of simulated systems are increasing. Examples of impact of NMRlipids and other overlay databanks in different disciplines are listed in Table~\ref{tab:applications}, yet the scope of applications is expected to further widen with increasing amount of publicly shared data.  
 
@@ -409,9 +420,9 @@ The quality evaluation of form factors is implemented in \texttt{/Scripts/BuildD
 
 
 \subsection{Training machine learning model to predict properties of multi-component membranes}
-Different machine learning approaches were tested to find the best model to predict the area per lipids of multi-component membranes  from their lipid composition. To his end, we tested linear, Lasso, Ridge, elastic net, decision tree, random forest, multi-layer perceptron, k-nearest neighbour, gradient boost, AdaBoost, and XGBoost regressors. The models were trained to predict the area per lipid for a membrane with the given molar fractions of membrane lipids. Most abundant lipids in the databank, POPC, POPE, POPG, POPS and cholesterol, were considered explicitly, while SM, cardiolipins and PI lipids with  more sparse data were all grouped together based on their headgroups independently on acyl chain content. Salt concentration, temperature and other conditions were not considered as parameters at this stage. 
+Different machine learning approaches were tested to find the best model to predict the area per lipids of multi-component membranes  from their lipid composition. To his end, we tested linear, Lasso, Ridge, elastic net, decision tree, random forest, multi-layer perceptron, k-nearest neighbour, gradient boosting, AdaBoost, and XGBoost regressors. The models were trained to predict the area per lipid for a membrane with the given molar fractions of membrane lipids. Most abundant lipids in the databank, POPC, POPE, POPG, POPS and cholesterol, were considered explicitly, while SM, cardiolipins and PI lipids with  more sparse data were all grouped together based on their headgroups independently on acyl chain content. Salt concentration, temperature and other conditions were not considered. 
 
-To find the optimal model for this task, we first randomly divided simulations into training (80\% of the simulations) and test (20\% of the simulations) sets. Then, we used the training set with 5-fold cross validation to conduct a grid search for hyperparameters for a set of ML regression models. The best performing hyperparameters were then used to fit each model to the training set. The performance of the models was then tested on the remaining 20\% of the data extracted from the databank, and additionally, by predicting area per lipids from multi-component membrane simulations reported in the literature but not included in the databank~\cite{shahane19,kumar21,oliveira22}. Due to its  simplicity and good performance in these tests, we selected to use linear regression model for further studies. The  linear regression model predicting membrane thicknesses was trained in similarly. The ML models and analysis were implemented with Python using scikit-learn which was supplemented with the xgboost library to include extreme gradient boosted decision tree regressor to the set of tested model. Jyputer notebook that trains the models and predicts are per lipids is available at \texttt{scripts/APLpredictor.ipynb} in the repository at~\url{https://github.com/NMRLipids/DataBankManuscript/}. In further applications, it is important to consider potential limitations arising from the currently limited amount of data for certain types of systems. For example, the current models have been trained and tested only for mixtures with palmitoyl and oleyl acyl chains because the databank does not yet contain enough data with varying number of double bonds. Such limitations are expected to decrease with increasing amount of data in the future.
+To find the optimal model for this task, we first randomly divided simulations into training (80\% of the simulations) and test (20\% of the simulations) sets. Then, we used the training set with 5-fold cross validation to conduct a grid search for hyperparameters for the set of ML regression models. The best performing hyperparameters were then used to fit each model to the training set. The performance of the models was then tested on the remaining 20\% of the data extracted from the databank, and additionally, by predicting area per lipids from multi-component membrane simulations reported in the literature but not included in the databank~\cite{shahane19,kumar21,oliveira22}. Due to its  simplicity and good performance in these tests, we selected to use linear regression model for further studies. The linear regression model predicting membrane thicknesses was trained similarly. The ML models and analysis were implemented with Python using scikit-learn which was supplemented with the xgboost library to include extreme gradient boosted decision tree regressor to the set of tested model. Jupyter notebook that trains the models and predicts are per lipids is available at \texttt{scripts/APLpredictor.ipynb} in the repository at~\url{https://github.com/NMRLipids/DataBankManuscript/}. In further applications, it is important to consider potential limitations arising from the currently limited amount of data for certain types of systems. For example, the current models have been trained and tested only for mixtures with palmitoyl and oleyl acyl chains because the databank does not yet contain enough data with varying number of double bonds. Such limitations are expected to alleviate with increasing amount of data in the future.
 
 \subsection{Calculation of lipid flip-flops}
 Flip-flop rates were calculated using the \texttt{AssignLeaflets} and \texttt{FlipFlop} tools from the LiPyphilic package~\cite{LiPyphilic2021}.
@@ -453,6 +464,7 @@ F.F.-R. acknowledges Tecnol{\'o}gico Nacional de M{\'e}xico, Direcci{\'o}n Gener
 M.S.M. was supported by the Trond Mohn Foundation BFS2017TMT01.
 O.H.S.O, A.M.K, R.N. and L. S. B. acknowledge CSC --- IT Center for Science for computational resources and Academy of Finland (grants 315596 and 319902) for financial support.
 M.K. acknowledge CSC –-- IT Center for Science for computational resources and thanks Finnish Cultural Foundation and the UEF Doctoral Programme for financial support. T.M.F. greatly acknowledges financial support by the Ministry of Economics, Science and Digitalisation of the State of Saxony-Anhalt.
+F.L. was supported by the Deutsche Forschungsgemeinschaft (DFG LO 2821/1-1).
 We acknowledge all the NMRlipids Project contributors for making development of the NMRlipids Databank possible.
 
 
@@ -461,7 +473,7 @@ We acknowledge all the NMRlipids Project contributors for making development of 
 %A.A. conceived the experiment(s),  A.A. and B.A. conducted the experiment(s), C.A. and D.A. analysed the results.  All authors reviewed the manuscript. 
 
 A.M.K. implemented the {\it Databank layer} and NMRlipids Databank-API.
-H.S.A. contributed to the quality evaluation metrics based on NMR and X-ray scattering form factors, and was involved in testing the GUI and polishing the manuscript.
+H.S.A. contributed to the quality evaluation metrics based on NMR and X-ray scattering form factors, wrote the machine learning code, and was involved in testing the GUI, polishing the manuscript, and in community outreach to source additional data.
 L.S.B. implemented roughly 630 pre-existing lipid bilayer simulations into the Databank and created the corresponding mapping files.
 P.B. implemented the PCA-based equilibration metric, supervised the work of A.K., and participated in code refactoring.
 F.F.-R. set up and performed simulations with Slipids Force Field: ID 617, ID 207 and ID 82. 
@@ -474,14 +486,21 @@ N.K. contributed experimental scattering data. % and SIMtoEXP algorithm.
 P.K. Implemented the flip-flop analysis and supported the integration of PCA equilibration metric into the databank.
 M.K. provided simulations with the OPLS3e force field. 
 A.K. implemented the PCA-based equilibration metric.
+A.L. provided simulations of heterogeneous lipid membranes including sphingolipids and glycosphingolipids with CHARMM36 force field.
+F.S.-L. developed the back-end and participated in the design and development and validation of the graphical user interface (GUI) (databank.nmrlipids.fi).
+F.L. provided simulations using the CHARMM36m forcefield, incorporating cholesterol POPC and SAPI25 lipids.
 J.J.M. provided simulations with the Amber force field, general discussion, and manuscript editing.
 M.S.M supported O.H.S.O. in conceptualising the project, contributed to the quality evaluation metrics based on NMR and X-ray scattering form factors, assisted in refining the manuscript and the GUI, and guided the work of L.S.B. and M.K.
+C.M. worked on the databank implementation and contributed code improvements.
+L.M. performed simulations (for sphingomyelin, CHARMM36 force field, and Orange force field)
 R.N. implemented the code for the calculations of X-ray scattering form factors.
+A.N. provided simulations with TLCL lipid, simulations with Reaction-Field instead of PME, and improved the implementation.
 T.J.P. performed many of the all-atom and united-atom simulations and contributed to discussions on the project.
 A.P. was responsible for the design, validation and supervision of the back-end and front-end for the graphical user interface (GUI) development (databank.nmrlipids.fi).
-%S.S. performed some of the simulations with CHARMM36 force field.
-F.S.-L. developed the back-end and participated in the design and development and validation of the graphical user interface (GUI) (databank.nmrlipids.fi).
-O.H.S.O. designed and supervised the work, implemented the water permeation and diffusion analyses, and wrote the manuscript. 
+S.S. contributed simulations of heterogeneous lipid membranes including sphingomyelin and ceramides with CHARMM36 force field.
+R.T. Provided simulations of complex lipid-bilayers with charmm36m force field.
+N.R. contributed simulations of complex lipid-bilayers obtained with NAMD and the charmm36 force field
+O.H.S.O. designed and supervised the work, implemented the water permeation, diffusion and machine learning analyses, and wrote the manuscript. 
  
 
 
