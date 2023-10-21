@@ -1,0 +1,41 @@
+\documentclass[11pt]{letter}
+\usepackage{graphicx,baskervald,microtype}
+\usepackage{hyperref,amsmath,xcolor}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+\usepackage{pgfplots,marginnote}
+\usepackage[top=0.5in,bottom=0.5in,left=1in,right=1in]{geometry}
+%\newgeometry{margin=2.5cm}
+\newcommand{\omamargin}[1]{\marginnote{\textbf{#1}}[7pt]}
+\begin{document}
+\reversemarginpar
+\pagestyle{empty}
+\noindent Dr. O. H. Samuli Ollila \\
+\noindent Institute of Biotechnology \\
+\noindent University of Helsinki, Finland \\
+\noindent samuli.ollila@helsinki.fi\\
+\noindent +358\,503\,746\,963 \\
+
+
+Dear Editor,
+
+thank you for considering our manuscript titled {\it Overlay databank unlocks data-driven analyses of biomolecules for all} for Nature Communications. We are grateful for the highly useful feedback that we received from our manuscript. Based on this feedback, we have now substantially revised the manuscript and the related online material. Particularly, we have improved the documentation and we now present a machine learning model that predicts multi-component membrane properties. Because we deliver new data and have major revisions in the manuscript that address the concerns of reviewers', we hope that you can reconsider our manuscript for Nature Communications. Overview on how the updates reply to reviewers' concerns are given in this letter, and detailed reply to reviewers' and the revised manuscript are enclosed.
+
+The main concern of reviewer 1 can be summarized with these two quotations from the report: "\textit{This reviewer finds the database is important to the field of membrane biophysics and certainly could have more general applications. However, there lacks any novelty in this work that would capture the interest beyond those focused on simple model membranes that contain 1 or 2 lipids.}" and "\textit{If this manuscript presented an algorithm that learned how to predict membrane structure of bilayer with mixed lipids >3 components, then this would be more at the level for this high impact journal.}" Following the suggestion by the reviewer, we now present an algorithm that predicts structures of multi-component membranes, and apply this algorithm to membranes with lipid mixtures that are typical for various cellular membranes. Therefore, we believe that the main concern of reviewer 1 is well addressed in the revised version of our manuscript.
+
+The main concern of the reviewer 3 is summarized in this quotation: "\textit{The paper itself proposes exciting ideas on how to use many MD data sets in conjunction with experimental data to obtain dynamics information on lipids that is not obtainable based on one or a few simulations alone. On the other hand, the tools provided do not allow an external user to easily do what the paper claims (“data-driven analysis […] for all”).}" To support this view, reviewer 3 provides extremely valuable technical feedback on the implementation of our API. We now provide new documentation for the NMRlipids databank at \url{https://nmrlipids.github.io/} and have implemented almost all suggestions by the reviewer 3. We totally agree with the reviewer about the importance of usability and documentation of the API, and understand its importance for the impact of our databank. However, we see this as rather technical feedback pointed on documentation and implementation of API. There are no critical points presented regarding the overlay structure of the databank (which is the core innovation in this work enabling the implementation of APIs and other applications), or the actual content of the manuscript. In contrary, all comments on the actual scientific content of the manuscript are positive, while the criticism considers technical implementation and documentation of the API. 
+
+Reviewer 2 seems to interpret the lack of author names and other information as a sign of negligence, although this was actually due to the double-blind review process. We believe that this may have biased his/her evaluation, and hope that comments of this reviewer would have less weight for the decision. 
+
+In conclusion, we believe that our revised manuscript and related content addresses all the concerns presented by reviewers' and hope that you can reconsider our manuscript for Nature Communications.
+
+Sincerely yours,
+
+on behalf of the authors,\\
+
+Dr. O. H. Samuli Ollila
+
+\end{document}
