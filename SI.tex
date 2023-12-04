@@ -61,7 +61,7 @@
 %\author[2]{...}                   %ORCID: ?
 \author[25]{Cedric Mingham}
 \author[29]{Luca Monticelli}
-\author[1]{Ricky Nencini}
+\author[1,30]{Ricky Nencini}
 \author[19,20]{Alexey M. Nesterenko}
 \author[21]{Thomas J. Piggot}
 \author[22]{{\'A}ngel Pi{\~n}eiro}
@@ -103,6 +103,7 @@
 \affil[27]{Heidelberg University Biochemistry Center, 69120 Heidelberg, Germany}
 \affil[28]{Department of Physics, University of Helsinki, FI-00014 Helsinki, Finland}
 \affil[29]{IBCP CNRS, UMR 5086 7, Lyon, France}
+\affil[30]{Division of Pharmaceutical Biosciences, Faculty of Pharmacy, University of Helsinki, Helsinki 00014, Finland}
 
 \affil[*]{samuli.ollila@helsinki.fi}
 
@@ -183,19 +184,18 @@
 \section{Testing machine learning models against literature data}
 \begin{figure}[hb]
     \centering
-    \includegraphics[width=50mm]{Figures/MLtest/LinearRegressiontest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/Ridgetest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/MLPRegressortest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/Lassotest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/ElasticNettest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/DecisionTreeRegressortest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/RandomForestRegressortest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/GradientBoostingRegressortest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/AdaBoostRegressortest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/KNeighborsRegressortest.pdf}
-    \includegraphics[width=50mm]{Figures/MLtest/XGBRegressortest.pdf}
-    \caption{Predictions of area per lipids of multi-component membranes composed of POPC, POPE, POPS, PI, sphingomyelin lipids and cholesterol from linear regression model against literature data from simulations 
-      (green~\cite{shahane19}, blue~\cite{kumar21}, and red~\cite{oliveira22}). Mean squared error (RMSE) and Pearson correlation coefficient are shown for each model. The black line depicts x=y where the prediction equals the literature value.}
+    \includegraphics[width=45mm]{Figures/MLtest/LinearRegressiontest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/Ridgetest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/MLPRegressortest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/Lassotest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/ElasticNettest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/DecisionTreeRegressortest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/RandomForestRegressortest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/GradientBoostingRegressortest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/AdaBoostRegressortest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/KNeighborsRegressortest.pdf}
+    \includegraphics[width=45mm]{Figures/MLtest/XGBRegressortest.pdf}
+    \caption{Predictions of area per lipids of multi-component membranes composed of POPC, POPE, POPS, PI, sphingomyelin lipids and cholesterol from linear regression model against literature data from simulations using CHARMM36 parameters (green~\cite{shahane19}, blue~\cite{kumar21}, and red~\cite{oliveira22}). Mean squared error (RMSE) and Pearson correlation coefficient are shown for each model. The black line depicts x=y where the prediction equals the literature value. Our machine learning models that are trained using simulations with wide range of force field parameters  have general tendency to predict larger area per lipid values than reported from CHARMM36 simulations in the literature. One explanation could be lower area per lipids predicted by the CHARMM36 parameters when compared with many other force fields in the training set~\cite{javanainen23}, yet other explanations cannot be ruled out.}
     \label{fig:MLTest}
 \end{figure}
 
