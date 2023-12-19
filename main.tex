@@ -429,7 +429,7 @@ All data related to this study are available via git repositories \url{https://g
 %name e.g “figshare”] with the identifier(s) [data DOI(s) e.g. “doi:10.6084/m9.figshare.1499292_D8”][Reference number]
 
 \subsection*{Code availability}
-All codes used in this study are available via git repositories \url{https://github.com/NMRlipids/Databank/} (DOI: 10.5281/zenodo.7875567) and \url{https://github.com/NMRLipids/DataBankManuscript/} (DOI: 10.5281/zenodo.10252380).
+All codes used in this study are available via git repositories \url{https://github.com/NMRlipids/Databank/} (DOI: 10.5281/zenodo.7875567) and \url{https://github.com/NMRLipids/DataBankManuscript/} (DOI: 10.5281/zenodo.10252380). For instructions to use the codes, see \url{https://nmrlipids.github.io/}.
 
 
 %TC:endignore
@@ -547,12 +547,14 @@ The authors declare no competing interests.
 
 \section*{Figure captions}
 \noindent
-\textbf{Figure 1.} Overview of the NMRlipids Databank. 
-    \textbf{A} Schematic presentation of the overlay structure used in the NMRlipids Databank. A more detailed structure of the \textit{Databank layer} is shown in Fig.~\ref{DatabankStructure} in the SI.
+\textbf{Figure 1.} 
+Overview of the NMRlipids Databank. 
+    \textbf{A} Schematic presentation of the overlay structure used in the NMRlipids Databank. A more detailed structure of the \textit{Databank layer} is shown in Supplementary Figure~\ref{DatabankStructure}.
     \textbf{B} Distribution of lipids present in the trajectories of the Databank. `Others' lists lipids occurring in six or fewer simulations. 
-    \textbf{C} Distribution of force fields in the simulations in the Databank. References for each force field are given in Table~\ref{tab:ForceFields}.
+    \textbf{C} Distribution of force fields in the simulations in the Databank. References for each force field are given in Supplementary Table~\ref{tab:ForceFields}.
     \textbf{D} Flowchart for performing an analysis of properties through all MD simulations in the NMRlipids Databank using the API.
     \textbf{E} Currently available lipid mixtures in the NMRlipids Databank. Colorbar shows the number of available simulations with the darkest green indicating three or more.  
+    
 
 \vspace{1cm}
     \noindent
@@ -561,13 +563,15 @@ The authors declare no competing interests.
     \textbf{B} Best POPC simulations ranked based on the \textit{sn}-1 acyl chain order parameter quality ($P^\mathrm{sn1}$). Also \textit{sn}-2 acyl chain ($P^\mathrm{sn2}$), headgroup ($P^\mathrm{hg}$) and total ($P^\mathrm{total}$) order parameter qualities, form factor quality ($FF_q$), and relative equilibration time for conformations ($\tau_\mathrm{rel}$) are shown. Note that the best possible order parameter quality is one, while the best possible form factor quality is zero.
     \textbf{C} Best POPE simulations ranked based on the \textit{sn}-1 acyl chain order parameter quality. 
     \textbf{D--F} Direct comparison against experimental (NMR order parameters and X-ray scattering ) data exemplified for a simulation with the best overall order parameter quality (D), the best quality for POPE lipid (E), and the headgroup quality for POPE (F).
-    \textbf{G} Scatter plots and Pearson correlation coefficients, $r$, for the membrane area per lipid, thickness, first minimum of X-ray scattering form factor and average order parameter of the \textit{sn}-1 acyl chain extracted from the NMRlipids Databank. All correlation coefficients have p-value below 0.001. For more correlations see Fig.~\ref{fig:QualityCorrelationsSI}.
+ Error bars for simulations are standard error of the mean over different lipids (n=number of lipids in a simulation shown in B). Error bars for experiments are 0.02~\cite{ollila16}.
+    \textbf{G} Scatter plots and Pearson correlation coefficients, $r$, for the membrane area per lipid, thickness, first minimum of X-ray scattering form factor and average order parameter of the \textit{sn}-1 acyl chain extracted from the NMRlipids Databank. All correlation coefficients have p-value below 0.001 with two-sided test. For more correlations see Supplementary Figure~\ref{fig:QualityCorrelationsSI}.
 
 
     \vspace{1cm}
     \noindent
 \textbf{Figure 3.}
-Predictions of areas per lipid of multi-component membranes composed of POPC, POPE, POPS, PI, sphingomyelin lipids, and cholesterol from linear regression model against literature data from simulations (green~\cite{shahane19}, blue~\cite{kumar21}, and red~\cite{oliveira22}). Black line indicates $x=y$.
+Predictions of areas per lipid (APL) of multi-component membranes composed of POPC, POPE, POPS, PI, sphingomyelin lipids, and cholesterol from linear regression model against literature data from simulations (green~\cite{shahane19}, blue~\cite{kumar21}, and red~\cite{oliveira22}). Error bars are from the publications as the values. Black line indicates $x=y$.
+
 
 \vspace{1cm}
     \noindent
