@@ -34,6 +34,11 @@
 %\renewcommand{\thefigure}{S\arabic{figure}}%
 %\renewcommand{\thesection}{S\arabic{section}}%
 %\renewcommand{\thepage}{S\arabic{page}}%
+%\renewcommand{\figurename}{Supplementary Figure}
+
+\usepackage[figurename=Supplementary Figure]{caption}
+\usepackage[tablename=Supplementary Table]{caption}
+\usepackage[refname=Supplementary Table]{caption}
 
 
 \title{SUPPLEMENTARY INFORMATION: Overlay databank unlocks data-driven analyses of biomolecules for all}
@@ -46,27 +51,27 @@
 \author[7]{Tiago Mendes Ferreira}
 \author[8,9]{Patrick F.J. Fuchs}
 \author[10]{Rebeca Garcia-Fandino}
-\author[11]{Ivan Gushchin}
-\author[12,13]{Batuhan Kav}           %ORCID: 0000-0003-4990-373X
-\author[14]{Norbert Ku{\v c}erka}
-\author[15]{Patrik Kula}
-\author[16]{Milla Kurki}
-\author[11]{Alexander Kuzmin}
-\author[17]{Anusha Lalitha} %ORCID: 0000-0002-2817-661X
-\author[18,19]{Fabio Lolicato}
-\author[20,21]{Jesper J. Madsen}  %ORCID: 0000-0003-1411-9080
-\author[2,22,23]{Markus S. Miettinen}   %ORCID: 0000-0002-3999-4722
-\author[24]{Cedric Mingham}
-\author[25,26]{Luca Monticelli}
-\author[1,27]{Ricky Nencini}
-\author[22,23]{Alexey M. Nesterenko}
-\author[28]{Thomas J. Piggot}
-\author[29]{{\'A}ngel Pi{\~n}eiro}
-\author[22,23]{Nathalie Reuter}
-\author[12,30]{Suman Samantray} %ORCID: 0000-0003-3361-9582
-\author[10,29,31]{Fabi{\'a}n Su{\'a}rez-Lest{\'o}n}
-\author[22,23]{Reza Talandashti}
-\author[1,32,*]{O. H. Samuli Ollila} %ORCID: 0000-0002- 8728-1006
+\author[ ]{Ivan Gushchin}
+\author[11,12]{Batuhan Kav}           %ORCID: 0000-0003-4990-373X
+\author[13]{Norbert Ku{\v c}erka}
+\author[14]{Patrik Kula}
+\author[15]{Milla Kurki}
+\author[ ]{Alexander Kuzmin}
+\author[16]{Anusha Lalitha} %ORCID: 0000-0002-2817-661X
+\author[17,18]{Fabio Lolicato}
+\author[19,20]{Jesper J. Madsen}  %ORCID: 0000-0003-1411-9080
+\author[2,21,22]{Markus S. Miettinen}   %ORCID: 0000-0002-3999-4722
+\author[23]{Cedric Mingham}
+\author[24,25]{Luca Monticelli}
+\author[1,26]{Ricky Nencini}
+\author[21,22]{Alexey M. Nesterenko}
+\author[27]{Thomas J. Piggot}
+\author[28]{{\'A}ngel Pi{\~n}eiro}
+\author[21,22]{Nathalie Reuter}
+\author[12,29]{Suman Samantray} %ORCID: 0000-0003-3361-9582
+\author[10,28,30]{Fabi{\'a}n Su{\'a}rez-Lest{\'o}n}
+\author[21,22]{Reza Talandashti}
+\author[1,31,*]{O. H. Samuli Ollila} %ORCID: 0000-0002- 8728-1006
 
 \affil[1]{University of Helsinki, Institute of Biotechnology, Helsinki, Finland}
 \affil[2]{Department of Theory and Bio-Systems, Max Planck Institute of Colloids and Interfaces, 14424 Potsdam, Germany}
@@ -76,32 +81,29 @@
 \affil[6]{Departamento de Ciencias B\'{a}sicas, Tecnol\'{o}gico Nacional de M\'{e}xico - ITS Zacatecas Occidente, Sombrerete, Zacatecas, 99102, M\'{e}xico}
 \affil[7]{NMR group - Institute for Physics, Martin Luther University Halle-Wittenberg,  Halle (Saale), 06120, Germany}
 \affil[8]{Sorbonne Universit{\'e}, Ecole Normale Sup{\'e}rieure, PSL University, CNRS, Laboratoire des Biomol{\'e}cules (LBM), F-75005 Paris, France}
-\affil[9]{Universit{\'e} Paris Cit{\'e}, F-75006 Paris, France}
+\affil[9]{Universit{\'e} Paris Cit{\'e}, UFR Sciences du Vivant, Paris, 75013, France}
 \affil[10]{Center for Research in Biological Chemistry and Molecular Materials (CiQUS), Universidade de Santiago de Compostela,  Santiago de Compostela, E-15782, Spain}
-\affil[11]{no affiliation}
-\affil[12]{Institute of Biological Information Processing: Structural Biochemistry (IBI-7), Forschungszentrum Jülich, 52428 Jülich, Germany}
-\affil[13]{ariadne.ai GmbH (Germany), Häusserstra{\ss}e 3 Heidelberg 69115, Germany }
-\affil[14]{Department of Physical Chemistry of Drugs, Faculty of Pharmacy, Comenius University Bratislava, 832 32 Bratislava, Slovakia}
-\affil[15]{Institute of Organic Chemistry and Biochemistry of the Czech Academy of Sciences, Flemingovo n\'{a}m. 542/2,  Prague, CZ-16610, Czech Republic}
-\affil[16]{School of Pharmacy, University of Eastern Finland, 70211 Kuopio, Finland}
-\affil[17]{Institut Charles Gerhardt Montpellier (UMR CNRS 5253), Universit{\'e} Montpellier, Place Eug{\`e}ne Bataillon, 34095 Montpellier, Cedex 05, France}
-\affil[18]{Heidelberg University Biochemistry Center, 69120 Heidelberg, Germany}
-\affil[19]{Department of Physics, University of Helsinki, FI-00014 Helsinki, Finland}
-\affil[20]{Department of Molecular Medicine, Morsani College of Medicine, University of South Florida, Tampa, Florida 33612, United States of America}
-\affil[21]{Center for Global Health and Infectious Diseases Research, Global and Planetary Health, College of Public Health, University of South Florida, Tampa, Florida 33612, United States of America}
-\affil[22]{Department of Chemistry, University of Bergen, 5007 Bergen, Norway}
-\affil[23]{Computational Biology Unit, Department of Informatics, University of Bergen, 5008 Bergen, Norway}
-\affil[24]{Hochschule Mannheim, University of Applied Sciences, Mannheim, Germany}
-\affil[25]{University of Lyon, CNRS, Molecular Microbiology and Structural Biochemistry (MMSB, UMR 5086), F-69007, Lyon, France}
-\affil[26]{Institut National de la Sant{\'e} et de la Recherche M{\'e}dicale (INSERM), Lyon, France}
-\affil[27]{Division of Pharmaceutical Biosciences, Faculty of Pharmacy, University of Helsinki, Helsinki 00014, Finland}
-
-\affil[28]{Chemistry, University of Southampton, Highfield, Southampton, SO17 1BJ, United Kingdom}
-
-\affil[29]{Department of Applied Physics, Faculty of Physics, University of Santiago de Compostela, Santiago de Compostela, E-15782, Spain}
-\affil[30]{Institute of Biotechnology, RWTH Aachen University, Worringerweg 3, 52074 Aachen, Germany}
-\affil[31]{MD.USE Innovations S.L., Edificio Emprendia, 15782 Santiago de Compostela, Spain}
-\affil[32]{VTT Technical Research Centre of Finland, Espoo, Finland}
+\affil[11]{Institute of Biological Information Processing: Structural Biochemistry (IBI-7), Forschungszentrum Jülich, 52428 Jülich, Germany}
+\affil[12]{ariadne.ai GmbH (Germany), Häusserstra{\ss}e 3 Heidelberg 69115, Germany }
+\affil[13]{Department of Physical Chemistry of Drugs, Faculty of Pharmacy, Comenius University Bratislava, 832 32 Bratislava, Slovakia}
+\affil[14]{Institute of Organic Chemistry and Biochemistry of the Czech Academy of Sciences, Flemingovo n\'{a}m. 542/2,  Prague, CZ-16610, Czech Republic}
+\affil[15]{School of Pharmacy, University of Eastern Finland, 70211 Kuopio, Finland}
+\affil[16]{Institut Charles Gerhardt Montpellier (UMR CNRS 5253), Universit{\'e} Montpellier, Place Eug{\`e}ne Bataillon, 34095 Montpellier, Cedex 05, France}
+\affil[17]{Heidelberg University Biochemistry Center, 69120 Heidelberg, Germany}
+\affil[18]{Department of Physics, University of Helsinki, FI-00014 Helsinki, Finland}
+\affil[19]{Department of Molecular Medicine, Morsani College of Medicine, University of South Florida, Tampa, Florida 33612, United States of America}
+\affil[20]{Center for Global Health and Infectious Diseases Research, Global and Planetary Health, College of Public Health, University of South Florida, Tampa, Florida 33612, United States of America}
+\affil[21]{Department of Chemistry, University of Bergen, 5007 Bergen, Norway}
+\affil[22]{Computational Biology Unit, Department of Informatics, University of Bergen, 5008 Bergen, Norway}
+\affil[23]{Hochschule Mannheim, University of Applied Sciences, Mannheim, Germany}
+\affil[24]{University of Lyon, CNRS, Molecular Microbiology and Structural Biochemistry (MMSB, UMR 5086), F-69007, Lyon, France}
+\affil[25]{Institut National de la Sant{\'e} et de la Recherche M{\'e}dicale (INSERM), Lyon, France}
+\affil[26]{Division of Pharmaceutical Biosciences, Faculty of Pharmacy, University of Helsinki, Helsinki 00014, Finland}
+\affil[27]{Chemistry, University of Southampton, Highfield, Southampton, SO17 1BJ, United Kingdom}
+\affil[28]{Department of Applied Physics, Faculty of Physics, University of Santiago de Compostela, Santiago de Compostela, E-15782, Spain}
+\affil[29]{Institute of Biotechnology, RWTH Aachen University, Worringerweg 3, 52074 Aachen, Germany}
+\affil[30]{MD.USE Innovations S.L., Edificio Emprendia, 15782 Santiago de Compostela, Spain}
+\affil[31]{VTT Technical Research Centre of Finland, Espoo, Finland}
 
 
 
@@ -264,14 +266,19 @@
         \multicolumn{4}{c}{ {\bf Application layer}}\\
         \hline
         %\multicolumn{4}{c}{ {\bf Scripts/BuildDatabank/ }}\\
-        AreaPerLipidAnd ThicknessCorrelations.ipynb  & Analyze correlations between results in the {\it Databank layer}  & Results in the {\it Databank layer} & Figs.~\ref{fig:quality}G and~\ref{fig:QualityCorrelationsSI} \\
+        AreaPerLipidAnd ThicknessCorrelations.ipynb  & Analyze correlations between results in the {\it Databank layer}  & Results in the {\it Databank layer} & Figure~\ref{fig:quality}G in the main text and Supplementary Figure~\ref{fig:QualityCorrelationsSI} \\
+        \\
         FlipFlop.py & Calculate flip-flop rates of lipids in all simulations & README.yaml & flipflop.dat files at {\it /Data/Flipflops/} \\
-        plotFlipFlop.ipynb & Plot how flip-flop rates depend on membrane properties & README.yaml and flipflop.dat files at {\it /Data/Flipflops/} & Fig.~\ref{fig:flip-flops} \\
+        \\
+        plotFlipFlop.ipynb & Plot how flip-flop rates depend on membrane properties & README.yaml and flipflop.dat files at {\it /Data/Flipflops/} & Figure~\ref{fig:flip-flops} in the main text \\
+        \\
         calcMD-PERMEATION.py  & Calculate permeation rate of water molecules through bilayers from all simulations & README.yaml & Counting\_events.txt files at {\it /Data/MD-PERMEATION/} \\
+        \\
         calcWATERdiffusion.py & Calculate water lateral diffusion along membrane surface & README.yaml & WATERlateralMSD.xvg files at {\it /Data/WATERdiffusion/} \\
-        plotWaterPermeation.ipynb & Plot how water permeation and diffusion depend on membrane properties & README.yaml, Counting\_events.txt\,at {\it /Data/MD-PERMEATION/} and\,WATERlateralMSD.xvg files\,at {\it /Data/WATERdiffusion/} & Figs.~\ref{fig:permeability},~\ref{fig:permeationSI}, and~\ref{fig:diffusionSI}. \\
+        \\
+        plotWaterPermeation.ipynb & Plot how water permeation and diffusion depend on membrane properties & README.yaml, Counting\_events.txt\,at {\it /Data/MD-PERMEATION/} and\,WATERlateralMSD.xvg files\,at {\it /Data/WATERdiffusion/} & Figure~\ref{fig:permeability} in the main text, and Supplementary Figures~\ref{fig:permeationSI}, and~\ref{fig:diffusionSI}. \\
+        \\
         APLpredictor.ipynb & Predict area per lipid of a membrane based in its lipid composition from machine learning models trained using the NMRlipids databank & README.yaml and apl.dat files & Machine learning models at /Data/APLpredictor/ \\ 
-        %plotSimulation.ipynb & Plot results from a simulation together with the experimental data if available & README.yaml files and results in the {\it databank layer} & Figs~\ref{fig:quality}D-F and ~\ref{fig:POPC_POPE_dataSI}
     \end{tabular}
     \caption{Examples of codes that analyze membrane properties from the Databank in an {\it Application layer} available at~\url{https://github.com/NMRLipids/DataBankManuscript/}.}
     \label{tab:codesApplication}
@@ -462,29 +469,29 @@
 \clearpage
 %\section{Experimental data}
 \section*{NMR experiments}
-Acyl chain order parameters of POPE (Figs.~\ref{POPEexp1} and~\ref{POPEexp2}) and POPG (Figs.~\ref{POPGexp1} and~\ref{POPGexp2}) were analyzed from the same data that were previously recorded to determine headgroup order parameters~\cite{bacle21}. The analysis of the crowded spectral region at 29--31 ppm was based on the previous assignment reported for POPC membranes~\cite{ferreira13}. To measure the order parameters for DOPC (Fig.~\ref{fig:DOPCexp}), the sample was prepared and experiments performed similarly to previous studies~\cite{bacle21}.
+Acyl chain order parameters of POPE (Supplementary Figures~\ref{POPEexp1} and~\ref{POPEexp2}) and POPG (Supplementary Figures~\ref{POPGexp1} and~\ref{POPGexp2}) were analyzed from the same data that were previously recorded to determine headgroup order parameters~\cite{bacle21}. The analysis of the crowded spectral region at 29--31 ppm was based on the previous assignment reported for POPC membranes~\cite{ferreira13}. To measure the order parameters for DOPC (Supplementary Figure~\ref{fig:DOPCexp}), the sample was prepared and experiments performed similarly to previous studies~\cite{bacle21}.
 
 \begin{figure}[h]
   \includegraphics[width=\textwidth]{Figures/POPE_INEPT_contour_SCH.pdf}
-  \caption{Determination of the POPE acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPE. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C--H bond order parameter profile for the acyl chains of POPE. The splittings used for calculating the order parameters are shown in Fig.~\ref{POPEexp2}. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.      }
+  \caption{Determination of the POPE acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPE. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C--H bond order parameter profile for the acyl chains of POPE. The splittings used for calculating the order parameters are shown in Supplementary Figure~\ref{POPEexp2}. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.      }
   \label{POPEexp1}
 \end{figure}
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth]{Figures/POPE_slices.pdf}
-  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum from POPE in Fig.~\ref{POPEexp1}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Fig.~\ref{POPEexp1}.  }
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum from POPE in Supplementary Figure~\ref{POPEexp1}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Supplementary Figure~\ref{POPEexp1}.  }
   \label{POPEexp2}
 \end{figure}
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth]{Figures/POPG_INEPT_contour_SCH.pdf}
-  \caption{Determination of the POPG acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPG. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C--H bond order parameter profile for the acyl chains of POPG. The splittings used for calculating the order parameters are shown in Fig.~\ref{POPGexp2}. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.}
+  \caption{Determination of the POPG acyl chain order parameters from a R-PDLF spectrum measured at a magic angle spinning frequency of 5.15 kHz. (A) $^{13}$C rINEPT spectrum with peak assignment. The labels used are shown in the chemical structure of POPG. The chemical shift of the methyl groups was defined as 13.8 ppm. (B) Contour plot of the R-PDLF spectrum for the crowded spectral region. The assignment was based on a previous assignment reported for POPC membranes~\cite{ferreira13}. (C) C--H bond order parameter profile for the acyl chains of POPG. The splittings used for calculating the order parameters are shown in Supplementary Figure~\ref{POPGexp2}. The unassigned peaks belong to the headgroup and glycerol backbone carbons. A detailed assignment and order parameter analysis of these carbons was shown previously~\cite{bacle21}.}
   \label{POPGexp1}
 \end{figure}
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth]{Figures/POPG_slices.pdf}
-  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in Fig.~\ref{POPGexp1}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Fig.~\ref{POPGexp1}. }
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in Supplementary Figure~\ref{POPGexp1}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Supplementary Figure~\ref{POPGexp1}. }
   \label{POPGexp2}
 \end{figure}
 
@@ -497,7 +504,7 @@ Acyl chain order parameters of POPE (Figs.~\ref{POPEexp1} and~\ref{POPEexp2}) an
 
 \begin{figure}[p]
   \includegraphics[width=\textwidth]{Figures/DOPC_slices.pdf}
-  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in Fig.~\ref{fig:DOPCexp}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Fig.~\ref{fig:DOPCexp}. }
+  \caption{Dipolar spectra obtained from the 2D R-PDLF spectrum described in Supplementary Figure~\ref{fig:DOPCexp}. The number at the top left corner of each panel denotes the corresponding chemical shift. The carbon label for each splitting is displayed on the top right corner. The labels are the same as in Supplementary Figure~\ref{fig:DOPCexp}. }
   \label{DOPCexp2}
 \end{figure}
 
@@ -507,6 +514,7 @@ Acyl chain order parameters of POPE (Figs.~\ref{POPEexp1} and~\ref{POPEexp2}) an
 %\subsection{X-ray scattering experiments}
 %X-ray scattering form factors contributed to the NMRlipids III project are included in the databank (\url{http://nmrlipids.blogspot.com/2022/09/nmrlipids-iii-including-lipid-lateral.html}).
 
+\renewcommand\refname{Supplementary References}
 
 \pagebreak
 \bibliography{refs.bib}
